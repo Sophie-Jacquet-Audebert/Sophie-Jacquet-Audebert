@@ -1,0 +1,177 @@
+.parcours-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* Timeline */
+.parcours-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.timeline-item:last-child {
+  border-left: 1px solid transparent;
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -5px;
+  top: 0.35rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-rose-dark);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-rose-dark);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--color-text-soft);
+}
+
+/* Aside */
+.parcours-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: calc(var(--nav-height) + 2rem);
+}
+
+.parcours-portrait {
+  background-color: var(--color-rose-light);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.parcours-portrait__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.parcours-portrait__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.parcours-portrait__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.parcours-portrait__caption strong {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.parcours-portrait__caption span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-text-soft);
+}
+
+.parcours-quote {
+  background-color: var(--color-text);
+  padding: 2rem;
+}
+
+.parcours-quote blockquote {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-cream);
+  margin-bottom: 0.75rem;
+}
+
+.parcours-quote cite {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(249, 245, 239, 0.5);
+  font-style: normal;
+}
+
+.parcours-formations__title {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-rose-dark);
+  margin-bottom: 1rem;
+}
+
+.parcours-formations__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.parcours-formations__list li {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-text-soft);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.parcours-formations__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-rose-dark);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .parcours-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .parcours-aside {
+    position: static;
+  }
+}

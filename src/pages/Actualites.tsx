@@ -1,0 +1,172 @@
+import { Link } from 'react-router-dom'
+import './Actualites.css'
+
+const workshops = [
+  {
+    id: 1,
+    category: 'Atelier',
+    title: 'Mémoire cellulaire & astrologie',
+    subtitle: 'Un week-end pour mettre en lumière vos besoins singuliers',
+    text: `Les humains partagent des besoins liés à la condition humaine, auxquels s'ajoutent des besoins plus singuliers, répondant à l'incarnation de chacun, à son tempérament, son histoire...
+
+Nous vous proposons, le temps d'un week-end, de mettre en lumière vos différents besoins — comme si nous vous invitions à la découverte de l'écosystème de votre propre jardin. Quels sont les besoins de ce jardin pour qu'il soit encore plus rayonnant ?`,
+    tags: ['Lumière', 'Conscience', 'Pluridisciplinarité'],
+    info: 'Paris 10ème · 210 €/pers · 400 €/couple',
+    status: 'Sur demande',
+    icon: '✦'
+  },
+  {
+    id: 2,
+    category: 'Rencontre mensuelle',
+    title: 'La soirée des parents',
+    subtitle: 'Autour de l\'enfant — à naître, découvrir, nourrir, éduquer',
+    text: `Une rencontre mensuelle autour de l'enfant à naître, à découvrir, à nourrir, à éduquer, à rencontrer. Chaque soirée aborde un nouveau thème.
+
+La transmission s'élabore de manière autant théorique que clinique, grâce à l'enseignement de l'équipe de professionnels, mais aussi à travers les précieux partages au sein du groupe.`,
+    tags: ['Exploration', 'Soutien', 'Parentalité active'],
+    info: 'Paris 10ème · 2ème mardi du mois · 19h30–22h · Oct–Juin',
+    status: 'Sur demande',
+    icon: '◇'
+  },
+  {
+    id: 3,
+    category: 'Conférence',
+    title: 'Petits outils de base pour êtres humains',
+    subtitle: 'Une pause de 2h pour cheminer plus léger',
+    text: `Cette rencontre de 2h vous propose de faire un petit tour au pays de vous-même, afin de cheminer plus léger dans la vie.
+
+Je partage quelques outils de vie, "facilitateurs de bien-être" que j'ai rencontrés, observés, compris — et qu'il me semble important de vous transmettre. J'essaie aussi de mettre en lumière les cachettes favorites des vieilleries encombrantes que nous traînons, nous autres les humains.
+
+Cette petite pause vous offre la possibilité de distinguer ce qui du passé peut être déposé, mais aussi ce dont vous pouvez vous saisir aujourd'hui.`,
+    tags: ['Connaissance', 'Discernement', 'Vivre conscient'],
+    info: 'Jusqu\'à 15 personnes · Organisable chez vous',
+    status: 'Sur demande',
+    icon: '○'
+  }
+]
+
+export default function Actualites() {
+  return (
+    <div>
+      <div className="page-hero">
+        <div className="container">
+          <span className="page-hero__label">Ateliers & conférences</span>
+          <h1 className="page-hero__title">Actualités</h1>
+          <p className="page-hero__text">
+            Des transmissions pour explorer, comprendre et grandir ensemble — 
+            en groupe ou chez vous, sur demande.
+          </p>
+        </div>
+      </div>
+
+      <section className="section">
+        <div className="container">
+          <div className="actualites-intro">
+            <p>
+              Ces ateliers et conférences peuvent avoir lieu chez vous. 
+              Il vous suffit pour cela de me contacter — je me déplace pour animer 
+              ces rencontres dans un cadre intime et bienveillant.
+            </p>
+          </div>
+
+          <div className="workshops-list">
+            {workshops.map((w) => (
+              <div key={w.id} className="workshop-card">
+                <div className="workshop-card__header">
+                  <div className="workshop-card__icon">{w.icon}</div>
+                  <div className="workshop-card__meta">
+                    <span className="workshop-card__category">{w.category}</span>
+                    <span className="workshop-card__status">{w.status}</span>
+                  </div>
+                </div>
+                <h2 className="workshop-card__title">{w.title}</h2>
+                <p className="workshop-card__subtitle">{w.subtitle}</p>
+                <div className="divider divider--left"></div>
+                <p className="workshop-card__text">{w.text}</p>
+                <div className="workshop-card__tags">
+                  {w.tags.map(t => (
+                    <span key={t} className="workshop-card__tag">{t}</span>
+                  ))}
+                </div>
+                <div className="workshop-card__footer">
+                  <span className="workshop-card__info">{w.info}</span>
+                  <Link to="/contact" className="btn btn--outline">
+                    Me contacter
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inspirations */}
+      <section className="section section--alt">
+        <div className="container">
+          <div className="section__header">
+            <span className="section__label">Ressources</span>
+            <h2 className="section__title">Inspirations & recommandations</h2>
+            <div className="divider"></div>
+          </div>
+          <div className="inspirations-grid">
+            <div className="inspiration-col">
+              <h3 className="inspiration-col__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                </svg>
+                Livres
+              </h3>
+              <ul className="inspiration-list">
+                <li>
+                  <strong>Votre corps a une mémoire</strong>
+                  <span>Myriam Brousse · Marabout, 2007</span>
+                </li>
+                <li>
+                  <strong>Nouvelle Terre</strong>
+                  <span>Eckhart Tolle · Ariane Édition, 2005</span>
+                </li>
+                <li>
+                  <strong>Aïe, mes aïeux !</strong>
+                  <span>Anne Ancelin Schützenberger · Desclée de Brouwer, 2003</span>
+                </li>
+                <li>
+                  <strong>Les fantômes familiaux</strong>
+                  <span>Bruno Clavier · Petite Bibliothèque Payot, 2013</span>
+                </li>
+              </ul>
+            </div>
+            <div className="inspiration-col">
+              <h3 className="inspiration-col__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20">
+                  <path d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+                </svg>
+                Documentaires
+              </h3>
+              <ul className="inspiration-list">
+                <li>
+                  <a href="https://youtu.be/hG04LX4zrlA" target="_blank" rel="noopener noreferrer">
+                    <strong>La Révolution de l'esprit</strong>
+                    <span>Anthony Chêne</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtu.be/70Xg0cclf5Q" target="_blank" rel="noopener noreferrer">
+                    <strong>La Puissance de l'intention</strong>
+                    <span>Anthony Chêne</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtu.be/aQL91Tahebk" target="_blank" rel="noopener noreferrer">
+                    <strong>Les Chemins de la guérison</strong>
+                    <span>Jean-Yves Bilien, 2013</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

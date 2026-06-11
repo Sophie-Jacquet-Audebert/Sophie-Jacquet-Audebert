@@ -1,0 +1,22 @@
+{
+  "name": "webapp",
+  "type": "module",
+   "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "framer-motion": "^12.40.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "express": "^5.2.1",
+    "typescript": "^6.0.3",
+    "vite": "^6.3.5"
+  }
+}
