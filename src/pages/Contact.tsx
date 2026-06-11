@@ -17,7 +17,7 @@ export default function Contact() {
           <h1 className="page-hero__title">Me contacter</h1>
           <p className="page-hero__text">
             Pour une première consultation, une question sur mes pratiques ou 
-            pour organiser un atelier — je vous réponds avec soin.
+            pour organiser un atelier.
           </p>
         </div>
       </div>
