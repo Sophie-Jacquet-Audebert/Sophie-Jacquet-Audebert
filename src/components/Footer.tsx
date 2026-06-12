@@ -4,7 +4,7 @@ import './Footer.css'
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__top container">
+      <div className="footer__top">
         <div className="footer__brand">
           <h3 className="footer__brand-name">Sophie Jacquet-Audebert</h3>
           <p className="footer__brand-subtitle">Psychologue clinicienne</p>

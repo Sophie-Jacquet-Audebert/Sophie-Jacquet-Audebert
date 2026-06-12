@@ -58,9 +58,9 @@ const practices = [
     slug: 'psychologie-clinique',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="18" r="10" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M24 28c-8 0-14 4-14 9h28c0-5-6-9-14-9z" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M20 18c0-2.2 1.8-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="24" cy="18" r="10" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M24 28c-8 0-14 4-14 9h28c0-5-6-9-14-9z" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M20 18c0-2.2 1.8-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     label: 'Fondement',
@@ -71,9 +71,9 @@ const practices = [
     slug: 'art-therapie',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 36l8-16 6 10 4-6 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="36" cy="14" r="4" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M10 10h6M10 14h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M12 36l8-16 6 10 4-6 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="36" cy="14" r="4" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M10 10h6M10 14h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     label: 'Expression',
@@ -84,9 +84,9 @@ const practices = [
     slug: 'memoire-cellulaire',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="24" cy="24" r="3" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="24" cy="24" r="3" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
     label: 'Transgénérationnel',
@@ -97,7 +97,7 @@ const practices = [
     slug: 'bio-resonance',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 24c3-8 5-8 8 0s5 8 8 0 5-8 8 0 5 8 8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 24c3-8 5-8 8 0s5 8 8 0 5-8 8 0 5 8 8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     label: 'Corps & vibration',
@@ -132,7 +132,7 @@ const podcasts = [
     href: "#",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
       </svg>
     )
   },
@@ -143,7 +143,7 @@ const podcasts = [
     href: "#",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392.12.6.12 2.208.007 2.832a9.78 9.78 0 01-1.8 4.116c-1.656 2.304-4.38 3.696-7.2 3.696-2.892 0-5.58-1.464-7.236-3.912-.72-1.056-1.212-2.28-1.476-3.72-.12-.66-.12-2.28 0-2.94a9.756 9.756 0 013.54-6.144 9.588 9.588 0 015.845-1.907zm-.024 1.6a8.135 8.135 0 00-6.228 2.952 8.164 8.164 0 00-1.716 7.584c.888 3.24 3.78 5.568 7.152 5.784 4.164.264 7.752-2.784 8.136-6.948.384-4.14-2.784-7.872-7.02-8.304a8.45 8.45 0 00-.324-.068zM12 7.9c1.548 0 2.808 1.26 2.808 2.808S13.548 13.516 12 13.516s-2.808-1.26-2.808-2.808S10.452 7.9 12 7.9zm0 7.22c2.04 0 3.9.936 5.148 2.424a7.776 7.776 0 01-10.296 0C8.1 16.056 9.96 15.12 12 15.12z"/>
+        <path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.272 1.272 1.912 2.619 2.264 4.392.12.6.12 2.208.007 2.832a9.78 9.78 0 01-1.8 4.116c-1.656 2.304-4.38 3.696-7.2 3.696-2.892 0-5.58-1.464-7.236-3.912-.72-1.056-1.212-2.28-1.476-3.72-.12-.66-.12-2.28 0-2.94a9.756 9.756 0 013.54-6.144 9.588 9.588 0 015.845-1.907zm-.024 1.6a8.135 8.135 0 00-6.228 2.952 8.164 8.164 0 00-1.716 7.584c.888 3.24 3.78 5.568 7.152 5.784 4.164.264 7.752-2.784 8.136-6.948.384-4.14-2.784-7.872-7.02-8.304a8.45 8.45 0 00-.324-.068zM12 7.9c1.548 0 2.808 1.26 2.808 2.808S13.548 13.516 12 13.516s-2.808-1.26-2.808-2.808S10.452 7.9 12 7.9zm0 7.22c2.04 0 3.9.936 5.148 2.424a7.776 7.776 0 01-10.296 0C8.1 16.056 9.96 15.12 12 15.12z" />
       </svg>
     )
   },
@@ -154,7 +154,7 @@ const podcasts = [
     href: "https://youtu.be/",
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+        <path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
       </svg>
     )
   }
@@ -244,6 +244,17 @@ export default function Home() {
       <section className="section about-intro">
         <div className="container">
           <div className="about-intro__inner">
+
+            {/* Image pleine colonne droite, sans flou ni overlay */}
+            <div className="about-intro__bg-image" aria-hidden="true" />
+
+            {/* Titre épinglé en bas à gauche de l'image */}
+            <div className="about-intro__image-caption">
+              <span className="section__label">À propos</span>
+              <AboutTitle />
+              <div className="divider divider--left"></div>
+            </div>
+
             <div className="about-intro__visual">
               <div className="about-intro__quote">
                 <blockquote>
@@ -251,28 +262,6 @@ export default function Home() {
                 </blockquote>
               </div>
               <div className="about-intro__signature">Sophie J.-A.</div>
-            </div>
-            <div className="about-intro__content">
-              <span className="section__label">À propos</span>
-              <AboutTitle />
-              <div className="divider divider--left"></div>
-              <p>
-                Psychologue clinicienne formée à Paris 7, Sophie Jacquet-Audebert 
-                a construit une pratique riche et singulière, nourrie autant par 
-                ses études universitaires que par son chemin personnel.
-              </p>
-              <p className="mt-sm">
-                Ancienne enlumineuse et calligraphe, elle intègre dans sa pratique 
-                la dimension créatrice, le corps, les mémoires transgénérationnelles 
-                et la psychologie clinique — pour un accompagnement véritablement global.
-              </p>
-              <p className="mt-sm">
-                Elle reçoit en cabinet à Paris 10ème, et propose des consultations 
-                à distance via Zoom, Skype ou FaceTime.
-              </p>
-              <Link to="/parcours" className="btn btn--outline mt-md">
-                Mon parcours complet
-              </Link>
             </div>
           </div>
         </div>
@@ -288,13 +277,17 @@ export default function Home() {
             </FadeUp>
             <div className="divider"></div>
             <p className="section__subtitle">
-              Une palette d'approches complémentaires, choisies et expérimentées 
+              Une palette d'approches complémentaires, choisies et expérimentées
               pour leur profondeur et leur efficacité.
             </p>
           </div>
           <div className="practices-grid">
             {practices.map(p => (
-              <Link to={`/pratiques/${p.slug}`} key={p.slug} className="practice-card">
+              <Link
+                to={`/pratiques/${p.slug}`}
+                key={p.slug}
+                className={`practice-card${p.slug === 'art-therapie' ? ' practice-card--active' : ''}`}
+              >
                 <div className="practice-card__icon">{p.icon}</div>
                 <span className="practice-card__label">{p.label}</span>
                 <h3 className="practice-card__title">{p.title}</h3>
@@ -313,14 +306,14 @@ export default function Home() {
             <div className="rdv-card rdv-card--cabinet">
               <div className="rdv-card__icon">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M24 4C17.373 4 12 9.373 12 16c0 9 12 24 12 24s12-15 12-24c0-6.627-5.373-12-12-12z"/>
-                  <circle cx="24" cy="16" r="4"/>
+                  <path d="M24 4C17.373 4 12 9.373 12 16c0 9 12 24 12 24s12-15 12-24c0-6.627-5.373-12-12-12z" />
+                  <circle cx="24" cy="16" r="4" />
                 </svg>
               </div>
               <h3 className="rdv-card__title">En cabinet</h3>
               <p className="rdv-card__address">189, rue du Faubourg Saint-Denis<br />75010 Paris</p>
               <p className="rdv-card__text">
-                Consultations individuelles dans un espace confidentiel et apaisant, 
+                Consultations individuelles dans un espace confidentiel et apaisant,
                 au cœur du 10ème arrondissement de Paris.
               </p>
               <FadeUpBtn href="#" className="btn btn--primary" delay={0.3}>
@@ -335,8 +328,8 @@ export default function Home() {
             <div className="rdv-card rdv-card--video">
               <div className="rdv-card__icon">
                 <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="4" y="12" width="28" height="24" rx="3"/>
-                  <path d="M32 20l12-8v24l-12-8V20z"/>
+                  <rect x="4" y="12" width="28" height="24" rx="3" />
+                  <path d="M32 20l12-8v24l-12-8V20z" />
                 </svg>
               </div>
               <h3 className="rdv-card__title">En vidéo</h3>
@@ -346,7 +339,7 @@ export default function Home() {
                 <span>FaceTime</span>
               </div>
               <p className="rdv-card__text">
-                La distance n'est pas un obstacle. Les consultations à distance 
+                La distance n'est pas un obstacle. Les consultations à distance
                 offrent la même qualité d'accompagnement, depuis chez vous.
               </p>
               <FadeUpBtn href="#" className="btn btn--outline" delay={0.5}>
@@ -392,7 +385,7 @@ export default function Home() {
             </FadeUp>
             <div className="divider"></div>
             <p className="section__subtitle">
-              Retrouvez Sophie dans des émissions et podcasts où elle partage 
+              Retrouvez Sophie dans des émissions et podcasts où elle partage
               ses réflexions sur la psychologie et le mieux-être.
             </p>
           </div>
@@ -406,8 +399,8 @@ export default function Home() {
                 </div>
                 <div className="podcast-item__play">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none" />
                   </svg>
                 </div>
               </a>
@@ -424,7 +417,7 @@ export default function Home() {
               <span className="section__label">Premiers pas</span>
               <ContactTitle />
               <p className="contact-cta__text">
-                Que vous ayez des questions sur mon approche, les tarifs ou les modalités 
+                Que vous ayez des questions sur mon approche, les tarifs ou les modalités
                 de consultation, je suis disponible pour en discuter ensemble.
               </p>
             </div>
@@ -517,7 +510,7 @@ function ContactForm() {
         <label className="form-label">Message</label>
         <textarea className="form-textarea" placeholder="Décrivez brièvement votre démarche..." rows={4}></textarea>
       </div>
-      <button type="submit" className="btn btn--primary" style={{width:'100%', justifyContent:'center'}}>
+      <button type="submit" className="btn btn--primary" style={{ width: '100%', justifyContent: 'center' }}>
         Envoyer ma demande
       </button>
       <p className="contact-form__privacy">

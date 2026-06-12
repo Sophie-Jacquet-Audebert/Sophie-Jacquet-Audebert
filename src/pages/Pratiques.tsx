@@ -9,13 +9,8 @@ const practices = [
     title: 'Psychologie clinique',
     short: "Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme, l'individu unique.",
     tags: ['Individuel', 'Adulte', 'Profondeur'],
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="32" cy="22" r="14" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M12 52c0-11.046 8.954-20 20-20s20 8.954 20 20" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M28 22c0-2.209 1.791-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    )
+    image: '/vitaly-gariev-qvbJkpIKotk-unsplash.jpg',
+    icon: null,
   },
   {
     slug: 'art-therapie',
@@ -24,13 +19,8 @@ const practices = [
     title: 'Art-thérapie',
     short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient — par le geste et la création.",
     tags: ['Corps', 'Créativité', 'Symbolique'],
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 48l10-20 8 13 5-8 8 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="48" cy="18" r="6" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M14 14h8M14 20h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    )
+    image: '/taelynn-christopher-pfSNx3Z12K8-unsplash.jpg',
+    icon: null,
   },
   {
     slug: 'memoire-cellulaire',
@@ -39,13 +29,8 @@ const practices = [
     title: 'Mémoire cellulaire',
     short: "Explorer l'histoire de l'individu dans sa généalogie — les mémoires invisibles qui traversent les générations.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M32 10v6M32 48v6M10 32h6M48 32h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="32" cy="32" r="12" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="32" cy="32" r="4" stroke="currentColor" strokeWidth="1.5"/>
-      </svg>
-    )
+    image: '/robina-weermeijer-IHfOpAzzjHM-unsplash.jpg',
+    icon: null,
   },
   {
     slug: 'bio-resonance',
@@ -54,6 +39,7 @@ const practices = [
     title: 'Bio-résonance cellulaire',
     short: "Un outil en lien direct avec la vibration du corps humain — pour rétablir les équilibres énergétiques.",
     tags: ['Corps', 'Énergie', 'Équilibre'],
+    image: '/mjh-shikder--bJj_81Zois-unsplash.jpg',
     icon: (
       <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 32c4-12 7-12 11 0s7 12 11 0 7-12 11 0 7 12 11 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -88,10 +74,23 @@ export default function Pratiques() {
           <div className="pratiques-list">
             {practices.map((p, i) => (
               <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`}>
+
                 <div className="pratique-item__visual">
-                  <div className="pratique-item__icon">{p.icon}</div>
-                  <span className="pratique-item__number">{p.number}</span>
+                  {p.image ? (
+                    <>
+                      <div className="pratique-item__photo">
+                        <img src={p.image} alt={p.title} />
+                      </div>
+                      <span className="pratique-item__number">{p.number}</span>
+                    </>
+                  ) : (
+                    <>
+                      <div className="pratique-item__icon">{p.icon}</div>
+                      <span className="pratique-item__number">{p.number}</span>
+                    </>
+                  )}
                 </div>
+
                 <div className="pratique-item__content">
                   <span className="pratique-item__label">{p.label}</span>
                   <h2 className="pratique-item__title">{p.title}</h2>
@@ -106,6 +105,7 @@ export default function Pratiques() {
                     En savoir plus
                   </Link>
                 </div>
+
               </div>
             ))}
           </div>

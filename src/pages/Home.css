@@ -87,10 +87,52 @@
   grid-template-columns: 1fr 1.5fr;
   gap: 6rem;
   align-items: center;
+  position: relative;
 }
 
-.about-intro__visual {
+/* Image sans flou ni overlay — pleine colonne droite */
+.about-intro__bg-image {
+  position: absolute;
+  top: -4rem;
+  bottom: -4rem;
+  left: calc((1 / 2.5) * 100% + 3rem); /* début de la colonne de droite */
+  right: -4rem;
+  background-image: url('/vitaly-gariev-wsQoMyNhBw8-unsplash.jpg');
+  background-size: cover;
+  background-position: center top;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Les enfants directs restent au-dessus de l'image */
+.about-intro__visual,
+.about-intro__content {
   position: relative;
+  z-index: 1;
+}
+
+/* Label + titre + divider épinglés en bas à gauche de la colonne image */
+.about-intro__image-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: calc((1 / 2.5) * 100% + 3rem + 2rem); /* aligné dans la colonne image */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-intro__image-caption .section__label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-intro__image-caption .about-intro__title {
+  color: var(--color-white, #fff) !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.about-intro__image-caption .divider--left {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .about-intro__quote {
@@ -165,6 +207,21 @@
 
 .practice-card:hover {
   background-color: var(--color-text);
+}
+
+.practice-card--active {
+  background-color: var(--color-text);
+}
+
+.practice-card--active .practice-card__icon,
+.practice-card--active .practice-card__title,
+.practice-card--active .practice-card__label,
+.practice-card--active .practice-card__desc {
+  color: var(--color-cream);
+}
+
+.practice-card--active .practice-card__link {
+  color: var(--color-rose-light);
 }
 
 .practice-card:hover .practice-card__icon,
@@ -524,6 +581,30 @@
   .about-intro__inner {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .about-intro__bg-image {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    height: 320px;
+  }
+
+  .about-intro__image-caption {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .about-intro__image-caption .section__label,
+  .about-intro__image-caption .about-intro__title {
+    color: var(--color-text) !important;
+    text-shadow: none;
+  }
+
+  .about-intro__image-caption .divider--left {
+    background-color: var(--color-rose-dark);
   }
 
   .rdv-grid {
