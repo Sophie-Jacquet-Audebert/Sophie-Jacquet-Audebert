@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Hero from '../components/Hero'
 import './Home.css'
 
 // ── shared animation config ──────────────────────────────────────────────────
@@ -38,18 +39,70 @@ function FadeUp({
   )
 }
 
-// Hero-specific: no scroll trigger, fires on mount
-const heroFadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i === 2 ? 1.6 : i * 0.5,
-      duration: i === 2 ? 1.4 : 1.2,
-      ease: EASE,
-    },
-  }),
+function FadeUpBtn({ href, className, delay = 0, children }: {
+  href: string
+  className: string
+  delay?: number
+  children: React.ReactNode
+}) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-70px' })
+  return (
+    <motion.a
+      ref={ref}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 1.3, ease: EASE }}
+    >
+      {children}
+    </motion.a>
+  )
+}
+
+// ── rounded section wrapper ───────────────────────────────────────────────────
+function RoundedSection({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-100px' })
+  return (
+    <motion.section
+      ref={ref}
+      className={className}
+      initial={{
+        borderTopLeftRadius: '0% 0rem',
+        borderTopRightRadius: '0% 0rem',
+        borderBottomLeftRadius: '0% 0rem',
+        borderBottomRightRadius: '0% 0rem',
+      }}
+      animate={
+        inView
+          ? {
+              borderTopLeftRadius: '50% 8rem',
+              borderTopRightRadius: '50% 8rem',
+              borderBottomLeftRadius: '50% 8rem',
+              borderBottomRightRadius: '50% 8rem',
+            }
+          : {
+              borderTopLeftRadius: '0% 0rem',
+              borderTopRightRadius: '0% 0rem',
+              borderBottomLeftRadius: '0% 0rem',
+              borderBottomRightRadius: '0% 0rem',
+            }
+      }
+      transition={{ duration: 1.4, ease: EASE }}
+    >
+      {children}
+    </motion.section>
+  )
 }
 
 // ── data ─────────────────────────────────────────────────────────────────────
@@ -160,115 +213,64 @@ const podcasts = [
   }
 ]
 
-// Animated anchor button (for <a> tags specifically)
-function FadeUpBtn({ href, className, delay = 0, children }: {
-  href: string
-  className: string
-  delay?: number
-  children: React.ReactNode
-}) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-70px' })
-  return (
-    <motion.a
-      ref={ref}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay, duration: 1.3, ease: EASE }}
-    >
-      {children}
-    </motion.a>
-  )
-}
-
 // ── page ─────────────────────────────────────────────────────────────────────
 export default function Home() {
   return (
     <div className="home">
 
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero__bg"></div>
-        <div className="hero__content container">
-          <div className="hero__text">
-            <h1 className="hero__title">
-              <span className="hero__title-line">
-                <motion.span
-                  custom={0}
-                  variants={heroFadeUp}
-                  initial="hidden"
-                  animate="visible"
-                  style={{ display: 'block' }}
-                >
-                  Un espace pour
-                </motion.span>
-              </span>
-              <span className="hero__title-line">
-                <motion.em
-                  custom={1}
-                  variants={heroFadeUp}
-                  initial="hidden"
-                  animate="visible"
-                  style={{ display: 'block' }}
-                >
-                  vous rencontrer
-                </motion.em>
-              </span>
-            </h1>
-            <div className="hero__actions">
-              <motion.a
-                custom={2}
-                variants={heroFadeUp}
-                initial="hidden"
-                animate="visible"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn--primary"
-              >
-                Prendre rendez-vous
-              </motion.a>
-            </div>
-          </div>
-        </div>
-        <div className="hero__scroll">
-          <span></span>
-        </div>
-      </section>
+      <Hero />
 
-      {/* ABOUT INTRO */}
-      <section className="section about-intro">
+      {/* ABOUT INTRO — redesigned, no background image */}
+      <RoundedSection className="section about-intro">
         <div className="container">
           <div className="about-intro__inner">
 
-            {/* Image pleine colonne droite, sans flou ni overlay */}
-            <div className="about-intro__bg-image" aria-hidden="true" />
-
-            {/* Titre épinglé en bas à gauche de l'image */}
-            <div className="about-intro__image-caption">
-              <span className="section__label">À propos</span>
+            {/* Left — label + title + divider */}
+            <div className="about-intro__left">
+              <FadeUp delay={0}>
+                <span className="section__label">À propos</span>
+              </FadeUp>
               <AboutTitle />
-              <div className="divider divider--left"></div>
+              <div className="divider divider--left" />
+              <FadeUp
+                as="p"
+                className="about-intro__body"
+                delay={0.5}
+                duration={1.3}
+              >
+                Psychologue clinicienne formée à l'approche analytique, j'accompagne
+                chaque personne dans sa singularité — en mobilisant, selon les besoins,
+                des outils complémentaires : art-thérapie, mémoire cellulaire,
+                bio-résonance.
+              </FadeUp>
+              <FadeUp delay={0.7} duration={1.3}>
+                <Link to="/parcours" className="btn btn--outline" style={{ marginTop: '2rem', display: 'inline-flex' }}>
+                  Mon parcours
+                </Link>
+              </FadeUp>
             </div>
 
-            <div className="about-intro__visual">
-              <div className="about-intro__quote">
+            {/* Right — accent number + quote */}
+            <div className="about-intro__right">
+              <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
+                15
+                <span>ans de pratique</span>
+              </FadeUp>
+              <FadeUp delay={0.4} duration={1.4} className="about-intro__quote">
                 <blockquote>
-                  "Ma démarche est d'accompagner chacun au plus proche de son besoin, en mettant mes compétences à sa disposition."
+                  "Ma démarche est d'accompagner chacun au plus proche de son besoin,
+                  en mettant mes compétences à sa disposition."
                 </blockquote>
-              </div>
-              <div className="about-intro__signature">Sophie J.-A.</div>
+                <div className="about-intro__signature">Sophie J.-A.</div>
+              </FadeUp>
             </div>
+
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
       {/* PRATIQUES */}
-      <section className="section section--alt practices-section">
+      <RoundedSection className="section section--alt practices-section">
         <div className="container">
           <div className="section__header">
             <span className="section__label">Accompagnement</span>
@@ -297,10 +299,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
       {/* RDV SECTION */}
-      <section className="section rdv-section">
+      <RoundedSection className="section rdv-section">
         <div className="container">
           <div className="rdv-grid">
             <div className="rdv-card rdv-card--cabinet">
@@ -348,10 +350,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
       {/* TEMOIGNAGES */}
-      <section className="section section--alt testimonials-section">
+      <RoundedSection className="section section--alt testimonials-section">
         <div className="container">
           <div className="section__header">
             <span className="section__label">Témoignages</span>
@@ -373,10 +375,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
       {/* PODCASTS */}
-      <section className="section podcasts-section">
+      <RoundedSection className="section podcasts-section">
         <div className="container">
           <div className="section__header">
             <span className="section__label">Médias</span>
@@ -407,10 +409,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
       {/* CONTACT CTA */}
-      <section className="section section--alt contact-cta">
+      <RoundedSection className="section section--alt contact-cta">
         <div className="container">
           <div className="contact-cta__inner">
             <div className="contact-cta__content">
@@ -426,7 +428,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </RoundedSection>
 
     </div>
   )

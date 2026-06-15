@@ -6,20 +6,23 @@
 }
 
 :root {
-  /* Palette */
-  --color-cream: #F9F5EF;
-  --color-cream-dark: #F2EBE0;
-  --color-rose: #C9A99A;
-  --color-rose-light: #E8D5CC;
-  --color-rose-dark: #A07060;
-  --color-gold: #B8956A;
-  --color-gold-light: #D4B896;
-  --color-text: #2C2420;
-  --color-text-soft: #6B5C52;
-  --color-text-muted: #9E8C82;
-  --color-white: #FFFFFF;
-  --color-border: #E2D5CB;
+/* Cosmic Glow */
+--color-cream: #F8FCFC;
+--color-cream-dark: #EAF5F6;
 
+--color-rose: #E83E8C;
+--color-rose-light: #F7B7D3;
+--color-rose-dark: #B11F61;
+
+--color-gold: #F4A825;
+--color-gold-light: #FFD27A;
+
+--color-text: #10252D;
+--color-text-soft: #42606B;
+--color-text-muted: #748D96;
+
+--color-white: #FFFFFF;
+--color-border: #D7E9EC;
   /* Typographies */
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Jost', system-ui, sans-serif;

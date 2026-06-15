@@ -190,3 +190,139 @@
     gap: 2.5rem;
   }
 }
+
+
+/* ===== PAGE NAV (fond cream-dark, contenu sombre) ===== */
+.page-nav {
+  background-color: var(--color-cream-dark);
+  color: var(--color-text);
+  padding: 2rem 0 4rem;
+  text-align: center;
+  border-bottom-left-radius: 50% 8rem;
+  border-bottom-right-radius: 50% 8rem;
+}
+
+.page-nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.page-nav__logo-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.page-nav__logo {
+  height: 56px;
+  width: auto;
+  margin: 0 auto;
+  /* logo sombre d'origine, plus de filtre d'inversion sur fond clair */
+}
+
+/* Identity */
+.page-nav__identity {
+  margin-bottom: 1.5rem;
+}
+
+.page-nav__name-top {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-rose-dark);
+  margin-bottom: 0.25rem;
+}
+
+.page-nav__role {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Nav */
+.page-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-nav__link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  padding: 0.4rem 0.9rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.page-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: var(--color-rose-dark);
+  transition: width 0.25s ease;
+}
+
+.page-nav__link:hover {
+  color: var(--color-text);
+}
+
+.page-nav__link:hover::after {
+  width: 60%;
+}
+
+/* ===== PAGE TITLE BLOCK (ex page-hero, intégré au page-nav) ===== */
+.page-hero__label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-rose-dark);
+  margin-bottom: 1rem;
+}
+
+.page-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.page-hero__text {
+  font-size: 1.1rem;
+  color: var(--color-text-soft);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .page-nav {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .page-nav__links {
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+}
