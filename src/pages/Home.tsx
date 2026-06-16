@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import { supabase } from '../lib/supabase'
 import Hero from '../components/Hero'
 import './Home.css'
 
@@ -318,7 +319,7 @@ export default function Home() {
                 Consultations individuelles dans un espace confidentiel et apaisant,
                 au cœur du 10ème arrondissement de Paris.
               </p>
-              <FadeUpBtn href="#" className="btn btn--primary" delay={0.3}>
+              <FadeUpBtn href="tel:06 64 99 70 50" className="btn btn--primary" delay={0.3}>
                 Réserver en cabinet
               </FadeUpBtn>
             </div>
@@ -344,7 +345,7 @@ export default function Home() {
                 La distance n'est pas un obstacle. Les consultations à distance
                 offrent la même qualité d'accompagnement, depuis chez vous.
               </p>
-              <FadeUpBtn href="#" className="btn btn--outline" delay={0.5}>
+              <FadeUpBtn href="tel:06 64 99 70 50" className="btn btn--outline" delay={0.5}>
                 Réserver en vidéo
               </FadeUpBtn>
             </div>
@@ -481,42 +482,199 @@ function ContactTitle() {
 
 // ── contact form ──────────────────────────────────────────────────────────────
 function ContactForm() {
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const [form, setForm] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    telephone: '',
+    motif: '',
+    source: '',
+    message: '',
+  })
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError(null)
+    setLoading(true)
+
+    try {
+      // 1. Insère le message dans Supabase
+      const { data: inserted, error: insertError } = await supabase
+        .from('contacts')
+        .insert({
+          prenom: form.prenom,
+          nom: form.nom,
+          email: form.email,
+          telephone: form.telephone || null,
+          motif: form.motif,
+          source: form.source || null, // Champ non obligatoire
+          message: form.message,
+        })
+        .select()
+        .single()
+
+      if (insertError) throw insertError
+
+      // 2. Déclenche la notification email (best-effort)
+      try {
+        await supabase.functions.invoke('send-notification', {
+          body: { type: 'contact', record: inserted },
+        })
+      } catch (notifyError) {
+        console.error('Notification email non envoyée :', notifyError)
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      console.error(err)
+      setError("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de me contacter par téléphone.")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  if (submitted) {
+    return (
+      <div className="contact-success">
+        <div className="contact-success__icon">✓</div>
+        <h3>Message envoyé</h3>
+        <p>Merci pour votre message. Je vous répondrai dans les meilleurs délais.</p>
+      </div>
+    )
+  }
+
   return (
-    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      {error && (
+        <p style={{ color: '#c1432f', fontSize: '0.85rem', marginBottom: '1rem' }}>
+          {error}
+        </p>
+      )}
+
       <div className="contact-form__row">
         <div className="form-group">
-          <label className="form-label">Prénom</label>
-          <input type="text" className="form-input" placeholder="Marie" />
+          <label className="form-label">Prénom *</label>
+          <input
+            type="text"
+            name="prenom"
+            className="form-input"
+            placeholder="Marie"
+            value={form.prenom}
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <label className="form-label">Nom</label>
-          <input type="text" className="form-input" placeholder="Dupont" />
+          <label className="form-label">Nom *</label>
+          <input
+            type="text"
+            name="nom"
+            className="form-input"
+            placeholder="Dupont"
+            value={form.nom}
+            onChange={handleChange}
+            required
+          />
         </div>
       </div>
+
       <div className="form-group">
-        <label className="form-label">Email</label>
-        <input type="email" className="form-input" placeholder="marie.dupont@email.fr" />
+        <label className="form-label">Email *</label>
+        <input
+          type="email"
+          name="email"
+          className="form-input"
+          placeholder="marie.dupont@email.fr"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
       </div>
+
+      {/* <div className="form-group">
+        <label className="form-label">Téléphone</label>
+        <input
+          type="tel"
+          name="telephone"
+          className="form-input"
+          placeholder="06 00 00 00 00"
+          value={form.telephone}
+          onChange={handleChange}
+        />
+      </div> */}
+
       <div className="form-group">
-        <label className="form-label">Motif</label>
-        <select className="form-select">
+        <label className="form-label">Motif *</label>
+        <select
+          name="motif"
+          className="form-select"
+          value={form.motif}
+          onChange={handleChange}
+          required
+        >
           <option value="">Sélectionner un motif</option>
           <option>Première consultation</option>
           <option>Suivi thérapeutique</option>
-          <option>Renseignements</option>
+          <option>Consultation à distance</option>
+          <option>Renseignements tarifs</option>
           <option>Atelier / conférence</option>
           <option>Autre</option>
         </select>
       </div>
+
+      {/* <div className="form-group">
+        <label className="form-label">Comment avez-vous entendu parler de moi ?</label>
+        <select
+          name="source"
+          className="form-select"
+          value={form.source}
+          onChange={handleChange}
+        >
+          <option value="">Sélectionner</option>
+          <option>Bouche à oreille</option>
+          <option>Doctolib</option>
+          <option>Recherche internet</option>
+          <option>Podcast / médias</option>
+          <option>Autre</option>
+        </select>
+      </div> */}
+
       <div className="form-group">
-        <label className="form-label">Message</label>
-        <textarea className="form-textarea" placeholder="Décrivez brièvement votre démarche..." rows={4}></textarea>
+        <label className="form-label">Message *</label>
+        <textarea
+          name="message"
+          className="form-textarea"
+          placeholder="Décrivez brièvement votre démarche, vos questions ou ce qui vous amène..."
+          rows={4}
+          value={form.message}
+          onChange={handleChange}
+          required
+        />
       </div>
-      <button type="submit" className="btn btn--primary" style={{ width: '100%', justifyContent: 'center' }}>
-        Envoyer ma demande
+
+      <button
+        type="submit"
+        className="btn btn--primary"
+        style={{ width: '100%', justifyContent: 'center' }}
+        disabled={loading}
+      >
+        {loading ? 'Envoi en cours…' : 'Envoyer ma demande'}
       </button>
+
       <p className="contact-form__privacy">
-        Vos informations restent strictement confidentielles et ne sont jamais transmises à des tiers.
+        Vos informations restent strictement confidentielles et ne sont jamais transmises à des tiers. 
+        Conformément au RGPD, vous disposez d'un droit d'accès et de suppression de vos données.
       </p>
     </form>
   )

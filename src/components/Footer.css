@@ -90,23 +90,50 @@
   color: var(--color-rose-light);
 }
 
+/* Adaptation du bouton pour qu'il ressemble au lien précédent */
 .footer__doctolib {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.65rem 1.25rem;
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border: 1px solid rgba(249, 245, 239, 0.25);
+  background: transparent;
   color: var(--color-cream);
   transition: all 0.3s ease;
   text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  line-height: 1;
+  border-radius: 0; /* Pour garder le même style que le lien */
+  min-width: auto;
 }
 
 .footer__doctolib:hover {
   background-color: var(--color-rose-dark);
   border-color: var(--color-rose-dark);
   color: var(--color-white);
+}
+
+/* Si vous voulez aussi adapter le lien téléphone en bouton */
+.footer__phone-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(249, 245, 239, 0.6);
+  font-family: var(--font-body);
+  padding: 0;
+  transition: color 0.2s ease;
+  text-align: left;
+}
+
+.footer__phone-btn:hover {
+  color: var(--color-rose-light);
 }
 
 /* Bottom */
@@ -146,5 +173,10 @@
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 1.25rem;
+  }
+
+  .footer__doctolib {
+    width: 100%;
+    justify-content: center;
   }
 }

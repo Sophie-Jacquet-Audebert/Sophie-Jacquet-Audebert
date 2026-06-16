@@ -1,13 +1,72 @@
 import { useState } from 'react'
-import './Contact.css'
 import { Link } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
+import AppointmentModal from '../components/Appointmentmodal'
+import './Contact.css'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false) // Ajout de l'état pour le modal
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [form, setForm] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    telephone: '',
+    motif: '',
+    source: '',
+    message: '',
+  })
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setError(null)
+    setLoading(true)
+
+    try {
+      // 1. Insère le message dans Supabase
+      const { data: inserted, error: insertError } = await supabase
+        .from('contacts')
+        .insert({
+          prenom: form.prenom,
+          nom: form.nom,
+          email: form.email,
+          telephone: form.telephone || null,
+          motif: form.motif,
+          source: form.source || null,
+          message: form.message,
+        })
+        .select()
+        .single()
+
+      if (insertError) throw insertError
+
+      // 2. Déclenche la notification email (best-effort : on n'échoue pas
+      //    l'envoi du formulaire si la notification échoue côté admin)
+      try {
+        await supabase.functions.invoke('send-notification', {
+          body: { type: 'contact', record: inserted },
+        })
+      } catch (notifyError) {
+        console.error('Notification email non envoyée :', notifyError)
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      console.error(err)
+      setError("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de me contacter par téléphone.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -24,7 +83,7 @@ export default function Contact() {
           </a>
         </div>
         <div className="topbar__right">
-          <a
+          <a 
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -36,7 +95,7 @@ export default function Contact() {
             </svg>
             Facebook
           </a>
-          <a
+          <a 
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -133,14 +192,17 @@ export default function Contact() {
               </div>
 
               <div className="contact-info__rdv">
-                <p className="contact-info__rdv-text">
+                {/* <p className="contact-info__rdv-text">
                   Pour une prise de rendez-vous rapide, 
                   utilisez Doctolib — disponible 24h/24.
+                </p> */}
+                <p className="contact-info__rdv-text">
+                  Pour une prise de rendez-vous rapide, 
+                  — disponible 24h/24.
                 </p>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* Bouton modifié pour ouvrir le modal */}
+                <button 
+                  onClick={() => setIsModalOpen(true)}
                   className="btn btn--primary"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -149,8 +211,8 @@ export default function Contact() {
                     <line x1="8" y1="2" x2="8" y2="6"/>
                     <line x1="3" y1="10" x2="21" y2="10"/>
                   </svg>
-                  Prendre RDV sur Doctolib
-                </a>
+                  Prendre RDV
+                </button>
               </div>
 
               <div className="contact-info__map">
@@ -175,29 +237,73 @@ export default function Contact() {
               ) : (
                 <form className="contact-form-full" onSubmit={handleSubmit}>
                   <h2 className="contact-form-full__title">Envoyer un message</h2>
+
+                  {error && (
+                    <p style={{ color: '#c1432f', fontSize: '0.85rem', marginBottom: '1rem' }}>
+                      {error}
+                    </p>
+                  )}
+
                   <div className="contact-form-full__row">
                     <div className="form-group">
                       <label className="form-label">Prénom *</label>
-                      <input type="text" className="form-input" placeholder="Marie" required />
+                      <input
+                        type="text"
+                        name="prenom"
+                        className="form-input"
+                        placeholder="Marie"
+                        value={form.prenom}
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div className="form-group">
                       <label className="form-label">Nom *</label>
-                      <input type="text" className="form-input" placeholder="Dupont" required />
+                      <input
+                        type="text"
+                        name="nom"
+                        className="form-input"
+                        placeholder="Dupont"
+                        value={form.nom}
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="contact-form-full__row">
                     <div className="form-group">
                       <label className="form-label">Email *</label>
-                      <input type="email" className="form-input" placeholder="marie.dupont@email.fr" required />
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-input"
+                        placeholder="marie.dupont@email.fr"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                      />
                     </div>
                     <div className="form-group">
                       <label className="form-label">Téléphone</label>
-                      <input type="tel" className="form-input" placeholder="06 00 00 00 00" />
+                      <input
+                        type="tel"
+                        name="telephone"
+                        className="form-input"
+                        placeholder="06 00 00 00 00"
+                        value={form.telephone}
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                   <div className="form-group">
                     <label className="form-label">Motif de contact *</label>
-                    <select className="form-select" required>
+                    <select
+                      name="motif"
+                      className="form-select"
+                      value={form.motif}
+                      onChange={handleChange}
+                      required
+                    >
                       <option value="">Sélectionner un motif</option>
                       <option>Première consultation</option>
                       <option>Suivi thérapeutique</option>
@@ -209,7 +315,12 @@ export default function Contact() {
                   </div>
                   <div className="form-group">
                     <label className="form-label">Comment avez-vous entendu parler de moi ?</label>
-                    <select className="form-select">
+                    <select
+                      name="source"
+                      className="form-select"
+                      value={form.source}
+                      onChange={handleChange}
+                    >
                       <option value="">Sélectionner</option>
                       <option>Bouche à oreille</option>
                       <option>Doctolib</option>
@@ -221,14 +332,22 @@ export default function Contact() {
                   <div className="form-group">
                     <label className="form-label">Message *</label>
                     <textarea
+                      name="message"
                       className="form-textarea"
                       placeholder="Décrivez brièvement votre démarche, vos questions ou ce qui vous amène..."
                       rows={6}
+                      value={form.message}
+                      onChange={handleChange}
                       required
                     ></textarea>
                   </div>
-                  <button type="submit" className="btn btn--primary" style={{width:'100%', justifyContent:'center'}}>
-                    Envoyer mon message
+                  <button
+                    type="submit"
+                    className="btn btn--primary"
+                    style={{ width: '100%', justifyContent: 'center' }}
+                    disabled={loading}
+                  >
+                    {loading ? 'Envoi en cours…' : 'Envoyer mon message'}
                   </button>
                   <p className="contact-form-full__privacy">
                     Vos informations restent strictement confidentielles et ne sont jamais transmises à des tiers. 
@@ -240,6 +359,12 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Ajout du modal */}
+      <AppointmentModal 
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   )
 }

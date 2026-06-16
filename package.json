@@ -1,15 +1,17 @@
 {
   "name": "webapp",
   "type": "module",
-   "scripts": {
+  "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
     "framer-motion": "^12.40.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.17.0"
+    "react-router-dom": "^7.17.0",
+    "recharts": "^3.8.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
