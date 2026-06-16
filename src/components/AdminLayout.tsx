@@ -4,11 +4,11 @@ import { useAuth } from '../context/AuthContext'
 import { supabase } from '../lib/supabase'
 
 const NAV_ITEMS = [
-  { to: '/', label: 'Résumé', icon: '◇', exact: true },
-  { to: '/articles', label: 'Articles', icon: '✎' },
-  { to: '/contacts', label: 'Contacts', icon: '✉' },
-  { to: '/rendez-vous', label: 'Rendez-vous', icon: '◷' },
-  { to: '/parametres', label: 'Paramètres', icon: '⚙' },
+  { to: '/admin/', label: 'Résumé', icon: '◇', exact: true },
+  { to: '/admin/articles', label: 'Articles', icon: '✎' },
+  { to: '/admin/contacts', label: 'Contacts', icon: '✉' },
+  { to: '/admin/rendez-vous', label: 'Rendez-vous', icon: '◷' },
+  { to: '/admin/parametres', label: 'Paramètres', icon: '⚙' },
 ]
 
 export default function AdminLayout() {
