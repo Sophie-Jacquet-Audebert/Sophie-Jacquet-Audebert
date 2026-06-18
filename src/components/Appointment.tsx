@@ -62,7 +62,7 @@ export default function Appointment() {
                 </div>
               </div>
               <a
-                href="#"
+                href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-doctolib w-full justify-center"
@@ -98,7 +98,7 @@ export default function Appointment() {
                 </div>
               </div>
               <a
-                href="#"
+                href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-doctolib w-full justify-center"

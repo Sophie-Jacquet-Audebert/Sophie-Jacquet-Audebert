@@ -129,7 +129,7 @@ export default function Testimonials() {
           {/* Doctolib reviews link */}
           <div className="text-center mt-12">
             <a
-              href="#"
+              href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-sans text-sm tracking-[0.15em] uppercase text-taupe-300 hover:text-cream transition-colors duration-200"

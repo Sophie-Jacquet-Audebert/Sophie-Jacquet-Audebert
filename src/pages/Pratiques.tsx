@@ -312,7 +312,7 @@ export default function Pratiques() {
             En cabinet à Paris 10ème ou à distance — je vous accueille selon vos besoins et disponibilités.
           </p>
           <FadeUpBtn 
-            href="#"
+            href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
             className="btn btn--primary"
             delay={0.2}
           >

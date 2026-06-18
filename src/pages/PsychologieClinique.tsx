@@ -68,7 +68,7 @@ export function PracticeSidebar() {
       <div className="practice-aside-card">
         <h4 className="practice-aside-card__title">Prendre rendez-vous</h4>
         <p>En cabinet à Paris 10ème ou à distance via Zoom, Skype ou FaceTime.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+        <a href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
           Réserver sur Doctolib
         </a>
       </div>

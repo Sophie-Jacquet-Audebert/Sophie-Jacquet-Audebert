@@ -146,7 +146,7 @@ export default function Contact() {
                   Réservez votre séance en ligne sur Doctolib, en quelques clics.
                 </p>
                 <a
-                  href="#"
+                  href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-doctolib w-full justify-center text-sm"
