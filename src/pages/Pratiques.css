@@ -285,6 +285,15 @@
   width: 60%;
 }
 
+/* Thin horizontal separator */
+.page__hero__line {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-rose-light);
+  opacity: 0.5;
+  margin-bottom: 2rem;
+}
+
 /* ===== PAGE TITLE BLOCK (ex page-hero, intégré au page-nav) ===== */
 .page-hero__label {
   display: inline-block;

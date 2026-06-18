@@ -235,6 +235,8 @@ export default function Pratiques() {
             ))}
           </nav>
 
+          <div className="page__hero__line" />
+
           {/* Page title block */}
           <div className="container">
             <span className="page-hero__label">Accompagnement</span>
