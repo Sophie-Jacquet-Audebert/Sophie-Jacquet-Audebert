@@ -69,7 +69,7 @@
 .hero__bg {
   position: absolute;
   inset: -15%;
-  background-image: url('/background.jpg');
+  background-image: url('/background.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
