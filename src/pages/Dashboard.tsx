@@ -169,7 +169,7 @@ export default function Dashboard() {
               ))}
             </div>
           )}
-          <Link to="/rendez-vous" className="btn btn--ghost btn--sm" style={{ marginTop: '0.5rem' }}>
+          <Link to="/admin/rendez-vous" className="btn btn--ghost btn--sm" style={{ marginTop: '0.5rem' }}>
             Voir tous les rendez-vous
           </Link>
         </div>
@@ -207,7 +207,7 @@ export default function Dashboard() {
             </tbody>
           </table>
         )}
-        <Link to="/contacts" className="btn btn--ghost btn--sm" style={{ marginTop: '1rem' }}>
+        <Link to="/admin/contacts" className="btn btn--ghost btn--sm" style={{ marginTop: '1rem' }}>
           Voir tous les messages
         </Link>
       </div>

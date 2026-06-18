@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-cream: #F8FCFC;
+  /* --color-cream: #F8FCFC;
   --color-cream-dark: #EAF5F6;
   --color-rose: #bc5e8a;
   --color-rose-light: #F7B7D3;
@@ -18,7 +18,7 @@
   --color-text-soft: #46545C;
   --color-text-muted: #748D96;
   --color-white: #FFFFFF;
-  --color-border: #D7E9EC;
+  --color-border: #D7E9EC; */
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Jost', system-ui, sans-serif;
