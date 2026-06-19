@@ -33,7 +33,7 @@
 
 .navbar__brand-name {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 400;
   color: var(--color-text);
   letter-spacing: 0.02em;
@@ -41,7 +41,7 @@
 
 .navbar__brand-title {
   font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 
 .navbar__link {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -91,9 +91,9 @@
 .navbar__cta {
   display: inline-flex;
   align-items: center;
-  padding: 0.6rem 1.4rem;
+  padding: 0.65rem 1.5rem;
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -170,12 +170,12 @@
   }
 
   .navbar__link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 0.15em;
   }
 
   .navbar__cta {
-    padding: 0.875rem 2rem;
-    font-size: 0.8rem;
+    padding: 0.9rem 2rem;
+    font-size: 0.88rem;
   }
 }

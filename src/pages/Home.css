@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.55rem 2rem;
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   letter-spacing: 0.04em;
   font-weight: 300;
   gap: 1rem;
@@ -71,12 +71,10 @@
   inset: -15%;
   background-image: url('/background.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-attachment: fixed;
   z-index: 0;
 }
-
-
 
 /* All centered content */
 .hero__inner {
@@ -95,11 +93,29 @@
 /* Logo */
 .hero__logo-wrap {
   margin-bottom: 1.25rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__logo-backdrop {
+  position: absolute;
+  inset: -12px -20px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  z-index: 0;
 }
 .hero__logo {
-  height: 56px;
+  height: 106px;
   width: auto;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+    filter:
+    drop-shadow(0 0 124px rgba(255, 255, 255, 0.866))
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.839));
+
 }
 
 /* Identity: name + role */
@@ -108,7 +124,7 @@
 }
 .hero__name-top {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -117,7 +133,7 @@
 }
 .hero__role {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -135,11 +151,11 @@
 }
 .hero__nav-link {
   font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.85rem;
+  font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-text-soft);
+  color: white;
   padding: 0.4rem 0.9rem;
   transition: color 0.2s;
   position: relative;
@@ -155,9 +171,7 @@
   background-color: var(--color-rose-dark);
   transition: width 0.25s ease;
 }
-.hero__nav-link:hover {
-  color: var(--color-text);
-}
+
 .hero__nav-link:hover::after {
   width: 60%;
 }
@@ -177,7 +191,7 @@
 }
 .hero__name-sub {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -189,17 +203,17 @@
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 6vw, 4.4rem);
   font-weight: 300;
-  color: var(--color-white);
+  color: var(--color-rose-dark);
   line-height: 1.15;
   margin-bottom: 1.5rem;
 }
 .hero__title em {
   font-style: italic;
-  color: var(--color-rose-light);
+  color: var(--color-rose-dark);
 }
 .hero__desc {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.85;
   color: rgba(255, 255, 255, 0.72);
@@ -226,7 +240,7 @@
   color: var(--color-rose-light);
 }
 .hero__scroll-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 400;
@@ -241,6 +255,41 @@
 }
 
 /* ===== ABOUT INTRO ===== */
+/* ===== ABOUT INTRO RIGHT ===== */
+.about-intro__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-intro__accent-number {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  line-height: 1;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-rose-light);
+}
+
+.about-intro__accent-number > .about-intro__accent-num {
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 8vw, 7rem);
+  font-weight: 400;
+  color: var(--color-rose-dark);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.about-intro__accent-number > span {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding-bottom: 0.9rem;
+  line-height: 1.6;
+}
 .about-intro__inner {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -310,7 +359,7 @@
 
 .about-intro__quote blockquote {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-style: italic;
   font-weight: 300;
   line-height: 1.6;
@@ -324,19 +373,19 @@
   margin-top: 1rem;
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--color-rose-dark);
 }
 
 .about-intro__content p {
   color: var(--color-text-soft);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.9;
 }
 
 .about-intro__title {
-  font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+  font-size: clamp(1.9rem, 3vw, 2.6rem) !important;
 }
 
 /* ===== PRACTICES ===== */
@@ -366,7 +415,7 @@
 }
 
 .practice-card--active {
-  background-color: var(--color-text);
+  background-color: #4AAEC4;
 }
 
 .practice-card--active .practice-card__icon,
@@ -405,7 +454,7 @@
 }
 
 .practice-card__label {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -416,7 +465,7 @@
 
 .practice-card__title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 400;
   color: var(--color-text);
   margin-bottom: 1rem;
@@ -424,7 +473,7 @@
 }
 
 .practice-card__desc {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 300;
   line-height: 1.8;
   color: var(--color-text-soft);
@@ -434,7 +483,7 @@
 }
 
 .practice-card__link {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.08em;
   color: var(--color-rose-dark);
@@ -487,7 +536,7 @@
 
 .rdv-card__title {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 400;
   margin: 0;
 }
@@ -497,7 +546,7 @@
 }
 
 .rdv-card__address {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 300;
   line-height: 1.7;
   color: rgba(249, 245, 239, 0.6);
@@ -508,7 +557,7 @@
 }
 
 .rdv-card__text {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.8;
   color: rgba(249, 245, 239, 0.7);
@@ -528,7 +577,7 @@
 
 .rdv-platforms span {
   padding: 0.3rem 0.75rem;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   border: 1px solid var(--color-border);
@@ -544,7 +593,7 @@
 .rdv-divider span {
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--color-text-muted);
   position: relative;
 }
@@ -573,7 +622,7 @@
 .testimonial-card__text {
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-soft);
   margin-bottom: 1.5rem;
@@ -589,13 +638,13 @@
 }
 
 .testimonial-card__author {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 400;
   color: var(--color-text);
 }
 
 .testimonial-card__detail {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 300;
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
@@ -651,14 +700,14 @@
 
 .podcast-item__title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--color-text);
   margin-bottom: 0.25rem;
 }
 
 .podcast-item__meta {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 300;
   color: var(--color-text-muted);
   letter-spacing: 0.08em;
@@ -687,7 +736,7 @@
 
 .contact-cta__title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 400;
   color: var(--color-text);
   margin-bottom: 1rem;
@@ -695,7 +744,7 @@
 }
 
 .contact-cta__text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.9;
   color: var(--color-text-soft);
@@ -708,7 +757,7 @@
 }
 
 .contact-form__privacy {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 300;
   color: var(--color-text-muted);
   text-align: center;
@@ -755,12 +804,12 @@
   }
 
   .section {
-  border-top-left-radius: 50% 8rem;
-  border-top-right-radius: 50% 8rem;
-  border-bottom-left-radius: 50% 8rem;
-  border-bottom-right-radius: 50% 8rem;
-  overflow: hidden;
-}
+    border-top-left-radius: 50% 8rem;
+    border-top-right-radius: 50% 8rem;
+    border-bottom-left-radius: 50% 8rem;
+    border-bottom-right-radius: 50% 8rem;
+    overflow: hidden;
+  }
 
   .about-intro__image-caption .divider--left {
     background-color: var(--color-rose-dark);

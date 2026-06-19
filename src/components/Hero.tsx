@@ -4,11 +4,20 @@ export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   const handleScrollDown = () => {
-    const heroEl = heroRef.current
-    if (!heroEl) return
-    const heroBottom = heroEl.offsetTop + heroEl.offsetHeight
-    window.scrollTo({ top: heroBottom - 80, behavior: 'smooth' })
+  const target = document.getElementById('rdv_section')
+
+  if (target) {
+    const y =
+      target.getBoundingClientRect().top +
+      window.pageYOffset -
+      80
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth'
+    })
   }
+}
 
   return (
     <>
@@ -98,14 +107,13 @@ export default function Hero() {
               <em>vous rencontrer</em>
             </h1>
             <p className="hero__desc">
-              Ma pratique s'est élaborée au fil de mon expérience — entièrement
-              constituée de thérapies longuement étudiées et expérimentées sur
-              moi-même.
+              "Deviens qui tu es"
+              — Nietzsche
             </p>
           </div>
 
           <button className="hero__scroll-btn" onClick={handleScrollDown} aria-label="Défiler vers le bas">
-            <span className="hero__scroll-label">Défiler</span>
+            <span className="hero__scroll-label">Prendre rdv </span>
             <span className="hero__scroll-arrow">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <line x1="12" y1="5" x2="12" y2="19" />

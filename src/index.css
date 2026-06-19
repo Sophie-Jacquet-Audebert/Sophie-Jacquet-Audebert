@@ -8,50 +8,18 @@
 }
 
 :root {
-  /* Cosmic Glow */
-  /* --color-cream: #F8FCFC;
-  --color-cream-dark: #EAF5F6;
-
-  --color-rose: #bc5e8a;
-  --color-rose-light: #F7B7D3;
-  --color-rose-dark: #9d3564;
-
-  --color-gold: #F4A825;
-  --color-gold-light: #FFD27A;
-
-  --color-text: #10252D;
-  --color-text-soft: #101112;
-  --color-text-muted: #748D96; */
-
-  /* cosmic */
-  /* --color-cream: #FFFDFC;
-  --color-cream-dark: #F7F3F2;
-
-  --color-rose: #D77FA6;
-  --color-rose-light: #F8D5E4;
-  --color-rose-dark: #B85B87;
-
-  --color-gold: #F5C76B;
-  --color-gold-light: #FFE6B3;
-
-  --color-text: #2B3A42;
-  --color-text-soft: #46545C;
-  --color-text-muted: #8FA1A8; */
-
   --color-white: #FFFFFF;
   --color-border: #D7E9EC;
-  /* Typographies */
+
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Jost', system-ui, sans-serif;
 
-  /* Espacements */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 6rem;
 
-  /* Layout */
   --max-width: 1200px;
   --nav-height: 80px;
 }
@@ -64,10 +32,8 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-cream);
   color: var(--color-text);
-  font-size: 17px;
-  /* ↑ was 16px */
+  font-size: 18px;
   line-height: 1.8;
-  /* ↑ was 1.7 */
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
@@ -122,8 +88,7 @@ img {
 .section__label {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  /* ↑ was 0.7rem */
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -133,16 +98,14 @@ img {
 
 .section__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4vw, 3.3rem);
-  /* ↑ was clamp(2rem, 4vw, 3rem) */
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
   font-weight: 400;
   color: var(--color-text);
   margin-bottom: 1rem;
 }
 
 .section__subtitle {
-  font-size: 1.1rem;
-  /* ↑ was 1rem */
+  font-size: 1.2rem;
   color: var(--color-text-soft);
   font-weight: 300;
   max-width: 600px;
@@ -155,10 +118,8 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.95rem 2.1rem;
-  /* ↑ was 0.875rem 2rem */
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  /* ↑ was 0.8rem */
+  font-size: 0.88rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -220,8 +181,7 @@ img {
 
 .page-hero__label {
   display: inline-block;
-  font-size: 0.8rem;
-  /* ↑ was 0.7rem */
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -231,16 +191,14 @@ img {
 
 .page-hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
-  /* ↑ was clamp(2.5rem, 5vw, 4rem) */
+  font-size: clamp(3rem, 5vw, 4.6rem);
   font-weight: 300;
   color: var(--color-text);
   margin-bottom: 1.5rem;
 }
 
 .page-hero__text {
-  font-size: 1.1rem;
-  /* ↑ was 1rem */
+  font-size: 1.2rem;
   color: var(--color-text-soft);
   max-width: 600px;
   margin: 0 auto;
@@ -265,8 +223,7 @@ img {
 
 .form-label {
   display: block;
-  font-size: 0.8rem;
-  /* ↑ was 0.75rem */
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -279,10 +236,8 @@ img {
 .form-select {
   width: 100%;
   padding: 0.95rem 1.1rem;
-  /* ↑ was 0.875rem 1rem */
   font-family: var(--font-body);
   font-size: 1rem;
-  /* ↑ was 0.95rem */
   font-weight: 300;
   color: var(--color-text);
   background-color: var(--color-cream);
@@ -350,6 +305,6 @@ img {
   }
 
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 }

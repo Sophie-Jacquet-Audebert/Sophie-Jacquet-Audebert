@@ -87,17 +87,17 @@ function RoundedSection({
       animate={
         inView
           ? {
-              borderTopLeftRadius: '50% 8rem',
-              borderTopRightRadius: '50% 8rem',
-              borderBottomLeftRadius: '50% 8rem',
-              borderBottomRightRadius: '50% 8rem',
-            }
+            borderTopLeftRadius: '50% 8rem',
+            borderTopRightRadius: '50% 8rem',
+            borderBottomLeftRadius: '50% 8rem',
+            borderBottomRightRadius: '50% 8rem',
+          }
           : {
-              borderTopLeftRadius: '0% 0rem',
-              borderTopRightRadius: '0% 0rem',
-              borderBottomLeftRadius: '0% 0rem',
-              borderBottomRightRadius: '0% 0rem',
-            }
+            borderTopLeftRadius: '0% 0rem',
+            borderTopRightRadius: '0% 0rem',
+            borderBottomLeftRadius: '0% 0rem',
+            borderBottomRightRadius: '0% 0rem',
+          }
       }
       transition={{ duration: 1.4, ease: EASE }}
     >
@@ -144,7 +144,7 @@ const practices = [
       </svg>
     ),
     label: 'Transgénérationnel',
-    title: 'Mémoire cellulaire',
+    title: 'Le corp et ses mémoires',
     desc: "Explorer l'histoire de l'individu dans sa généalogie — les mémoires invisibles qui traversent les générations et façonnent le présent."
   },
   {
@@ -254,8 +254,8 @@ export default function Home() {
             {/* Right — accent number + quote */}
             <div className="about-intro__right">
               <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
-                15
-                <span>ans de pratique</span>
+                <strong className="about-intro__accent-num">15</strong>
+                <span>ans de<br />pratique</span>
               </FadeUp>
               <FadeUp delay={0.4} duration={1.4} className="about-intro__quote">
                 <blockquote>
@@ -276,7 +276,7 @@ export default function Home() {
           <div className="section__header">
             <span className="section__label">Accompagnement</span>
             <FadeUp as="h2" className="section__title" duration={1.3}>
-              Mes pratiques
+              Mes outils
             </FadeUp>
             <div className="divider"></div>
             <p className="section__subtitle">
@@ -304,7 +304,7 @@ export default function Home() {
 
       {/* RDV SECTION */}
       <RoundedSection className="section rdv-section">
-        <div className="container">
+        <div id='rdv_section' className="container">
           <div className="rdv-grid">
             <div className="rdv-card rdv-card--cabinet">
               <div className="rdv-card__icon">
@@ -673,7 +673,7 @@ function ContactForm() {
       </button>
 
       <p className="contact-form__privacy">
-        Vos informations restent strictement confidentielles et ne sont jamais transmises à des tiers. 
+        Vos informations restent strictement confidentielles et ne sont jamais transmises à des tiers.
         Conformément au RGPD, vous disposez d'un droit d'accès et de suppression de vos données.
       </p>
     </form>

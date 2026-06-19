@@ -136,7 +136,7 @@ const practices = [
     slug: 'memoire-cellulaire',
     number: '03',
     label: 'Transgénérationnel',
-    title: 'Mémoire cellulaire',
+    title: 'Le corp et ses mémoires',
     short: "Explorer l'histoire de l'individu dans sa généalogie — les mémoires invisibles qui traversent les générations.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
     image: '/robina-weermeijer-IHfOpAzzjHM-unsplash.jpg',
