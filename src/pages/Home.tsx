@@ -255,7 +255,7 @@ export default function Home() {
             <div className="about-intro__right">
               <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
                 <strong className="about-intro__accent-num">15</strong>
-                <span>ans de<br />pratique</span>
+                <span>ans de pratique</span>
               </FadeUp>
               <FadeUp delay={0.4} duration={1.4} className="about-intro__quote">
                 <blockquote>
@@ -439,7 +439,7 @@ export default function Home() {
 function AboutTitle() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-70px' })
-  const lines = ['Une approche intégrative,', 'au service de l\u2019humain']
+  const lines = ['Une approche intégrative', 'au service de l\u2019humain']
   return (
     <h2 ref={ref} className="section__title about-intro__title">
       {lines.map((line, i) => (

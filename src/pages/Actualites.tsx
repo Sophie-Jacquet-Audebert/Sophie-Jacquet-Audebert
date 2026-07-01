@@ -1,51 +1,53 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
 import './Actualites.css'
 
-const workshops = [
-  {
-    id: 1,
-    category: 'Atelier',
-    title: 'Mémoire cellulaire & astrologie',
-    subtitle: 'Un week-end pour mettre en lumière vos besoins singuliers',
-    text: `Les humains partagent des besoins liés à la condition humaine, auxquels s'ajoutent des besoins plus singuliers, répondant à l'incarnation de chacun, à son tempérament, son histoire...
-
-Nous vous proposons, le temps d'un week-end, de mettre en lumière vos différents besoins — comme si nous vous invitions à la découverte de l'écosystème de votre propre jardin. Quels sont les besoins de ce jardin pour qu'il soit encore plus rayonnant ?`,
-    tags: ['Lumière', 'Conscience', 'Pluridisciplinarité'],
-    info: 'Paris 10ème · 210 €/pers · 400 €/couple',
-    status: 'Sur demande',
-    icon: '✦'
-  },
-  {
-    id: 2,
-    category: 'Rencontre mensuelle',
-    title: 'La soirée des parents',
-    subtitle: 'Autour de l\'enfant — à naître, découvrir, nourrir, éduquer',
-    text: `Une rencontre mensuelle autour de l'enfant à naître, à découvrir, à nourrir, à éduquer, à rencontrer. Chaque soirée aborde un nouveau thème.
-
-La transmission s'élabore de manière autant théorique que clinique, grâce à l'enseignement de l'équipe de professionnels, mais aussi à travers les précieux partages au sein du groupe.`,
-    tags: ['Exploration', 'Soutien', 'Parentalité active'],
-    info: 'Paris 10ème · 2ème mardi du mois · 19h30–22h · Oct–Juin',
-    status: 'Sur demande',
-    icon: '◇'
-  },
-  {
-    id: 3,
-    category: 'Conférence',
-    title: 'Petits outils de base pour êtres humains',
-    subtitle: 'Une pause de 2h pour cheminer plus léger',
-    text: `Cette rencontre de 2h vous propose de faire un petit tour au pays de vous-même, afin de cheminer plus léger dans la vie.
-
-Je partage quelques outils de vie, "facilitateurs de bien-être" que j'ai rencontrés, observés, compris — et qu'il me semble important de vous transmettre. J'essaie aussi de mettre en lumière les cachettes favorites des vieilleries encombrantes que nous traînons, nous autres les humains.
-
-Cette petite pause vous offre la possibilité de distinguer ce qui du passé peut être déposé, mais aussi ce dont vous pouvez vous saisir aujourd'hui.`,
-    tags: ['Connaissance', 'Discernement', 'Vivre conscient'],
-    info: 'Jusqu\'à 15 personnes · Organisable chez vous',
-    status: 'Sur demande',
-    icon: '○'
-  }
-]
+type Workshop = {
+  id: number
+  category: string
+  title: string
+  subtitle: string | null
+  text: string
+  tags: string[]
+  info: string | null
+  status: string
+  icon: string | null
+}
 
 export default function Actualites() {
+  const [workshops, setWorkshops] = useState<Workshop[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let isMounted = true
+
+    async function fetchWorkshops() {
+      const { data, error } = await supabase
+        .from('articles')
+        .select('id, category, title, subtitle, text, tags, info, status, icon')
+        .eq('published', true)
+        .order('sort_order', { ascending: true })
+
+      if (!isMounted) return
+
+      if (error) {
+        console.error('Erreur lors du chargement des articles :', error)
+        setError('Impossible de charger les ateliers pour le moment.')
+      } else {
+        setWorkshops(data ?? [])
+      }
+      setLoading(false)
+    }
+
+    fetchWorkshops()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   return (
     <div>
       {/* ===== TOP BAR ===== */}
@@ -144,34 +146,50 @@ export default function Actualites() {
             </p>
           </div>
 
-          <div className="workshops-list">
-            {workshops.map((w) => (
-              <div key={w.id} className="workshop-card">
-                <div className="workshop-card__header">
-                  <div className="workshop-card__icon">{w.icon}</div>
-                  <div className="workshop-card__meta">
-                    <span className="workshop-card__category">{w.category}</span>
-                    <span className="workshop-card__status">{w.status}</span>
+          {loading && (
+            <p className="actualites-status">Chargement des ateliers...</p>
+          )}
+
+          {!loading && error && (
+            <p className="actualites-status actualites-status--error">{error}</p>
+          )}
+
+          {!loading && !error && workshops.length === 0 && (
+            <p className="actualites-status">Aucun atelier n'est publié pour le moment.</p>
+          )}
+
+          {!loading && !error && workshops.length > 0 && (
+            <div className="workshops-list">
+              {workshops.map((w) => (
+                <div key={w.id} className="workshop-card">
+                  <div className="workshop-card__header">
+                    <div className="workshop-card__icon">{w.icon}</div>
+                    <div className="workshop-card__meta">
+                      <span className="workshop-card__category">{w.category}</span>
+                      <span className="workshop-card__status">{w.status}</span>
+                    </div>
+                  </div>
+                  <h2 className="workshop-card__title">{w.title}</h2>
+                  {w.subtitle && (
+                    <p className="workshop-card__subtitle">{w.subtitle}</p>
+                  )}
+                  <div className="divider divider--left"></div>
+                  <p className="workshop-card__text">{w.text}</p>
+                  <div className="workshop-card__tags">
+                    {(w.tags ?? []).map(t => (
+                      <span key={t} className="workshop-card__tag">{t}</span>
+                    ))}
+                  </div>
+                  <div className="workshop-card__footer">
+                    <span className="workshop-card__info">{w.info}</span>
+                    <Link to="/contact" className="btn btn--outline">
+                      Me contacter
+                    </Link>
                   </div>
                 </div>
-                <h2 className="workshop-card__title">{w.title}</h2>
-                <p className="workshop-card__subtitle">{w.subtitle}</p>
-                <div className="divider divider--left"></div>
-                <p className="workshop-card__text">{w.text}</p>
-                <div className="workshop-card__tags">
-                  {w.tags.map(t => (
-                    <span key={t} className="workshop-card__tag">{t}</span>
-                  ))}
-                </div>
-                <div className="workshop-card__footer">
-                  <span className="workshop-card__info">{w.info}</span>
-                  <Link to="/contact" className="btn btn--outline">
-                    Me contacter
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

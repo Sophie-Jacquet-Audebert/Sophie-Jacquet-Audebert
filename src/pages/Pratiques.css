@@ -206,11 +206,11 @@
 }
 
 .page-nav__logo-wrap {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.85rem;
 }
 
 .page-nav__logo {
-  height: 56px;
+  height: 190px;
   width: auto;
   margin: 0 auto;
 }
@@ -317,6 +317,10 @@
 @media (max-width: 768px) {
   .page-nav {
     padding: 1.5rem 0 3rem;
+  }
+
+  .page-nav__logo {
+    height: 140px;
   }
 
   .page-nav__links {

@@ -210,11 +210,11 @@
 }
 
 .page-nav__logo-wrap {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.85rem;
 }
 
 .page-nav__logo {
-  height: 56px;
+  height: 190px;
   width: auto;
   margin: 0 auto;
 }
@@ -254,7 +254,7 @@
 .page-nav__link {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-soft);
@@ -313,6 +313,10 @@
 @media (max-width: 768px) {
   .page-nav {
     padding: 1.5rem 0 3rem;
+  }
+
+  .page-nav__logo {
+    height: 140px;
   }
 
   .page-nav__links {

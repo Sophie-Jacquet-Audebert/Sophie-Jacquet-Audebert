@@ -298,14 +298,6 @@ hero__logo.parcours-grid {
   font-weight: 300;
 }
 
-.page__hero__line {
-  width: 48px;
-  height: 1px;
-  background-color: var(--color-rose-light);
-  opacity: 0.5;
-  margin-bottom: 2rem;
-}
-
 @media (max-width: 768px) {
   .page-nav {
     padding: 1.5rem 0 3rem;

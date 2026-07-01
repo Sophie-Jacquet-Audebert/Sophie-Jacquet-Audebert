@@ -10,7 +10,7 @@ export default function PsychologieClinique() {
           <h1 className="page-hero__title">Psychologie clinique</h1>
           <p className="page-hero__text">
             Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme 
-            et ses origines, exprimés par un individu unique.
+            et ses origines.
           </p>
         </div>
       </div>

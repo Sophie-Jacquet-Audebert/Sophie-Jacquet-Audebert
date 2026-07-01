@@ -70,8 +70,10 @@ export default function Hero() {
         <div className="hero__inner">
           {/* Logo */}
           <div className="hero__logo-wrap">
+            <div className="hero__logo-backdrop" />
             <img src="/logo.png" alt="Logo Sophie Jacquet-Audebert" className="hero__logo" />
           </div>
+
           {/* Identity */}
           <div className="hero__identity">
             <p className="hero__name-top">Sophie Jacquet-Audebert</p>
@@ -100,11 +102,10 @@ export default function Hero() {
           <div className="hero__line" />
 
           <div className="hero__title-block">
-            <p className="hero__name-sub">Sophie Jacquet-Audebert</p>
             <h1 className="hero__title">
               Un espace pour
               <br />
-              <em>vous rencontrer</em>
+              <em>vous retrouver</em>
             </h1>
             <p className="hero__desc">
               "Deviens qui tu es"
@@ -113,9 +114,9 @@ export default function Hero() {
           </div>
 
           <button className="hero__scroll-btn" onClick={handleScrollDown} aria-label="Défiler vers le bas">
-            <span className="hero__scroll-label">Prendre rdv </span>
+            <span className="hero__scroll-label">Prendre rdv</span>
             <span className="hero__scroll-arrow">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <polyline points="19 12 12 19 5 12" />
               </svg>

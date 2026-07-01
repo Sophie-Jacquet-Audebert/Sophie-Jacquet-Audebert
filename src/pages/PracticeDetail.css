@@ -13,18 +13,28 @@
 
 .practice-detail__lead {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-style: italic;
   font-weight: 300;
-  line-height: 1.7;
-  color: var(--color-text-soft);
+  line-height: 1.6;
+  color: #4AAEC4;
+  background-color: #E0348C;
+  border-radius: 1.5rem 1.5rem 1.5rem 0.25rem;
+  padding: 1.5rem 2rem 1.5rem 2.75rem;
+  position: relative;
+  margin: 0.5rem 0;
+  z-index: 1;
 }
-
-.practice-detail__content p {
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.9;
-  color: var(--color-text-soft);
+.practice-detail__lead::before {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-style: normal;
+  line-height: 0;
+  color: rgba(74, 174, 196, 0.6);
+  position: absolute;
+  top: 1.75rem;
+  left: 0.75rem;
 }
 
 .practice-detail__quote {
