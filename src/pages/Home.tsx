@@ -510,26 +510,28 @@ function ContactForm() {
 
     try {
       // 1. Insère le message dans Supabase
-      const { data: inserted, error: insertError } = await supabase
+      //    (pas de .select() : l'utilisateur anonyme n'a pas de droit SELECT
+      //    sur la table `contacts`, ce qui est le comportement souhaité)
+      const payload = {
+        prenom: form.prenom,
+        nom: form.nom,
+        email: form.email,
+        telephone: form.telephone || null,
+        motif: form.motif,
+        source: form.source || null, // Champ non obligatoire
+        message: form.message,
+      }
+
+      const { error: insertError } = await supabase
         .from('contacts')
-        .insert({
-          prenom: form.prenom,
-          nom: form.nom,
-          email: form.email,
-          telephone: form.telephone || null,
-          motif: form.motif,
-          source: form.source || null, // Champ non obligatoire
-          message: form.message,
-        })
-        .select()
-        .single()
+        .insert(payload)
 
       if (insertError) throw insertError
 
       // 2. Déclenche la notification email (best-effort)
       try {
         await supabase.functions.invoke('send-notification', {
-          body: { type: 'contact', record: inserted },
+          body: { type: 'contact', record: payload },
         })
       } catch (notifyError) {
         console.error('Notification email non envoyée :', notifyError)

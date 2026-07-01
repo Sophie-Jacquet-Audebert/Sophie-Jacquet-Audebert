@@ -92,26 +92,29 @@ export default function AppointmentModal({ open, onClose }: Props) {
     setLoading(true)
 
     try {
-      const { data: inserted, error: insertError } = await supabase
+      // Insère la demande de RDV dans Supabase
+      //  (pas de .select() : l'utilisateur anonyme n'a pas de droit SELECT
+      //  sur la table `appointments`, ce qui est le comportement souhaité)
+      const payload = {
+        date: form.date,
+        heure: form.heure,
+        motif: form.motif,
+        prenom: form.prenom,
+        nom: form.nom,
+        email: form.email,
+        telephone: form.telephone || null,
+        status: 'En attente',
+      }
+
+      const { error: insertError } = await supabase
         .from('appointments')
-        .insert({
-          date: form.date,
-          heure: form.heure,
-          motif: form.motif,
-          prenom: form.prenom,
-          nom: form.nom,
-          email: form.email,
-          telephone: form.telephone || null,
-          status: 'En attente',
-        })
-        .select()
-        .single()
+        .insert(payload)
 
       if (insertError) throw insertError
 
       try {
         await supabase.functions.invoke('send-notification', {
-          body: { type: 'appointment', record: inserted },
+          body: { type: 'appointment', record: payload },
         })
       } catch (notifyError) {
         console.error('Notification email non envoyée :', notifyError)
