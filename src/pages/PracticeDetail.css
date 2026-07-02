@@ -13,13 +13,13 @@
 
 .practice-detail__lead {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-style: italic;
   font-weight: 800;
   line-height: 1.6;
   letter-spacing: 0.08em;
-  color: #82d5f3;
-  background-color: #E0348C;
+  color: var(--color-text);
+  background-color: #fd007640;
   border-radius: 1.5rem 1.5rem 1.5rem 0.25rem;
   padding: 1.5rem 2rem 1.5rem 2.75rem;
   position: relative;
