@@ -89,7 +89,7 @@ export const PALETTES: Record<PaletteName, Record<string, string>> = {
     '--color-gold': '#E0B15A',
     '--color-gold-light': '#F5DEB3',
     '--color-text': '#25332A',
-    '--color-text-soft': '#556B5D',
-    '--color-text-muted': '#8B9B90',
+    '--color-text-soft': '#32373a',
+    '--color-text-muted': '#4b5458',
   },
 }

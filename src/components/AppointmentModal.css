@@ -28,7 +28,7 @@
 .appt-modal-card__header h2 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .appt-modal-card__close {

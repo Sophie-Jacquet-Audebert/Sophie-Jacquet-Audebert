@@ -11,7 +11,7 @@
   padding: 0.55rem 2rem;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  font-weight: 300;
+  font-weight: 500;
   gap: 1rem;
 }
 
@@ -135,7 +135,7 @@
 .hero__name-top {
   font-family: var(--font-body);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-rose-light);
@@ -144,7 +144,7 @@
 .hero__role {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
@@ -202,7 +202,7 @@
 .hero__title {
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 6vw, 4.4rem);
-  font-weight: 300;
+  font-weight: 500;
   color: #E0348C;
   line-height: 1.15;
   margin-bottom: 1.5rem;
@@ -217,7 +217,7 @@
   font-family: var(--font-heading);
   font-style: italic;
   font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.7;
   color: var(--color-rose-light);
   max-width: 560px;
@@ -284,36 +284,37 @@
 .about-intro__accent-number > .about-intro__accent-num {
   font-family: var(--font-heading);
   font-size: clamp(5rem, 8vw, 7rem);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-rose-dark);
   line-height: 1;
   letter-spacing: -0.03em;
   padding-bottom: 8rem;
 }
 .about-intro__accent-desc {
-   font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 1.35rem;
   text-transform: lowercase;
-  font-weight: 500;
+  font-style: italic;
   color: var(--color-text-soft);
+  font-family: var(--font-heading);  
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
 }
 .about-intro__accent-question {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.35rem;
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-rose-dark);
 }
 
 .about-intro__accent-number > span {
+  text-transform: uppercase;
   font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-text-soft);
   padding-bottom: 0.9rem;
   line-height: 1.6;
 }
@@ -388,7 +389,7 @@
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.6;
   color: var(--color-text-soft);
   position: relative;
@@ -407,7 +408,7 @@
 .about-intro__content p {
   color: var(--color-text-soft);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.9;
 }
 
@@ -482,7 +483,7 @@
 
 .practice-card__label {
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -493,7 +494,7 @@
 .practice-card__title {
   font-family: var(--font-heading);
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 1rem;
   transition: color 0.3s ease;
@@ -501,7 +502,7 @@
 
 .practice-card__desc {
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.8;
   color: var(--color-text-soft);
   flex: 1;
@@ -511,7 +512,7 @@
 
 .practice-card__link {
   font-size: 0.82rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--color-rose-dark);
   transition: color 0.3s ease;
@@ -564,7 +565,7 @@
 .rdv-card__title {
   font-family: var(--font-heading);
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -574,7 +575,7 @@
 
 .rdv-card__address {
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.7;
   color: rgba(249, 245, 239, 0.6);
 }
@@ -585,7 +586,7 @@
 
 .rdv-card__text {
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.8;
   color: rgba(249, 245, 239, 0.7);
   flex: 1;
@@ -605,7 +606,7 @@
 .rdv-platforms span {
   padding: 0.3rem 0.75rem;
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.1em;
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
@@ -666,13 +667,13 @@
 
 .testimonial-card__author {
   font-size: 0.92rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
 }
 
 .testimonial-card__detail {
   font-size: 0.82rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
 }
@@ -728,14 +729,14 @@
 .podcast-item__title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 0.25rem;
 }
 
 .podcast-item__meta {
   font-size: 0.82rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-muted);
   letter-spacing: 0.08em;
 }
@@ -764,7 +765,7 @@
 .contact-cta__title {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -772,7 +773,7 @@
 
 .contact-cta__text {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.9;
   color: var(--color-text-soft);
 }
@@ -785,7 +786,7 @@
 
 .contact-form__privacy {
   font-size: 0.82rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-muted);
   text-align: center;
   margin-top: 0.75rem;

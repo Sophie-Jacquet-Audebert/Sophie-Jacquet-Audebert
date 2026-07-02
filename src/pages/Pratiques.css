@@ -5,7 +5,7 @@
   color: var(--color-text-soft);
   font-size: 1.1rem;
   line-height: 1.9;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .pratiques-list {
@@ -74,7 +74,7 @@
   left: 2rem;
   font-family: var(--font-heading);
   font-size: 5rem;
-  font-weight: 300;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.25);
   line-height: 1;
   z-index: 1;
@@ -111,7 +111,7 @@
 .pratique-item__label {
   display: inline-block;
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -121,14 +121,14 @@
 .pratique-item__title {
   font-family: var(--font-heading);
   font-size: clamp(1.9rem, 2.5vw, 2.6rem);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .pratique-item__text {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.9;
   color: var(--color-text-soft);
   margin-top: 1rem;
@@ -145,7 +145,7 @@
 .pratique-item__tag {
   padding: 0.3rem 0.75rem;
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.08em;
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
@@ -222,7 +222,7 @@
 .page-nav__name-top {
   font-family: var(--font-body);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -232,7 +232,7 @@
 .page-nav__role {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -250,7 +250,7 @@
 .page-nav__link {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-soft);
@@ -291,7 +291,7 @@
 .page-hero__label {
   display: inline-block;
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -301,7 +301,7 @@
 .page-hero__title {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 5vw, 4.6rem);
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text);
   margin-bottom: 1.5rem;
 }
@@ -311,7 +311,7 @@
   color: var(--color-text-soft);
   max-width: 600px;
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

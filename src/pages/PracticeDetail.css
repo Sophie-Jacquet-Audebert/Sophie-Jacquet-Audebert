@@ -13,11 +13,12 @@
 
 .practice-detail__lead {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 800;
   line-height: 1.6;
-  color: #4AAEC4;
+  letter-spacing: 0.08em;
+  color: #82d5f3;
   background-color: #E0348C;
   border-radius: 1.5rem 1.5rem 1.5rem 0.25rem;
   padding: 1.5rem 2rem 1.5rem 2.75rem;
@@ -52,7 +53,7 @@
 .practice-detail__content h3 {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-top: 0.5rem;
 }
@@ -66,7 +67,7 @@
 
 .practice-detail__list li {
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-soft);
   padding-left: 1.25rem;
   position: relative;
@@ -100,13 +101,13 @@
 .practice-aside-card__title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-cream);
 }
 
 .practice-aside-card p {
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.7;
   color: rgba(249, 245, 239, 0.6);
 }
@@ -122,7 +123,7 @@
 .practice-aside-nav h4 {
   font-family: var(--font-body);
   font-size: 0.65rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -131,7 +132,7 @@
 
 .practice-aside-nav a {
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-soft);
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--color-border);

@@ -37,7 +37,7 @@ hero__logo.parcours-grid {
 .timeline-year {
   display: inline-block;
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -47,14 +47,14 @@ hero__logo.parcours-grid {
 .timeline-title {
   font-family: var(--font-heading);
   font-size: 1.45rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .timeline-text {
   font-size: 0.95rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.9;
   color: var(--color-text-soft);
 }
@@ -101,13 +101,13 @@ hero__logo.parcours-grid {
 .parcours-portrait__caption strong {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
 }
 
 .parcours-portrait__caption span {
   font-size: 0.88rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-soft);
 }
 
@@ -120,14 +120,14 @@ hero__logo.parcours-grid {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-cream);
   margin-bottom: 0.75rem;
 }
 
 .parcours-quote cite {
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 500;
   color: rgba(249, 245, 239, 0.5);
   font-style: normal;
 }
@@ -135,7 +135,7 @@ hero__logo.parcours-grid {
 .parcours-formations__title {
   font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -151,7 +151,7 @@ hero__logo.parcours-grid {
 
 .parcours-formations__list li {
   font-size: 0.92rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text-soft);
   padding-left: 1rem;
   position: relative;
@@ -214,7 +214,7 @@ hero__logo.parcours-grid {
 .page-nav__name-top {
   font-family: var(--font-body);
   font-size: 0.88rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -224,7 +224,7 @@ hero__logo.parcours-grid {
 .page-nav__role {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -242,7 +242,7 @@ hero__logo.parcours-grid {
 .page-nav__link {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-soft);
@@ -275,7 +275,7 @@ hero__logo.parcours-grid {
 .page-hero__label {
   display: inline-block;
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rose-dark);
@@ -285,7 +285,7 @@ hero__logo.parcours-grid {
 .page-hero__title {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 5vw, 4.6rem);
-  font-weight: 300;
+  font-weight: 500;
   color: var(--color-text);
   margin-bottom: 1.5rem;
 }
@@ -295,7 +295,7 @@ hero__logo.parcours-grid {
   color: var(--color-text-soft);
   max-width: 600px;
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,14 @@
 import { PracticeSidebar } from './PsychologieClinique'
 import './PracticeDetail.css'
+import { Link } from 'react-router-dom'
 
 export default function MemoireCellulaire() {
   return (
     <div>
       <div className="page-hero">
+         <Link to="/pratiques" className="btn btn--ghost bottom-page-hero__btn">
+          ← Toutes les pratiques
+        </Link>
         <div className="container">
           <span className="page-hero__label">Pratique · 03</span>
           <h1 className="page-hero__title">Mémoire cellulaire</h1>

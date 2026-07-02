@@ -6,6 +6,9 @@ export default function ArtTherapie() {
   return (
     <div>
       <div className="page-hero">
+         <Link to="/pratiques" className="btn btn--ghost bottom-page-hero__btn">
+          ← Toutes les pratiques
+        </Link>
         <div className="container">
           <span className="page-hero__label">Pratique · 02</span>
           <h1 className="page-hero__title">Art-thérapie</h1>

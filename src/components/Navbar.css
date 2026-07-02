@@ -34,7 +34,7 @@
 .navbar__brand-name {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--color-text);
   letter-spacing: 0.02em;
 }
@@ -42,7 +42,7 @@
 .navbar__brand-title {
   font-family: var(--font-body);
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-text-muted);
@@ -58,7 +58,7 @@
 .navbar__link {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-soft);
@@ -94,7 +94,7 @@
   padding: 0.65rem 1.5rem;
   font-family: var(--font-body);
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   background-color: var(--color-rose-dark);

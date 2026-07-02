@@ -5,11 +5,14 @@ export default function PsychologieClinique() {
   return (
     <div>
       <div className="page-hero">
+        <Link to="/pratiques" className="btn btn--ghost bottom-page-hero__btn">
+          ← Toutes les pratiques
+        </Link>
         <div className="container">
           <span className="page-hero__label">Pratique · 01</span>
           <h1 className="page-hero__title">Psychologie clinique</h1>
           <p className="page-hero__text">
-            Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme 
+            Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme
             et ses origines.
           </p>
         </div>
@@ -20,28 +23,28 @@ export default function PsychologieClinique() {
           <div className="practice-detail-grid">
             <article className="practice-detail__content">
               <p className="practice-detail__lead">
-                Le terme clinique trouve ses origines dans le vocabulaire médical. 
+                Le terme clinique trouve ses origines dans le vocabulaire médical.
                 Il signifie "qui s'observe au chevet du patient alité" (de cliné, le lit en grec).
               </p>
               <p>
-                La psychologie clinique s'appuie sur l'observation directe du patient par 
-                l'analyse approfondie de son comportement dans différentes situations. C'est à dire 
-                que le psychologue clinicien s'attache à ce qui fait signe chez le sujet, et ce peut 
+                La psychologie clinique s'appuie sur l'observation directe du patient par
+                l'analyse approfondie de son comportement dans différentes situations. C'est à dire
+                que le psychologue clinicien s'attache à ce qui fait signe chez le sujet, et ce peut
                 être une infinie possibilité de manifestations.
               </p>
               <p>
-                Mes études universitaires et mon travail personnel partent d'une solide base analytique. 
-                Peu à peu ma pratique s'est enrichie des différents éléments cliniques rencontrés au fil 
+                Mes études universitaires et mon travail personnel partent d'une solide base analytique.
+                Peu à peu ma pratique s'est enrichie des différents éléments cliniques rencontrés au fil
                 de mes observations et aussi grâce aux diverses thérapies dont j'ai bénéficié.
               </p>
               <p>
-                Que ces pépites viennent éclairer, compléter, confirmer ou même infirmer mes hypothèses 
-                personnelles, toujours elles renouvellent mon intérêt profond et entier pour ces différents 
+                Que ces pépites viennent éclairer, compléter, confirmer ou même infirmer mes hypothèses
+                personnelles, toujours elles renouvellent mon intérêt profond et entier pour ces différents
                 sujets profondément liés à l'humain et à la condition humaine, au sens tout à fait premier du terme.
               </p>
               <blockquote className="practice-detail__quote">
-                La spécificité de mon approche clinique est d'inclure dans ma "lecture" du sujet 
-                la réalité historique de ses origines, autant personnelles que générationnelles, 
+                La spécificité de mon approche clinique est d'inclure dans ma "lecture" du sujet
+                la réalité historique de ses origines, autant personnelles que générationnelles,
                 les événements cycliques familiaux et individuels et bien sûr, les maux de son corps.
               </blockquote>
               <h3>Approches intégrées</h3>
