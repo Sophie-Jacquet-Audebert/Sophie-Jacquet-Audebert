@@ -255,7 +255,13 @@ export default function Home() {
             <div className="about-intro__right">
               <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
                 <strong className="about-intro__accent-num">15</strong>
-                <span>ans de pratique</span>
+                <span>ans de pratique, <span className="about-intro__accent-desc">
+                  une seule intention :
+                  Aider l’autre à trouver ou re-trouver l’équilibre, à prendre sa place, à naître à lui même </span>
+                  <p className="about-intro__accent-question"><br />
+                    Deviens celui que tu es ? Qui tu es ?
+                  </p>
+                </span>
               </FadeUp>
               <FadeUp delay={0.4} duration={1.4} className="about-intro__quote">
                 <blockquote>

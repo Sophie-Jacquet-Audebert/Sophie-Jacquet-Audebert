@@ -288,6 +288,23 @@
   color: var(--color-rose-dark);
   line-height: 1;
   letter-spacing: -0.03em;
+  padding-bottom: 8rem;
+}
+.about-intro__accent-desc {
+   font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.35rem;
+  text-transform: lowercase;
+  font-weight: 500;
+  color: var(--color-text-soft);
+}
+.about-intro__accent-question {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.35rem;
+  text-transform: lowercase;
+  font-weight: 500;
+  color: var(--color-rose-dark);
 }
 
 .about-intro__accent-number > span {

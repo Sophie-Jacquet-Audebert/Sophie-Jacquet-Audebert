@@ -19,6 +19,16 @@
   --color-text-muted: #748D96;
   --color-white: #FFFFFF;
   --color-border: #D7E9EC; */
+  --color-cream: #FFFDFC;
+    --color-cream-dark: #F7F3F2;
+    --color-rose: #D77FA6;
+    --color-rose-light: #F8D5E4;
+    --color-rose-dark: #fd0076;
+    --color-gold: #F5C76B;
+    --color-gold-light: #FFE6B3;
+    --color-text: #2B3A42;
+    --color-text-soft: #46545C;
+    --color-text-muted: #8FA1A8;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Jost', system-ui, sans-serif;
