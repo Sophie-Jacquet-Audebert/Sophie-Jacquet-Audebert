@@ -259,7 +259,7 @@ export default function Home() {
                   une seule intention :
                   Aider l’autre à trouver ou re-trouver l’équilibre, à prendre sa place, à naître à lui même </span>
                   <p className="about-intro__accent-question"><br />
-                    Deviens celui que tu es ? Qui tu es ?
+                    Deviens ce que tu es
                   </p>
                 </span>
               </FadeUp>

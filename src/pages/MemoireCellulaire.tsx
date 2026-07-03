@@ -6,14 +6,14 @@ export default function MemoireCellulaire() {
   return (
     <div>
       <div className="page-hero">
-         <Link to="/pratiques" className="btn btn--ghost bottom-page-hero__btn">
+        <Link to="/pratiques" className="btn btn--ghost bottom-page-hero__btn">
           ← Toutes les pratiques
         </Link>
         <div className="container">
           <span className="page-hero__label">Pratique · 03</span>
           <h1 className="page-hero__title">Mémoire cellulaire</h1>
           <p className="page-hero__text">
-            Cette pratique vient explorer l'histoire de l'individu en le replaçant dans 
+            Cette pratique vient explorer l'histoire de l'individu en le replaçant dans
             sa généalogie et les mémoires qui y sont liées.
           </p>
         </div>
@@ -24,26 +24,52 @@ export default function MemoireCellulaire() {
           <div className="practice-detail-grid">
             <article className="practice-detail__content">
               <p className="practice-detail__lead">
-                La mémoire cellulaire est la discipline qui a été la révélation majeure 
-                dans la pratique de Sophie Jacquet-Audebert — un outil qui fait le lien 
+                La mémoire cellulaire est la discipline qui a été la révélation majeure
+                dans la pratique de Sophie Jacquet-Audebert — un outil qui fait le lien
                 entre tous les autres registres qu'elle manie.
               </p>
               <p>
-                Quand la Mémoire Cellulaire est entrée dans sa vie, la rencontre a été 
-                aussi bouleversante que naturelle. Elle a su rapidement que cette discipline 
-                allait devenir pour elle un outil incontournable.
+                Parler de mémoire cellulaire, c'est parler de la mémoire de notre corps,
+                celle contenue dans nos cellules, notre matière.
               </p>
               <p>
-                Cette pratique explore l'histoire de l'individu en le replaçant dans sa 
-                généalogie — les mémoires invisibles transmises de génération en génération, 
-                les événements fondateurs qui ont façonné les schémas répétitifs, les blocages 
-                et les ressources d'une lignée.
+                Le corps, par l'intermédiaire de ses cellules, peut être considéré comme
+                détenteur d'archives personnelles et familiales. Le corps est porteur
+                d'histoires. Celle du patient bien sûr, mais également celle de ses
+                parents, de ses grands-parents, et même de ses arrière-grands-parents.
+              </p>
+              <p>
+                Nous sommes nombreux à comprendre notre problème, et malheureusement,
+                tout aussi nombreux à continuer à exprimer le symptôme issu du problème,
+                malgré notre compréhension donc, et de plus (le pire ?), souvent après
+                des années de travail intense auprès d'un psychologue ou d'un thérapeute
+                tout à fait investi. Et oui, l'esprit a compris (ce qui est déjà fort
+                utile), mais la matière est lourde et continue de renfermer en son sein
+                une mémoire enkystée, et bien souvent ignorée.
+              </p>
+              <p>
+                Travailler en mémoire cellulaire, c'est considérer cet aspect de la
+                problématique humaine, celle encapsulée tout au fond de nous. En dessiner
+                les contours petit à petit, pour ainsi, au fil du temps, s'en débarrasser.
               </p>
               <blockquote className="practice-detail__quote">
-                "Une force silencieuse mais puissante circule au creux des systèmes familiaux. 
-                La mémoire cellulaire permet de la rencontrer, de la comprendre, 
-                et de la transformer."
+                "Je suis très reconnaissante à la mémoire cellulaire dans mon parcours,
+                elle a permis ma délivrance. Après 10 ans de psychanalyse, il était
+                évident que des symptômes s'accrochaient, persistaient. Aller travailler
+                dans le corps fut ma chance, mon issue."
               </blockquote>
+              <p>
+                Je ne renie pas la psychanalyse, bien au contraire, car je ne pense pas
+                que le travail en mémoire cellulaire aurait à lui seul suffi à mon
+                soulagement (comme toutes les thérapies non ?), en revanche, l'axe de
+                travail mémoire cellulaire permet un nettoyage dans la matière que peu
+                de thérapies proposent. C'est, jusqu'à présent, mon observation.
+              </p>
+              <p>
+                Le film suisse : lien via email
+                <br />
+                Trauma sur 4 générations présent dans l'adn
+              </p>
               <h3>Ce que la mémoire cellulaire peut traiter</h3>
               <ul className="practice-detail__list">
                 <li>Schémas répétitifs inexpliqués</li>
