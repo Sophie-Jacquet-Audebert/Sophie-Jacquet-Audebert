@@ -65,11 +65,20 @@ export default function MemoireCellulaire() {
                 travail mémoire cellulaire permet un nettoyage dans la matière que peu
                 de thérapies proposent. C'est, jusqu'à présent, mon observation.
               </p>
-              <p>
-                Le film suisse : lien via email
-                <br />
-                Trauma sur 4 générations présent dans l'adn
-              </p>
+              <figure className="practice-detail__video">
+                <div className="practice-detail__video-frame">
+                  <iframe
+                    src="https://www.rts.ch/play/embed?urn=urn:rts:video:3745896"
+                    title="Film suisse — Trauma sur 4 générations présent dans l'ADN"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  Film suisse — Trauma sur 4 générations présent dans l'ADN
+                </figcaption>
+              </figure>
               <h3>Ce que la mémoire cellulaire peut traiter</h3>
               <ul className="practice-detail__list">
                 <li>Schémas répétitifs inexpliqués</li>
