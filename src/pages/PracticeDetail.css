@@ -38,6 +38,36 @@
   left: 0.75rem;
 }
 
+.practice-detail__video {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.practice-detail__video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: var(--color-cream-dark);
+}
+
+.practice-detail__video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.practice-detail__video figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
 .practice-detail__quote {
   border-left: 2px solid var(--color-rose-dark);
   padding: 1.25rem 1.5rem;

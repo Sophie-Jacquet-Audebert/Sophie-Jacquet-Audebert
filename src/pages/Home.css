@@ -239,7 +239,7 @@
   padding: 1.1rem 2.25rem;
   font-family: var(--font-body);
   border-radius: 999px;
-  box-shadow: 0 8px 30px rgba(224, 52, 140, 0.45);
+  box-shadow: 0 4px 14px rgba(224, 52, 140, 0.2);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 .hero__scroll-btn:hover {
@@ -247,7 +247,7 @@
   border-color: #c92d7c;
   color: var(--color-white, #fff);
   transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(224, 52, 140, 0.55);
+  box-shadow: 0 6px 18px rgba(224, 52, 140, 0.28);
 }
 .hero__scroll-label {
   font-size: 0.95rem;
