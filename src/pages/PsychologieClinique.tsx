@@ -12,7 +12,7 @@ export default function PsychologieClinique() {
           <span className="page-hero__label">Pratique · 01</span>
           <h1 className="page-hero__title">Psychologie clinique</h1>
           <p className="page-hero__text">
-            Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme
+            Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme
             et ses origines.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function PsychologieClinique() {
                 <li>Communication Profonde Accompagnée (CPA)</li>
               </ul>
             </article>
-            <PracticeSidebar />
+            <PracticeSidebar current="psychologie-clinique" />
           </div>
         </div>
       </section>
@@ -65,21 +65,30 @@ export default function PsychologieClinique() {
   )
 }
 
-export function PracticeSidebar() {
+// Liste de référence des pratiques, dans l'ordre d'affichage du site
+export const PRACTICES = [
+  { slug: 'psychologie-clinique', label: 'Psychologie clinique' },
+  { slug: 'memoire-cellulaire', label: 'Mémoire cellulaire' },
+  { slug: 'art-therapie', label: 'Art-thérapie' },
+]
+
+export function PracticeSidebar({ current }: { current: string }) {
+  const others = PRACTICES.filter(p => p.slug !== current)
+
   return (
     <aside className="practice-detail__aside">
       <div className="practice-aside-card">
         <h4 className="practice-aside-card__title">Prendre rendez-vous</h4>
-        <p>En cabinet à Paris 10ème ou à distance via Zoom, Skype ou FaceTime.</p>
+        <p>En cabinet à Paris 10ème ou à distance via Zoom ou FaceTime.</p>
         <a href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
           Réserver sur Doctolib
         </a>
       </div>
       <div className="practice-aside-nav">
         <h4>Autres pratiques</h4>
-        <Link to="/pratiques/art-therapie">Art-thérapie</Link>
-        <Link to="/pratiques/memoire-cellulaire">Mémoire cellulaire</Link>
-        <Link to="/pratiques/bio-resonance">Bio-résonance cellulaire</Link>
+        {others.map(p => (
+          <Link key={p.slug} to={`/pratiques/${p.slug}`}>{p.label}</Link>
+        ))}
       </div>
       <Link to="/pratiques" className="btn btn--ghost">
         ← Toutes les pratiques

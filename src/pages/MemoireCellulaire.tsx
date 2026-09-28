@@ -10,7 +10,7 @@ export default function MemoireCellulaire() {
           ← Toutes les pratiques
         </Link>
         <div className="container">
-          <span className="page-hero__label">Pratique · 03</span>
+          <span className="page-hero__label">Pratique · 02</span>
           <h1 className="page-hero__title">Mémoire cellulaire</h1>
           <p className="page-hero__text">
             Cette pratique vient explorer l'histoire de l'individu en le replaçant dans
@@ -25,7 +25,7 @@ export default function MemoireCellulaire() {
             <article className="practice-detail__content">
               <p className="practice-detail__lead">
                 La mémoire cellulaire est la discipline qui a été la révélation majeure
-                dans la pratique de Sophie Jacquet-Audebert — un outil qui fait le lien
+                dans la pratique de Sophie Jacquet-Audebert : un outil qui fait le lien
                 entre tous les autres registres qu'elle manie.
               </p>
               <p>
@@ -69,14 +69,14 @@ export default function MemoireCellulaire() {
                 <div className="practice-detail__video-frame">
                   <iframe
                     src="https://www.rts.ch/play/embed?urn=urn:rts:video:3745896"
-                    title="Film suisse — Trauma sur 4 générations présent dans l'ADN"
+                    title="Film suisse : trauma sur 4 générations présent dans l'ADN"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     loading="lazy"
                   />
                 </div>
                 <figcaption>
-                  Film suisse — Trauma sur 4 générations présent dans l'ADN
+                  Film suisse : trauma sur 4 générations présent dans l'ADN
                 </figcaption>
               </figure>
               <h3>Ce que la mémoire cellulaire peut traiter</h3>
@@ -89,7 +89,7 @@ export default function MemoireCellulaire() {
                 <li>Libération de mémoires héritées</li>
               </ul>
             </article>
-            <PracticeSidebar />
+            <PracticeSidebar current="memoire-cellulaire" />
           </div>
         </div>
       </section>

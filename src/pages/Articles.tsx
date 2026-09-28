@@ -12,6 +12,7 @@ const EMPTY_ARTICLE: ArticleInput = {
   info: '',
   status: 'Sur demande',
   icon: '◇',
+  image_url: '',
   published: true,
   sort_order: 0,
 }
@@ -63,6 +64,7 @@ export default function Articles() {
       info: article.info ?? '',
       status: article.status,
       icon: article.icon,
+      image_url: article.image_url ?? '',
       published: article.published,
       sort_order: article.sort_order,
     })
@@ -315,7 +317,7 @@ export default function Articles() {
                     className="form-input"
                     value={form.info ?? ''}
                     onChange={(e) => setForm({ ...form, info: e.target.value })}
-                    placeholder="Paris 10ème · 2ème mardi du mois · 19h30–22h"
+                    placeholder="Paris 10ème · 2ème mardi du mois · 19h30 à 22h"
                   />
                 </div>
                 <div className="form-group">
@@ -327,10 +329,31 @@ export default function Articles() {
                   >
                     <option>Sur demande</option>
                     <option>Places disponibles</option>
+                    <option>Inscriptions ouvertes</option>
                     <option>Complet</option>
                     <option>Suspendu</option>
                   </select>
                 </div>
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Visuel (affiche, flyer)</label>
+                <input
+                  className="form-input"
+                  value={form.image_url ?? ''}
+                  onChange={(e) => setForm({ ...form, image_url: e.target.value })}
+                  placeholder="/immersion-prendre-sa-place.jpg"
+                />
+                <p className="form-hint">
+                  Chemin d'une image du dossier <code>public/</code> ou adresse complète. Laisser vide pour un article sans visuel.
+                </p>
+                {form.image_url ? (
+                  <img
+                    src={form.image_url}
+                    alt="Aperçu du visuel"
+                    style={{ marginTop: '0.75rem', maxHeight: '160px', borderRadius: '0.5rem' }}
+                  />
+                ) : null}
               </div>
 
               <div className="form-row">

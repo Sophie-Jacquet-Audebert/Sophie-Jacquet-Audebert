@@ -14,7 +14,6 @@ import Contact from './pages/Contact'
 import PsychologieClinique from './pages/PsychologieClinique'
 import ArtTherapie from './pages/ArtTherapie'
 import MemoireCellulaire from './pages/MemoireCellulaire'
-import BioResonance from './pages/BioResonance'
 
 // Admin imports
 import AdminLayout from './components/AdminLayout'
@@ -39,7 +38,6 @@ export default function App() {
                 <Route path="pratiques/psychologie-clinique" element={<PsychologieClinique />} />
                 <Route path="pratiques/art-therapie" element={<ArtTherapie />} />
                 <Route path="pratiques/memoire-cellulaire" element={<MemoireCellulaire />} />
-                <Route path="pratiques/bio-resonance" element={<BioResonance />} />
                 <Route path="parcours" element={<Parcours />} />
                 <Route path="actualites" element={<Actualites />} />
                 <Route path="contact" element={<Contact />} />

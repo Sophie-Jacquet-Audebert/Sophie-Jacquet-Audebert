@@ -78,12 +78,12 @@ export default function Contact() {
       {/* ===== TOP BAR ===== */}
       <div className="topbar">
         <div className="topbar__left">
-          <span>189, rue du Faubourg Saint Denis — 75010 Paris</span>
+          <span>189, rue du Faubourg Saint Denis, 75010 Paris</span>
           <span className="topbar__sep">·</span>
           <a href="tel:0664997050">06 64 99 70 50</a>
           <span className="topbar__sep">·</span>
-          <a href="mailto:sophie.jacquetaudebert@gmail.com">
-            sophie.jacquetaudebert@gmail.com
+          <a href="mailto:sophiejacquetaudebert@gmail.com">
+            sophiejacquetaudebert@gmail.com
           </a>
         </div>
         <div className="topbar__right">
@@ -190,19 +190,13 @@ export default function Contact() {
                 <span className="contact-info__label">Consultations à distance</span>
                 <div className="contact-info__platforms">
                   <span>Zoom</span>
-                  <span>Skype</span>
                   <span>FaceTime</span>
                 </div>
               </div>
 
               <div className="contact-info__rdv">
-                {/* <p className="contact-info__rdv-text">
-                  Pour une prise de rendez-vous rapide, 
-                  utilisez Doctolib — disponible 24h/24.
-                </p> */}
                 <p className="contact-info__rdv-text">
-                  Pour une prise de rendez-vous rapide, 
-                  — disponible 24h/24.
+                  Prise de rendez-vous en ligne, disponible 24h/24.
                 </p>
                 {/* Bouton modifié pour ouvrir le modal */}
                 <button 

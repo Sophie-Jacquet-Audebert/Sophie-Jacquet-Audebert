@@ -24,6 +24,44 @@
   box-shadow: 0 4px 30px rgba(44, 36, 32, 0.06);
 }
 
+/* Carte avec visuel : affiche a gauche, contenu a droite */
+.workshop-card--illustrated {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.workshop-card__visual {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: var(--color-cream-dark);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.workshop-card__visual:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 34px rgba(44, 36, 32, 0.16);
+}
+
+.workshop-card__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .workshop-card--illustrated {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .workshop-card__visual {
+    max-width: 320px;
+  }
+}
+
 .workshop-card__header {
   display: flex;
   align-items: center;

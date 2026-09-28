@@ -104,11 +104,12 @@
 }
 
 .practice-detail__list li::before {
-  content: '—';
+  content: '·';
   position: absolute;
   left: 0;
   color: var(--color-rose-dark);
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  line-height: 1.1;
 }
 
 /* Aside */
