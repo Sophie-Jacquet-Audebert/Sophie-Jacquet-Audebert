@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="footer__brand">
             <h3 className="footer__brand-name">Sophie Jacquet-Audebert</h3>
             <p className="footer__brand-subtitle">Psychologue clinicienne</p>
-            <p className="footer__brand-quote">« Deviens qui tu es »<br /><em>— Nietzsche</em></p>
+            <p className="footer__brand-quote">«&nbsp;Deviens ce que tu es&nbsp;»<br /><em>Nietzsche</em></p>
           </div>
 
           <div className="footer__nav">
@@ -34,9 +34,8 @@ export default function Footer() {
             <h4 className="footer__nav-title">Pratiques</h4>
             <ul className="footer__nav-list">
               <li><Link to="/pratiques/psychologie-clinique">Psychologie clinique</Link></li>
-              <li><Link to="/pratiques/art-therapie">Art-thérapie</Link></li>
               <li><Link to="/pratiques/memoire-cellulaire">Mémoire cellulaire</Link></li>
-              <li><Link to="/pratiques/bio-resonance">Bio-résonance cellulaire</Link></li>
+              <li><Link to="/pratiques/art-therapie">Art-thérapie</Link></li>
             </ul>
           </div>
 
@@ -65,10 +64,10 @@ export default function Footer() {
 
         <div className="footer__bottom container">
           <p className="footer__legal">
-            © {new Date().getFullYear()} Sophie Jacquet-Audebert — Psychologue clinicienne — Paris 10ème
+            © {new Date().getFullYear()} Sophie Jacquet-Audebert · Psychologue clinicienne · Paris 10ème
           </p>
           <p className="footer__legal footer__legal--right">
-            Consultation en cabinet et à distance (Zoom, Skype, FaceTime)
+            Consultation en cabinet et à distance (Zoom, FaceTime)
           </p>
         </div>
       </footer>

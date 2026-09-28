@@ -126,7 +126,7 @@ export default function Approach() {
               </div>
               <h3 className="font-display text-2xl font-light text-charcoal mb-3">Consultations à distance</h3>
               <p className="font-sans text-sm text-taupe-500 font-light leading-relaxed">
-                Via Skype, Zoom, FaceTime ou WhatsApp.<br />
+                Via Zoom, FaceTime ou WhatsApp.<br />
                 Accessible depuis toute la France et l'étranger.
               </p>
             </div>

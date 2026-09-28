@@ -13,6 +13,7 @@ type Workshop = {
   info: string | null
   status: string
   icon: string | null
+  image_url: string | null
 }
 
 export default function Actualites() {
@@ -26,7 +27,7 @@ export default function Actualites() {
     async function fetchWorkshops() {
       const { data, error } = await supabase
         .from('articles')
-        .select('id, category, title, subtitle, text, tags, info, status, icon')
+        .select('id, category, title, subtitle, text, tags, info, status, icon, image_url')
         .eq('published', true)
         .order('sort_order', { ascending: true })
 
@@ -53,12 +54,12 @@ export default function Actualites() {
       {/* ===== TOP BAR ===== */}
       <div className="topbar">
         <div className="topbar__left">
-          <span>189, rue du Faubourg Saint Denis — 75010 Paris</span>
+          <span>189, rue du Faubourg Saint Denis, 75010 Paris</span>
           <span className="topbar__sep">·</span>
           <a href="tel:0664997050">06 64 99 70 50</a>
           <span className="topbar__sep">·</span>
-          <a href="mailto:sophie.jacquetaudebert@gmail.com">
-            sophie.jacquetaudebert@gmail.com
+          <a href="mailto:sophiejacquetaudebert@gmail.com">
+            sophiejacquetaudebert@gmail.com
           </a>
         </div>
         <div className="topbar__right">
@@ -129,7 +130,7 @@ export default function Actualites() {
             <span className="page-hero__label">Ateliers & conférences</span>
             <h1 className="page-hero__title">Actualités</h1>
             <p className="page-hero__text">
-             Des transmissions pour explorer, comprendre et grandir ensemble — 
+             Des transmissions pour explorer, comprendre et grandir ensemble,
             en groupe ou chez vous, sur demande.
             </p>
           </div>
@@ -141,7 +142,7 @@ export default function Actualites() {
           <div className="actualites-intro">
             <p>
               Ces ateliers et conférences peuvent avoir lieu chez vous. 
-              Il vous suffit pour cela de me contacter — je me déplace pour animer 
+              Il vous suffit pour cela de me contacter : je me déplace pour animer
               ces rencontres dans un cadre intime et bienveillant.
             </p>
           </div>
@@ -161,30 +162,42 @@ export default function Actualites() {
           {!loading && !error && workshops.length > 0 && (
             <div className="workshops-list">
               {workshops.map((w) => (
-                <div key={w.id} className="workshop-card">
-                  <div className="workshop-card__header">
-                    <div className="workshop-card__icon">{w.icon}</div>
-                    <div className="workshop-card__meta">
-                      <span className="workshop-card__category">{w.category}</span>
-                      <span className="workshop-card__status">{w.status}</span>
-                    </div>
-                  </div>
-                  <h2 className="workshop-card__title">{w.title}</h2>
-                  {w.subtitle && (
-                    <p className="workshop-card__subtitle">{w.subtitle}</p>
+                <div key={w.id} className={`workshop-card${w.image_url ? ' workshop-card--illustrated' : ''}`}>
+                  {w.image_url && (
+                    <a
+                      className="workshop-card__visual"
+                      href={w.image_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={w.image_url} alt={w.title} loading="lazy" />
+                    </a>
                   )}
-                  <div className="divider divider--left"></div>
-                  <p className="workshop-card__text">{w.text}</p>
-                  <div className="workshop-card__tags">
-                    {(w.tags ?? []).map(t => (
-                      <span key={t} className="workshop-card__tag">{t}</span>
-                    ))}
-                  </div>
-                  <div className="workshop-card__footer">
-                    <span className="workshop-card__info">{w.info}</span>
-                    <Link to="/contact" className="btn btn--outline">
-                      Me contacter
-                    </Link>
+                  <div className="workshop-card__body">
+                    <div className="workshop-card__header">
+                      <div className="workshop-card__icon">{w.icon}</div>
+                      <div className="workshop-card__meta">
+                        <span className="workshop-card__category">{w.category}</span>
+                        <span className="workshop-card__status">{w.status}</span>
+                      </div>
+                    </div>
+                    <h2 className="workshop-card__title">{w.title}</h2>
+                    {w.subtitle && (
+                      <p className="workshop-card__subtitle">{w.subtitle}</p>
+                    )}
+                    <div className="divider divider--left"></div>
+                    <p className="workshop-card__text">{w.text}</p>
+                    <div className="workshop-card__tags">
+                      {(w.tags ?? []).map(t => (
+                        <span key={t} className="workshop-card__tag">{t}</span>
+                      ))}
+                    </div>
+                    <div className="workshop-card__footer">
+                      <span className="workshop-card__info">{w.info}</span>
+                      <Link to="/contact" className="btn btn--outline">
+                        Me contacter
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

@@ -158,11 +158,12 @@ hero__logo.parcours-grid {
 }
 
 .parcours-formations__list li::before {
-  content: '—';
+  content: '·';
   position: absolute;
   left: 0;
   color: var(--color-rose-dark);
-  font-size: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 @media (max-width: 900px) {

@@ -69,9 +69,9 @@
 .hero__bg {
   position: absolute;
   inset: -15%;
-  background-image: url('/background.jpeg');
+  background-image: url('/accueil-desert.jpg');
   background-size: cover;
-  background-position: bottom left;
+  background-position: center center;
   z-index: 0;
 }
 
@@ -303,9 +303,20 @@
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.35rem;
-  text-transform: lowercase;
   font-weight: 600;
   color: var(--color-rose-dark);
+}
+
+.about-intro__accent-author {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 .about-intro__accent-number > span {

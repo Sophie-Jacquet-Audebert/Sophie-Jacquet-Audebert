@@ -7,12 +7,12 @@ export default function Parcours() {
       {/* ===== TOP BAR ===== */}
       <div className="topbar">
         <div className="topbar__left">
-          <span>189, rue du Faubourg Saint Denis — 75010 Paris</span>
+          <span>189, rue du Faubourg Saint Denis, 75010 Paris</span>
           <span className="topbar__sep">·</span>
           <a href="tel:0664997050">06 64 99 70 50</a>
           <span className="topbar__sep">·</span>
-          <a href="mailto:sophie.jacquetaudebert@gmail.com">
-            sophie.jacquetaudebert@gmail.com
+          <a href="mailto:sophiejacquetaudebert@gmail.com">
+            sophiejacquetaudebert@gmail.com
           </a>
         </div>
         <div className="topbar__right">
@@ -83,7 +83,7 @@ export default function Parcours() {
             <span className="page-hero__label">Biographie</span>
             <h1 className="page-hero__title">Mon parcours</h1>
             <p className="page-hero__text">
-              Un chemin singulier, de la création artistique à la psychologie clinique —
+              Un chemin singulier, de la création artistique à la psychologie clinique,
             nourri par la curiosité, l'expérience personnelle et un engagement profond envers l'humain.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function Parcours() {
                 <p className="timeline-text">
                   Sophie Jacquet-Audebert débute sa vie créatrice en tant qu'enlumineuse et calligraphe
                   (École française d'Enluminure). Un ancrage dans la beauté, la précision du geste
-                  et la transmission — qui nourrit encore aujourd'hui sa pratique.
+                  et la transmission, qui nourrit encore aujourd'hui sa pratique.
                 </p>
               </div>
 
@@ -124,7 +124,7 @@ export default function Parcours() {
                 <p className="timeline-text">
                   Son intention première est de travailler avec la mère et l'enfant afin d'aider
                   la jeune mère et le tout-petit à prendre le meilleur départ possible dans la relation.
-                  Le spectre de son observation s'élargit naturellement — de la femme enceinte jusqu'à
+                  Le spectre de son observation s'élargit naturellement, de la femme enceinte jusqu'à
                   la parentalité, en passant par la problématique de l'infertilité.
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function Parcours() {
                 <p className="timeline-text">
                   Les liens familiaux invisibles reliant les individus à travers les générations
                   retiennent son attention. Elle comprend qu'une force silencieuse mais puissante
-                  circule au creux des systèmes familiaux — l'analyse transgénérationnelle devient
+                  circule au creux des systèmes familiaux : l'analyse transgénérationnelle devient
                   un pilier de sa pratique.
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function Parcours() {
               <div className="parcours-portrait">
                 <div className="parcours-portrait__img">
                   <img
-                    src="/Sophie-Jacquet-Audebert.avif"
+                    src="/sophie-jacquet-audebert.jpg"
                     alt="Sophie Jacquet-Audebert"
                   />
                 </div>
@@ -166,13 +166,6 @@ export default function Parcours() {
                   <span>Psychologue clinicienne</span>
                   <span>Paris 7 · MasterPro somatique</span>
                 </div>
-              </div>
-
-              <div className="parcours-quote">
-                <blockquote>
-                  "Deviens qui tu es"
-                </blockquote>
-                <cite>— Nietzsche</cite>
               </div>
 
               <div className="parcours-formations">

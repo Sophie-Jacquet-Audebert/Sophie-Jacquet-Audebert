@@ -8,6 +8,7 @@ export type Article = {
   info: string | null
   status: string
   icon: string
+  image_url: string | null
   published: boolean
   sort_order: number
   created_at: string

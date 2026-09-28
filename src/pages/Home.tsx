@@ -119,20 +119,7 @@ const practices = [
     ),
     label: 'Fondement',
     title: 'Psychologie clinique',
-    desc: "Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme, l'individu unique dans toute sa singularité."
-  },
-  {
-    slug: 'art-therapie',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 36l8-16 6 10 4-6 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="36" cy="14" r="4" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M10 10h6M10 14h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
-    label: 'Expression',
-    title: 'Art-thérapie',
-    desc: "Un outil précieux pour accéder à la personne en deçà de la parole, au-delà du contrôle conscient — par le geste et la création."
+    desc: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique dans toute sa singularité."
   },
   {
     slug: 'memoire-cellulaire',
@@ -145,18 +132,20 @@ const practices = [
     ),
     label: 'Transgénérationnel',
     title: 'Le corp et ses mémoires',
-    desc: "Explorer l'histoire de l'individu dans sa généalogie — les mémoires invisibles qui traversent les générations et façonnent le présent."
+    desc: "Explorer l'histoire de l'individu dans sa généalogie : les mémoires invisibles qui traversent les générations et façonnent le présent."
   },
   {
-    slug: 'bio-resonance',
+    slug: 'art-therapie',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 24c3-8 5-8 8 0s5 8 8 0 5-8 8 0 5 8 8 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 36l8-16 6 10 4-6 6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="36" cy="14" r="4" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M10 10h6M10 14h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
-    label: 'Corps & vibration',
-    title: 'Bio-résonance cellulaire',
-    desc: "Un outil en lien direct avec la vibration du corps humain — pour rétablir les équilibres énergétiques fondamentaux."
+    label: 'Expression',
+    title: 'Art-thérapie',
+    desc: "Un outil précieux pour accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création."
   }
 ]
 
@@ -221,12 +210,12 @@ export default function Home() {
 
       <Hero />
 
-      {/* ABOUT INTRO — redesigned, no background image */}
+      {/* ABOUT INTRO : redesigned, no background image */}
       <RoundedSection className="section about-intro">
         <div className="container">
           <div className="about-intro__inner">
 
-            {/* Left — label + title + divider */}
+            {/* Left : label + title + divider */}
             <div className="about-intro__left">
               <FadeUp delay={0}>
                 <span className="section__label">À propos</span>
@@ -240,9 +229,8 @@ export default function Home() {
                 duration={1.3}
               >
                 Psychologue clinicienne formée à l'approche analytique, j'accompagne
-                chaque personne dans sa singularité — en mobilisant, selon les besoins,
-                des outils complémentaires : art-thérapie, mémoire cellulaire,
-                bio-résonance.
+                chaque personne dans sa singularité, en mobilisant selon les besoins
+                des outils complémentaires : art-thérapie, mémoire cellulaire.
               </FadeUp>
               <FadeUp delay={0.7} duration={1.3}>
                 <Link to="/parcours" className="btn btn--outline" style={{ marginTop: '2rem', display: 'inline-flex' }}>
@@ -251,7 +239,7 @@ export default function Home() {
               </FadeUp>
             </div>
 
-            {/* Right — accent number + quote */}
+            {/* Right : accent number + quote */}
             <div className="about-intro__right">
               <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
                 <strong className="about-intro__accent-num">15</strong>
@@ -259,7 +247,8 @@ export default function Home() {
                   une seule intention :
                   Aider l’autre à trouver ou re-trouver l’équilibre, à prendre sa place, à naître à lui même </span>
                   <p className="about-intro__accent-question"><br />
-                    Deviens ce que tu es
+                    «&nbsp;Deviens ce que tu es&nbsp;»
+                    <span className="about-intro__accent-author">Nietzsche</span>
                   </p>
                 </span>
               </FadeUp>
@@ -344,7 +333,6 @@ export default function Home() {
               <h3 className="rdv-card__title">En vidéo</h3>
               <div className="rdv-platforms">
                 <span>Zoom</span>
-                <span>Skype</span>
                 <span>FaceTime</span>
               </div>
               <p className="rdv-card__text">

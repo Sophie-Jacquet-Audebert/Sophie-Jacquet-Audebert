@@ -90,7 +90,7 @@ export default function Appointment() {
               <div className="space-y-2 mb-8">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />
-                  <span className="font-sans text-xs text-taupe-400">Zoom, Skype, FaceTime, WhatsApp</span>
+                  <span className="font-sans text-xs text-taupe-400">Zoom, FaceTime, WhatsApp</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />

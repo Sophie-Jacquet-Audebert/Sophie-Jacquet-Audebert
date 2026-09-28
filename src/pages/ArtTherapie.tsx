@@ -10,7 +10,7 @@ export default function ArtTherapie() {
           ← Toutes les pratiques
         </Link>
         <div className="container">
-          <span className="page-hero__label">Pratique · 02</span>
+          <span className="page-hero__label">Pratique · 03</span>
           <h1 className="page-hero__title">Art-thérapie</h1>
           <p className="page-hero__text">
             Un outil précieux permettant d'accéder à la personne et à ses fonctionnements 
@@ -29,8 +29,8 @@ export default function ArtTherapie() {
               </p>
               <p>
                 Elle permet d'accéder à des parties de soi qui ne peuvent pas toujours 
-                s'exprimer par les mots. Le geste, la couleur, la forme — tout cela parle 
-                à la place du contrôle conscient et permet une exploration plus profonde 
+                s'exprimer par les mots. Le geste, la couleur, la forme : tout cela parle
+                à la place du contrôle conscient et permet une exploration plus profonde
                 de l'expérience intérieure.
               </p>
               <p>
@@ -52,7 +52,7 @@ export default function ArtTherapie() {
                 <li>Exploration créatrice de soi</li>
               </ul>
             </article>
-            <PracticeSidebar />
+            <PracticeSidebar current="art-therapie" />
           </div>
         </div>
       </section>

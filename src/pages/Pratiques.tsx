@@ -117,44 +117,30 @@ const practices = [
     number: '01',
     label: 'Fondement analytique',
     title: 'Psychologie clinique',
-    short: "Une écoute profonde ancrée dans l'analytique — l'inconscient, le symptôme, l'individu unique.",
+    short: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique.",
     tags: ['Individuel', 'Adulte', 'Profondeur'],
     image: '/vitaly-gariev-qvbJkpIKotk-unsplash.jpg',
     icon: null,
   },
   {
-    slug: 'art-therapie',
-    number: '02',
-    label: 'Expression créatrice',
-    title: 'Art-thérapie',
-    short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient — par le geste et la création.",
-    tags: ['Corps', 'Créativité', 'Symbolique'],
-    image: '/taelynn-christopher-pfSNx3Z12K8-unsplash.jpg',
-    icon: null,
-  },
-  {
     slug: 'memoire-cellulaire',
-    number: '03',
+    number: '02',
     label: 'Transgénérationnel',
     title: 'Le corp et ses mémoires',
-    short: "Explorer l'histoire de l'individu dans sa généalogie — les mémoires invisibles qui traversent les générations.",
+    short: "Explorer l'histoire de l'individu dans sa généalogie : les mémoires invisibles qui traversent les générations.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
     image: '/robina-weermeijer-IHfOpAzzjHM-unsplash.jpg',
     icon: null,
   },
   {
-    slug: 'bio-resonance',
-    number: '04',
-    label: 'Corps & vibration',
-    title: 'Bio-résonance cellulaire',
-    short: "Un outil en lien direct avec la vibration du corps humain — pour rétablir les équilibres énergétiques.",
-    tags: ['Corps', 'Énergie', 'Équilibre'],
-    image: '/mjh-shikder--bJj_81Zois-unsplash.jpg',
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 32c4-12 7-12 11 0s7 12 11 0 7-12 11 0 7 12 11 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    )
+    slug: 'art-therapie',
+    number: '03',
+    label: 'Expression créatrice',
+    title: 'Art-thérapie',
+    short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création.",
+    tags: ['Corps', 'Créativité', 'Symbolique'],
+    image: '/taelynn-christopher-pfSNx3Z12K8-unsplash.jpg',
+    icon: null,
   }
 ]
 
@@ -164,12 +150,12 @@ export default function Pratiques() {
       {/* ===== TOP BAR ===== */}
       <div className="topbar">
         <div className="topbar__left">
-          <span>189, rue du Faubourg Saint Denis — 75010 Paris</span>
+          <span>189, rue du Faubourg Saint Denis, 75010 Paris</span>
           <span className="topbar__sep">·</span>
           <a href="tel:0664997050">06 64 99 70 50</a>
           <span className="topbar__sep">·</span>
-          <a href="mailto:sophie.jacquetaudebert@gmail.com">
-            sophie.jacquetaudebert@gmail.com
+          <a href="mailto:sophiejacquetaudebert@gmail.com">
+            sophiejacquetaudebert@gmail.com
           </a>
         </div>
         <div className="topbar__right">
@@ -240,7 +226,7 @@ export default function Pratiques() {
             <span className="page-hero__label">Accompagnement</span>
             <h1 className="page-hero__title">Mes pratiques</h1>
             <p className="page-hero__text">
-              Ma pratique s'est élaborée au fil de mon expérience — entièrement constituée
+              Ma pratique s'est élaborée au fil de mon expérience, entièrement constituée
               de thérapies longuement étudiées et expérimentées sur moi-même.
             </p>
           </div>
@@ -309,7 +295,7 @@ export default function Pratiques() {
           <h2 className="section__title">Prendre rendez-vous</h2>
           <div className="divider"></div>
           <p className="section__subtitle" style={{ marginBottom: '2rem' }}>
-            En cabinet à Paris 10ème ou à distance — je vous accueille selon vos besoins et disponibilités.
+            En cabinet à Paris 10ème ou à distance, je vous accueille selon vos besoins et disponibilités.
           </p>
           <FadeUpBtn 
             href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
