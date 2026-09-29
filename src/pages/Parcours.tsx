@@ -153,21 +153,87 @@ export default function Parcours() {
               </div>
             </div>
 
-            <div className="parcours-aside">
-              <div className="parcours-portrait">
-                <div className="parcours-portrait__img">
-                  <img
-                    src="/sophie-jacquet-audebert.jpg"
-                    alt="Sophie Jacquet-Audebert"
-                  />
-                </div>
-                <div className="parcours-portrait__caption">
-                  <strong>Sophie Jacquet-Audebert</strong>
-                  <span>Psychologue clinicienne</span>
-                  <span>Paris 7 · MasterPro somatique</span>
-                </div>
-              </div>
+            <article className="parcours-recit">
+              <span className="parcours-recit__label">Mon récit</span>
 
+              <p className="parcours-recit__lead">
+                Il me fallut aller bien mal pour oser entreprendre le chemin du mieux-être.
+              </p>
+              <p>
+                Initiant ce voyage à petits pas, remonter cette pente me demanda une grande
+                persévérance. Lentement un nouvel équilibre se mit en place, jusqu'à me sentir
+                forte de mes vulnérabilités identifiées.
+              </p>
+              <p>
+                Cette traversée vers moi-même reste un virage essentiel dans ma vie. Elle me
+                permet de dire «&nbsp;j'ai osé&nbsp;» et «&nbsp;j'ai réussi&nbsp;» à transformer
+                un désespoir en force, et pour cela je ressens encore de la gratitude à mon égard.
+              </p>
+              <p>
+                Je suis Sophie Jacquet Audebert, une enlumineuse-calligraphe, devenue psychologue
+                clinicienne.
+              </p>
+              <p>
+                C'est le chaos de la première maternité et son inévitable quête d'équilibre, qui
+                m'amena à initier mon travail personnel en psychothérapie.
+              </p>
+              <p>
+                Traînant dans mes bagages un lourd échec scolaire, ma renaissance commença par
+                <em> éponger </em> cette blessure handicapante. M'inscrire à l'équivalence au bac,
+                Diplôme d'Accès aux Études Universitaires (DAEU) puis, grâce à mes bons résultats,
+                intégrer le cursus de psychologie de Paris VII, représentait déjà une belle
+                réparation, mais ça n'était pas suffisant, je restais fragile.
+              </p>
+              <p>
+                Huit années me furent nécessaires pour obtenir mon diplôme et autant de temps en
+                thérapie, pour que je commence à ressentir un certain bénéfice à tout ce travail.
+                Objectivement, j'avais réussi à transformer un échec scolaire cuisant en Bac +5
+                validé, et j'en étais épatée.
+              </p>
+              <p>
+                Poussant la porte de ma première thérapeute j'étais bien loin d'imaginer qu'un jour
+                je reprendrai mes études et deviendrai psychologue. Puis, en m'inscrivant à la fac
+                de psychologie, je n'imaginais pas un instant que j'irai au bout de ce cursus.
+                Chaque année fut vécue comme un exploit : je l'avais fini, je l'avais réussi,
+                j'avais le droit de <em>rejouer</em>, alors je continuais.
+              </p>
+              <p>
+                Je me suis inscrite en psychologie avec l'intention de me former à l'haptonomie,
+                avec le désir de l'appliquer à la périnatalité. Je voulais accompagner les parents
+                et le tout-petit dans ce départ, aussi sensible qu'important, qu'est la naissance.
+                Mais, au fil des années d'études, j'ouvrais mon champ d'intérêt jusqu'à la
+                parentalité en général, la problématique de l'infertilité, les grossesses
+                pathologiques… et abandonnais ce désir de spécialité. Pour autant je gardais le
+                corps au cœur de mon intérêt et choisis l'option somatique en Master.
+              </p>
+              <p>
+                Être en analyse pendant des années éclaire bien sûr les schémas personnels, mais
+                aussi les liens familiaux. Cela commence par le système <em>visiblement</em> bancal
+                et s'étend jusqu'aux fils subtils qui relient les individus à travers les
+                générations. La lumière s'allume alors sur le transgénérationnel, cette force
+                silencieuse mais puissante circulant au creux des familles.
+              </p>
+              <p>
+                Après un long travail psychothérapeutique, quelques fantômes familiaux, impossibles
+                à ignorer, restaient présents à mes côtés. C'est alors que je rencontrais un axe de
+                travail complémentaire : la mémoire cellulaire.
+              </p>
+              <p>
+                Plus que d'éclairer mes blocages et de répondre à beaucoup de mes questions, la
+                mémoire cellulaire a validé ce que je présupposais : issues du ventre de nos mères
+                autant que de l'histoire de nos familles, les mémoires personnelle et familiale ont
+                <em> une place </em> dans le corps et certains de nos symptômes les expriment.
+              </p>
+
+              <p className="parcours-recit__closing">
+                Ma pratique est le résultat de ce parcours, universitaire, personnel, et passionné.
+                Ma démarche est d'accompagner chacun au plus proche de son besoin en mettant mes
+                compétences au service du patient.
+              </p>
+              <span className="parcours-recit__signature">Sophie J.-A.</span>
+            </article>
+
+            <div className="parcours-aside">
               <div className="parcours-formations">
                 <h4 className="parcours-formations__title">Formations & approches</h4>
                 <ul className="parcours-formations__list">

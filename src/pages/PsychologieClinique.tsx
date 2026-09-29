@@ -68,7 +68,8 @@ export default function PsychologieClinique() {
 // Liste de référence des pratiques, dans l'ordre d'affichage du site
 export const PRACTICES = [
   { slug: 'psychologie-clinique', label: 'Psychologie clinique' },
-  { slug: 'memoire-cellulaire', label: 'Mémoire cellulaire' },
+  { slug: 'transgenerationnel', label: 'Le transgénérationnel' },
+  { slug: 'memoire-cellulaire', label: 'Le corps et ses mémoires' },
   { slug: 'art-therapie', label: 'Art-thérapie' },
 ]
 

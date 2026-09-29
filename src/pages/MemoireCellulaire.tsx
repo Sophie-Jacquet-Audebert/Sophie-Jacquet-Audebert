@@ -10,8 +10,8 @@ export default function MemoireCellulaire() {
           ← Toutes les pratiques
         </Link>
         <div className="container">
-          <span className="page-hero__label">Pratique · 02</span>
-          <h1 className="page-hero__title">Mémoire cellulaire</h1>
+          <span className="page-hero__label">Pratique · 03</span>
+          <h1 className="page-hero__title">Le corps et ses mémoires</h1>
           <p className="page-hero__text">
             Cette pratique vient explorer l'histoire de l'individu en le replaçant dans
             sa généalogie et les mémoires qui y sont liées.

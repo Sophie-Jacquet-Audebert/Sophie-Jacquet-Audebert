@@ -14,6 +14,7 @@ import Contact from './pages/Contact'
 import PsychologieClinique from './pages/PsychologieClinique'
 import ArtTherapie from './pages/ArtTherapie'
 import MemoireCellulaire from './pages/MemoireCellulaire'
+import Transgenerationnel from './pages/Transgenerationnel'
 
 // Admin imports
 import AdminLayout from './components/AdminLayout'
@@ -36,6 +37,7 @@ export default function App() {
                 <Route index element={<Home />} />
                 <Route path="pratiques" element={<Pratiques />} />
                 <Route path="pratiques/psychologie-clinique" element={<PsychologieClinique />} />
+                <Route path="pratiques/transgenerationnel" element={<Transgenerationnel />} />
                 <Route path="pratiques/art-therapie" element={<ArtTherapie />} />
                 <Route path="pratiques/memoire-cellulaire" element={<MemoireCellulaire />} />
                 <Route path="parcours" element={<Parcours />} />

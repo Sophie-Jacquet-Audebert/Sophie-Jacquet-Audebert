@@ -117,9 +117,23 @@ const practices = [
         <path d="M20 18c0-2.2 1.8-4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
-    label: 'Fondement',
+    label: 'Fondement théorique',
     title: 'Psychologie clinique',
     desc: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique dans toute sa singularité."
+  },
+  {
+    slug: 'transgenerationnel',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="11" r="4" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="33" cy="11" r="4" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="24" cy="38" r="4" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M15 15v6h18v-6M24 21v13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    label: 'Racines familiales',
+    title: 'Le transgénérationnel',
+    desc: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles."
   },
   {
     slug: 'memoire-cellulaire',
@@ -130,9 +144,9 @@ const practices = [
         <circle cx="24" cy="24" r="3" stroke="currentColor" strokeWidth="1.5" />
       </svg>
     ),
-    label: 'Transgénérationnel',
-    title: 'Le corp et ses mémoires',
-    desc: "Explorer l'histoire de l'individu dans sa généalogie : les mémoires invisibles qui traversent les générations et façonnent le présent."
+    label: "Zone d'échange",
+    title: 'Le corps et ses mémoires',
+    desc: "Issues du ventre de nos mères autant que de l'histoire de nos familles, les mémoires ont une place dans le corps : certains de nos symptômes les expriment."
   },
   {
     slug: 'art-therapie',
@@ -228,9 +242,10 @@ export default function Home() {
                 delay={0.5}
                 duration={1.3}
               >
-                Psychologue clinicienne formée à l'approche analytique, j'accompagne
-                chaque personne dans sa singularité, en mobilisant selon les besoins
-                des outils complémentaires : art-thérapie, mémoire cellulaire.
+                Psychologue clinicienne formée à Paris VII, j'accompagne chaque personne
+                dans sa singularité — utilisant les différents outils de ma palette,
+                apports complémentaires à ma formation initiale : l'éclairage du
+                transgénérationnel, celui de la mémoire cellulaire, ou encore du trauma…
               </FadeUp>
               <FadeUp delay={0.7} duration={1.3}>
                 <Link to="/parcours" className="btn btn--outline" style={{ marginTop: '2rem', display: 'inline-flex' }}>
@@ -244,12 +259,8 @@ export default function Home() {
               <FadeUp delay={0.2} duration={1.4} className="about-intro__accent-number">
                 <strong className="about-intro__accent-num">15</strong>
                 <span>ans de pratique, <span className="about-intro__accent-desc">
-                  une seule intention :
-                  Aider l’autre à trouver ou re-trouver l’équilibre, à prendre sa place, à naître à lui même </span>
-                  <p className="about-intro__accent-question"><br />
-                    «&nbsp;Deviens ce que tu es&nbsp;»
-                    <span className="about-intro__accent-author">Nietzsche</span>
-                  </p>
+                  une seule intention : aider l’autre à re-trouver ou trouver l’équilibre,
+                  à prendre sa place, à s’accepter, à naître à soi même. </span>
                 </span>
               </FadeUp>
               <FadeUp delay={0.4} duration={1.4} className="about-intro__quote">
@@ -275,8 +286,9 @@ export default function Home() {
             </FadeUp>
             <div className="divider"></div>
             <p className="section__subtitle">
-              Une palette d'approches complémentaires, choisies et expérimentées
-              pour leur profondeur et leur efficacité.
+              Une palette d'approches complémentaires, toutes personnellement
+              expérimentées, évidemment incluses à ma pratique car leviers importants
+              dans mon propre parcours thérapeutique.
             </p>
           </div>
           <div className="practices-grid">
@@ -336,8 +348,11 @@ export default function Home() {
                 <span>FaceTime</span>
               </div>
               <p className="rdv-card__text">
-                La distance n'est pas un obstacle. Les consultations à distance
-                offrent la même qualité d'accompagnement, depuis chez vous.
+                Le confinement a permis d'expérimenter les consultations à distance et de
+                comprendre que l'éloignement n'est pas un obstacle. Cependant, je préfère
+                utiliser la vidéo avec des patients déjà rencontrés. Si vous nécessitez une
+                première consultation et qu'il vous est impossible de venir au cabinet,
+                merci de me contacter pour échanger au préalable.
               </p>
               <FadeUpBtn href="tel:06 64 99 70 50" className="btn btn--outline" delay={0.5}>
                 Réserver en vidéo
