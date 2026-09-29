@@ -24,19 +24,16 @@ export default function MemoireCellulaire() {
           <div className="practice-detail-grid">
             <article className="practice-detail__content">
               <p className="practice-detail__lead">
-                La mémoire cellulaire est la discipline qui a été la révélation majeure
-                dans la pratique de Sophie Jacquet-Audebert : un outil qui fait le lien
-                entre tous les autres registres qu'elle manie.
-              </p>
-              <p>
                 Parler de mémoire cellulaire, c'est parler de la mémoire de notre corps,
                 celle contenue dans nos cellules, notre matière.
               </p>
               <p>
                 Le corps, par l'intermédiaire de ses cellules, peut être considéré comme
-                détenteur d'archives personnelles et familiales. Le corps est porteur
-                d'histoires. Celle du patient bien sûr, mais également celle de ses
-                parents, de ses grands-parents, et même de ses arrière-grands-parents.
+                détenteur d'archives personnelles et familiales. On peut dire que le corps
+                est porteur d'histoires. Mais de quelles histoires parle-t-on&nbsp;? Des
+                histoires sans lesquelles le patient ne serait pas là. Mémoires des
+                histoires de gestation, mémoires de l'histoire de ses parents, mémoires
+                issues de ses grands-parents… La voilà, la mystérieuse zone d'échange.
               </p>
               <p>
                 Nous sommes nombreux à comprendre notre problème, et malheureusement,

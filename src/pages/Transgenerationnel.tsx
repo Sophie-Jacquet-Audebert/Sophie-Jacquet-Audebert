@@ -24,8 +24,9 @@ export default function Transgenerationnel() {
           <div className="practice-detail-grid">
             <article className="practice-detail__content">
               <p className="practice-detail__lead">
-                Être en analyse pendant des années éclaire bien sûr les schémas
-                personnels, mais aussi les liens familiaux.
+                Être en analyse pendant des années permet le travail sur les schémas
+                personnels, bien sûr, mais aussi de mettre en lumière les liens familiaux
+                entravant le patient.
               </p>
               <p>
                 Cela commence par le système visiblement bancal, celui que l'on voit et
@@ -39,7 +40,7 @@ export default function Transgenerationnel() {
                 généalogie. Ce qui n'a pas pu se dire dans une génération cherche souvent
                 à se rejouer dans la suivante : une répétition, une date qui revient, une
                 place difficile à tenir dans la fratrie, une loyauté que l'on porte sans
-                l'avoir choisie.
+                l'avoir choisie…
               </p>
               <p>
                 La spécificité de mon approche clinique est d'inclure dans ma «&nbsp;lecture&nbsp;»
@@ -49,22 +50,20 @@ export default function Transgenerationnel() {
               </p>
               <blockquote className="practice-detail__quote">
                 Après un long travail psychothérapeutique, quelques fantômes familiaux,
-                impossibles à ignorer, restaient présents à mes côtés. C'est alors que je
-                rencontrais un axe de travail complémentaire : la mémoire cellulaire.
+                impossibles à ignorer, restaient présents à mes côtés.
               </blockquote>
-              <h3>Ce que l'éclairage transgénérationnel permet d'explorer</h3>
-              <ul className="practice-detail__list">
-                <li>Schémas et répétitions qui traversent les générations</li>
-                <li>Loyautés invisibles et places assignées dans le système familial</li>
-                <li>Non-dits, secrets et deuils non résolus dans la lignée</li>
-                <li>Événements cycliques, dates et anniversaires qui reviennent</li>
-                <li>Liens entre l'histoire familiale et les symptômes du présent</li>
-              </ul>
               <p>
                 Cet axe de travail se prolonge naturellement dans{' '}
                 <Link to="/pratiques/memoire-cellulaire">le corps et ses mémoires</Link>,
                 là où l'histoire familiale s'est déposée dans la matière.
               </p>
+              <h3>Exemples de ce que l'éclairage transgénérationnel permet d'explorer</h3>
+              <ul className="practice-detail__list">
+                <li>Schémas, évènements, répétitions… observables dans les différentes générations</li>
+                <li>Loyautés invisibles et places assignées dans le système familial</li>
+                <li>Non-dits, secrets et deuils non résolus dans la lignée</li>
+                <li>Liens entre l'histoire familiale et les symptômes actuels</li>
+              </ul>
             </article>
             <PracticeSidebar current="transgenerationnel" />
           </div>

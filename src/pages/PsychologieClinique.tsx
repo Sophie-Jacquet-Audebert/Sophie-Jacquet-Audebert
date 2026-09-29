@@ -12,8 +12,8 @@ export default function PsychologieClinique() {
           <span className="page-hero__label">Pratique · 01</span>
           <h1 className="page-hero__title">Psychologie clinique</h1>
           <p className="page-hero__text">
-            Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme
-            et ses origines.
+            Une écoute profonde ancrée dans l'approche psychanalytique : l'inconscient,
+            le symptôme et ses origines.
           </p>
         </div>
       </div>
@@ -33,9 +33,9 @@ export default function PsychologieClinique() {
                 être une infinie possibilité de manifestations.
               </p>
               <p>
-                Mes études universitaires et mon travail personnel partent d'une solide base analytique.
-                Peu à peu ma pratique s'est enrichie des différents éléments cliniques rencontrés au fil
-                de mes observations et aussi grâce aux diverses thérapies dont j'ai bénéficié.
+                Mes études universitaires et mon travail personnel partent d'une solide base
+                psychanalytique. Peu à peu, ma pratique s'est enrichie au fil de mes observations,
+                de mon expérience et aussi des diverses thérapies personnellement expérimentées.
               </p>
               <p>
                 Que ces pépites viennent éclairer, compléter, confirmer ou même infirmer mes hypothèses
