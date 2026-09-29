@@ -34,7 +34,8 @@ export default function Footer() {
             <h4 className="footer__nav-title">Pratiques</h4>
             <ul className="footer__nav-list">
               <li><Link to="/pratiques/psychologie-clinique">Psychologie clinique</Link></li>
-              <li><Link to="/pratiques/memoire-cellulaire">Mémoire cellulaire</Link></li>
+              <li><Link to="/pratiques/transgenerationnel">Le transgénérationnel</Link></li>
+              <li><Link to="/pratiques/memoire-cellulaire">Le corps et ses mémoires</Link></li>
               <li><Link to="/pratiques/art-therapie">Art-thérapie</Link></li>
             </ul>
           </div>

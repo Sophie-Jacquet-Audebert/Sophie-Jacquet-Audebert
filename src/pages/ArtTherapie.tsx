@@ -10,7 +10,7 @@ export default function ArtTherapie() {
           ← Toutes les pratiques
         </Link>
         <div className="container">
-          <span className="page-hero__label">Pratique · 03</span>
+          <span className="page-hero__label">Pratique · 04</span>
           <h1 className="page-hero__title">Art-thérapie</h1>
           <p className="page-hero__text">
             Un outil précieux permettant d'accéder à la personne et à ses fonctionnements 

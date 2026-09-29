@@ -115,7 +115,7 @@ const practices = [
   {
     slug: 'psychologie-clinique',
     number: '01',
-    label: 'Fondement analytique',
+    label: 'Fondement théorique',
     title: 'Psychologie clinique',
     short: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique.",
     tags: ['Individuel', 'Adulte', 'Profondeur'],
@@ -123,19 +123,29 @@ const practices = [
     icon: null,
   },
   {
-    slug: 'memoire-cellulaire',
+    slug: 'transgenerationnel',
     number: '02',
-    label: 'Transgénérationnel',
-    title: 'Le corp et ses mémoires',
-    short: "Explorer l'histoire de l'individu dans sa généalogie : les mémoires invisibles qui traversent les générations.",
+    label: 'Racines familiales',
+    title: 'Le transgénérationnel',
+    short: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles.",
+    tags: ['Généalogie', 'Lignée', 'Répétitions'],
+    image: '/mjh-shikder--bJj_81Zois-unsplash.jpg',
+    icon: null,
+  },
+  {
+    slug: 'memoire-cellulaire',
+    number: '03',
+    label: "Zone d'échange",
+    title: 'Le corps et ses mémoires',
+    short: "Les mémoires personnelle et familiale ont une place dans le corps : certains de nos symptômes les expriment.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
     image: '/robina-weermeijer-IHfOpAzzjHM-unsplash.jpg',
     icon: null,
   },
   {
     slug: 'art-therapie',
-    number: '03',
-    label: 'Expression créatrice',
+    number: '04',
+    label: 'Expression',
     title: 'Art-thérapie',
     short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création.",
     tags: ['Corps', 'Créativité', 'Symbolique'],
@@ -237,9 +247,10 @@ export default function Pratiques() {
         <div className="container">
           <div className="pratiques-intro">
             <p>
-              Chacune de ces approches est complémentaire. Selon votre besoin du moment,
-              nous pourrons travailler avec l'une ou plusieurs d'entre elles,
-              dans une logique d'accompagnement sur-mesure.
+              Une palette d'approches complémentaires, toutes personnellement expérimentées,
+              évidemment incluses à ma pratique car leviers importants dans mon propre
+              parcours thérapeutique. Selon votre besoin du moment, nous pourrons travailler
+              avec l'une ou plusieurs d'entre elles.
             </p>
           </div>
           <div className="pratiques-list">
