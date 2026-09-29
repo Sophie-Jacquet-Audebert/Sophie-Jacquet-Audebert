@@ -119,7 +119,7 @@ const practices = [
     ),
     label: 'Fondement théorique',
     title: 'Psychologie clinique',
-    desc: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique dans toute sa singularité."
+    desc: "Écoute profonde du patient reposant sur sa singularité. Observation de son discours, ses symptômes, son entièreté. Considération de l'expression de l'inconscient."
   },
   {
     slug: 'transgenerationnel',
@@ -133,7 +133,7 @@ const practices = [
     ),
     label: 'Racines familiales',
     title: 'Le transgénérationnel',
-    desc: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles."
+    desc: "Mise en lumière des fils invisibles reliant les individus à travers les générations. Utilisation à des fins thérapeutiques de cette force silencieuse mais puissante qui circule au creux des familles."
   },
   {
     slug: 'memoire-cellulaire',
@@ -146,7 +146,7 @@ const practices = [
     ),
     label: "Zone d'échange",
     title: 'Le corps et ses mémoires',
-    desc: "Issues du ventre de nos mères autant que de l'histoire de nos familles, les mémoires ont une place dans le corps : certains de nos symptômes les expriment."
+    desc: "Issues de l'histoire de nos familles, de notre gestation ou de nos premiers instants de vie, les mémoires ont une place dans notre corps. Étude de leurs expressions, manifestation de l'invisible dans la matière."
   },
   {
     slug: 'art-therapie',
@@ -159,7 +159,7 @@ const practices = [
     ),
     label: 'Expression',
     title: 'Art-thérapie',
-    desc: "Un outil précieux pour accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création."
+    desc: "Outil précieux pour accéder à la personne, en deçà de la parole et au-delà du contrôle conscient. Repose sur le geste. Permet le lâcher-prise."
   }
 ]
 
