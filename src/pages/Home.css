@@ -416,8 +416,8 @@
   display: flex;
   flex-direction: column;
   padding: 2.5rem 2rem;
-  background-color: var(--color-white);
-  border-right: 1px solid var(--color-border);
+  background-color: #4AAEC4;
+  border-right: 1px solid rgba(255, 253, 252, 0.25);
   transition: background-color 0.3s ease;
   text-decoration: none;
   color: inherit;
@@ -431,36 +431,10 @@
   background-color: var(--color-text);
 }
 
-.practice-card--active {
-  background-color: #4AAEC4;
-}
-
-.practice-card--active .practice-card__icon,
-.practice-card--active .practice-card__title,
-.practice-card--active .practice-card__label,
-.practice-card--active .practice-card__desc {
-  color: var(--color-cream);
-}
-
-.practice-card--active .practice-card__link {
-  color: var(--color-rose-light);
-}
-
-.practice-card:hover .practice-card__icon,
-.practice-card:hover .practice-card__title,
-.practice-card:hover .practice-card__label,
-.practice-card:hover .practice-card__desc {
-  color: var(--color-cream);
-}
-
-.practice-card:hover .practice-card__link {
-  color: var(--color-rose-light);
-}
-
 .practice-card__icon {
   width: 40px;
   height: 40px;
-  color: var(--color-rose-dark);
+  color: var(--color-cream);
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
 }
@@ -475,7 +449,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-cream);
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
@@ -484,7 +458,7 @@
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-cream);
   margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
@@ -493,7 +467,7 @@
   font-size: 0.92rem;
   font-weight: 500;
   line-height: 1.8;
-  color: var(--color-text-soft);
+  color: var(--color-cream);
   flex: 1;
   margin-bottom: 1.5rem;
   transition: color 0.3s ease;
@@ -503,7 +477,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--color-rose-dark);
+  color: var(--color-rose-light);
   transition: color 0.3s ease;
 }
 

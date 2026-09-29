@@ -296,7 +296,7 @@ export default function Home() {
               <Link
                 to={`/pratiques/${p.slug}`}
                 key={p.slug}
-                className={`practice-card${p.slug === 'art-therapie' ? ' practice-card--active' : ''}`}
+                className="practice-card"
               >
                 <div className="practice-card__icon">{p.icon}</div>
                 <span className="practice-card__label">{p.label}</span>
