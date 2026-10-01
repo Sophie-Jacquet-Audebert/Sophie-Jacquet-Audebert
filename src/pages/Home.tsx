@@ -119,7 +119,7 @@ const practices = [
     ),
     label: 'Fondement théorique',
     title: 'Psychologie clinique',
-    desc: "Écoute profonde du patient reposant sur sa singularité. Observation de son discours, ses symptômes, son entièreté. Considération de l'expression de l'inconscient."
+    desc: "Écoute profonde du patient reposant sur sa singularité. Observation du patient dans son entièreté : sa demande, son discours, ses symptômes… Prise en considération de l'inconscient."
   },
   {
     slug: 'transgenerationnel',
@@ -243,9 +243,10 @@ export default function Home() {
                 duration={1.3}
               >
                 Psychologue clinicienne formée à Paris VII, j'accompagne chaque personne
-                dans sa singularité — utilisant les différents outils de ma palette,
-                apports complémentaires à ma formation initiale : l'éclairage du
-                transgénérationnel, celui de la mémoire cellulaire, ou encore du trauma…
+                dans sa singularité. Ma base est clinique mais ma palette dispose d'outils
+                supplémentaires. Ces approches ou techniques complémentaires, auxquelles je
+                me suis formée au fil des années, sont les couleurs avec lesquelles je
+                compose le cadre thérapeutique du patient.
               </FadeUp>
               <FadeUp delay={0.7} duration={1.3}>
                 <Link to="/parcours" className="btn btn--outline" style={{ marginTop: '2rem', display: 'inline-flex' }}>
@@ -286,9 +287,7 @@ export default function Home() {
             </FadeUp>
             <div className="divider"></div>
             <p className="section__subtitle">
-              Une palette d'approches complémentaires, toutes personnellement
-              expérimentées, évidemment incluses à ma pratique car leviers importants
-              dans mon propre parcours thérapeutique.
+              Mes basics
             </p>
           </div>
           <div className="practices-grid">

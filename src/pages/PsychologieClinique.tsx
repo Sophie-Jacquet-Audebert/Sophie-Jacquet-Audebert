@@ -47,7 +47,6 @@ export default function PsychologieClinique() {
                 la réalité historique de ses origines, autant personnelles que générationnelles,
                 les événements cycliques familiaux et individuels et bien sûr, les maux de son corps.
               </blockquote>
-              <h3>Approches intégrées</h3>
               <ul className="practice-detail__list">
                 <li>Psychogénéalogie</li>
                 <li>Hypnothérapie</li>

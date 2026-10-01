@@ -238,8 +238,8 @@ export default function Pratiques() {
             <span className="page-hero__label">Accompagnement</span>
             <h1 className="page-hero__title">Mes pratiques</h1>
             <p className="page-hero__text">
-              Ma pratique s'est élaborée au fil de mon expérience, entièrement constituée
-              de thérapies longuement étudiées et expérimentées sur moi-même.
+              Être psychologue demande de s'informer et de se former sans fin.
+              La société bouge, le thérapeute se doit de suivre son mouvement.
             </p>
           </div>
         </div>
@@ -247,14 +247,6 @@ export default function Pratiques() {
 
       <section className="section">
         <div className="container">
-          <div className="pratiques-intro">
-            <p>
-              Une palette d'approches complémentaires, toutes personnellement expérimentées,
-              évidemment incluses à ma pratique car leviers importants dans mon propre
-              parcours thérapeutique. Selon votre besoin du moment, nous pourrons travailler
-              avec l'une ou plusieurs d'entre elles.
-            </p>
-          </div>
           <div className="pratiques-list">
             {practices.map((p, i) => (
               <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`}>
