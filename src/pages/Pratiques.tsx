@@ -239,7 +239,11 @@ export default function Pratiques() {
             <h1 className="page-hero__title">Mes pratiques</h1>
             <p className="page-hero__text">
               Être psychologue demande de s'informer et de se former sans fin.
-              La société bouge, le thérapeute se doit de suivre son mouvement.
+              La société bouge, les symptômes évoluent, le thérapeute se doit de suivre ce mouvement. Ma pratique s’appuie sur mes essentiels et s’enrichit sans cesse, respiration qui rend mon approche vivante.
+            </p>
+            <p className="page-hero__subtitle">
+              Le spectre de mes formations additionnelles est vaste.
+              Ces approches me permettent de considérer autant la matière que l’invisible, de prendre en charge les symptômes post-traumatiques ainsi que les fantômes familiaux, de considérer le «&nbsp;système&nbsp;» ainsi que le vibratoire, …
             </p>
           </div>
         </div>
@@ -247,6 +251,14 @@ export default function Pratiques() {
 
       <section className="section">
         <div className="container">
+          <div className="pratiques-quote">
+            <span className="pratiques-quote__icon" aria-hidden="true">“</span>
+            <blockquote className="pratiques-quote__text">
+              «&nbsp;La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information.&nbsp;»
+            </blockquote>
+            <cite className="pratiques-quote__author">— Albert Einstein</cite>
+          </div>
+
           <div className="pratiques-list">
             {practices.map((p, i) => (
               <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`}>
