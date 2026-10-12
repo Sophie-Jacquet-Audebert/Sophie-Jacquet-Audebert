@@ -101,9 +101,9 @@ export default function Parcours() {
                 <span className="timeline-year">Origines</span>
                 <h3 className="timeline-title">Enlumineuse & calligraphe</h3>
                 <p className="timeline-text">
-                  Sophie Jacquet-Audebert débute sa vie créatrice en tant qu'enlumineuse et calligraphe
+                  Sophie Jacquet Audebert, je débute ma vie professionnelle en tant qu'enlumineuse et calligraphe
                   (École française d'Enluminure). Un ancrage dans la beauté, la précision du geste
-                  et la transmission, qui nourrit encore aujourd'hui sa pratique.
+                  et la transmission, qui nourrit encore aujourd'hui ma pratique.
                 </p>
               </div>
 
@@ -113,9 +113,9 @@ export default function Parcours() {
                 <h3 className="timeline-title">La maternité comme initiation</h3>
                 <p className="timeline-text">
                   C'est grâce à la maternité et à la quête du nouvel équilibre qui en découle
-                  qu'elle initie son travail personnel en psychothérapie. Il l'emmène sur les bancs
-                  de la faculté, où elle obtient un DAEU pour intégrer ensuite le cursus de Psychologie
-                  Clinique (Master Pro, option somatique) à l'Université Paris 7.
+                  que j'initie mon travail personnel en psychothérapie. Il m'emmène sur les bancs
+                  de la faculté, où j'obtiens d'abord le DAEU qui me permettra d'intégrer ensuite le cursus
+                  de Psychologie Clinique (Master Pro, option somatique) à l'Université Paris 7.
                 </p>
               </div>
 
@@ -124,9 +124,9 @@ export default function Parcours() {
                 <span className="timeline-year">Spécialisation</span>
                 <h3 className="timeline-title">Mère, enfant, parentalité</h3>
                 <p className="timeline-text">
-                  Son intention première est de travailler avec la mère et l'enfant afin d'aider
+                  Mon intention première est de travailler avec la mère et l'enfant afin d'aider
                   la jeune mère et le tout-petit à prendre le meilleur départ possible dans la relation.
-                  Le spectre de son observation s'élargit naturellement, de la femme enceinte jusqu'à
+                  Le spectre de mon observation s'élargit naturellement, de la femme enceinte jusqu'à
                   la parentalité, en passant par la problématique de l'infertilité.
                 </p>
               </div>
@@ -137,9 +137,9 @@ export default function Parcours() {
                 <h3 className="timeline-title">Les liens familiaux invisibles</h3>
                 <p className="timeline-text">
                   Les liens familiaux invisibles reliant les individus à travers les générations
-                  retiennent son attention. Elle comprend qu'une force silencieuse mais puissante
+                  retiennent mon attention. Je comprends qu'une force silencieuse mais puissante
                   circule au creux des systèmes familiaux : l'analyse transgénérationnelle devient
-                  un pilier de sa pratique.
+                  un pilier de ma pratique.
                 </p>
               </div>
 
@@ -148,9 +148,9 @@ export default function Parcours() {
                 <span className="timeline-year">Révélation</span>
                 <h3 className="timeline-title">La mémoire cellulaire</h3>
                 <p className="timeline-text">
-                  Quand la Mémoire Cellulaire entre dans sa vie, la rencontre est aussi bouleversante
-                  que naturelle. Elle sait rapidement que cette discipline va devenir pour elle un outil
-                  incontournable, tellement il fait le lien avec les autres registres qu'elle manie.
+                  Quand la Mémoire Cellulaire entre dans ma vie, la rencontre est aussi bouleversante
+                  que naturelle. Je sais rapidement que cette discipline va devenir pour moi un outil
+                  incontournable, tellement il fait le lien avec les autres registres que je manie.
                 </p>
               </div>
             </div>
