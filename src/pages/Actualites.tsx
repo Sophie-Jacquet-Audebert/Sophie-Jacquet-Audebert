@@ -253,13 +253,13 @@ export default function Actualites() {
               </h3>
               <ul className="inspiration-list">
                 <li>
-                  <a href="https://youtu.be/hG04LX4zrlA" target="_blank" rel="noopener noreferrer">
+                  <a href="https://youtu.be/hG04LX4zrlA?si=ShT64G277eYfGFuo" target="_blank" rel="noopener noreferrer">
                     <strong>La Révolution de l'esprit</strong>
                     <span>Anthony Chêne</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://youtu.be/70Xg0cclf5Q" target="_blank" rel="noopener noreferrer">
+                  <a href="https://youtu.be/70Xg0cclf5Q?si=p04_Nz1Y-cib3bGO" target="_blank" rel="noopener noreferrer">
                     <strong>La Puissance de l'intention</strong>
                     <span>Anthony Chêne</span>
                   </a>

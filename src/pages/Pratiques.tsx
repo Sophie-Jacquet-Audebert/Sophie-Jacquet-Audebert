@@ -119,7 +119,7 @@ const practices = [
     title: 'Psychologie clinique',
     short: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique.",
     tags: ['Individuel', 'Adulte', 'Profondeur'],
-    image: '/vitaly-gariev-qvbJkpIKotk-unsplash.jpg',
+    image: '/psychologie-clinique.jpeg',
     icon: null,
   },
   {
@@ -129,7 +129,7 @@ const practices = [
     title: 'Le transgénérationnel',
     short: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles.",
     tags: ['Généalogie', 'Lignée', 'Répétitions'],
-    image: '/mjh-shikder--bJj_81Zois-unsplash.jpg',
+    image: '/transgenerationnel.jpeg',
     icon: null,
   },
   {
@@ -139,7 +139,7 @@ const practices = [
     title: 'Le corps et ses mémoires',
     short: "Les mémoires personnelle et familiale ont une place dans le corps : certains de nos symptômes les expriment.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
-    image: '/robina-weermeijer-IHfOpAzzjHM-unsplash.jpg',
+    image: '/corps-et-memoires.jpeg',
     icon: null,
   },
   {
@@ -149,7 +149,7 @@ const practices = [
     title: 'Art-thérapie',
     short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création.",
     tags: ['Corps', 'Créativité', 'Symbolique'],
-    image: '/taelynn-christopher-pfSNx3Z12K8-unsplash.jpg',
+    image: '/art-therapie.jpeg',
     icon: null,
   }
 ]
