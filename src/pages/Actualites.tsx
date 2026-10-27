@@ -16,30 +16,71 @@ type Workshop = {
   image_url: string | null
 }
 
+const DEFAULT_WORKSHOPS: Workshop[] = [
+  {
+    id: 1,
+    category: 'Immersion',
+    title: 'Immersion : prendre sa place',
+    subtitle: 'Et si tout commençait par la naissance ?',
+    text: `Comprendre d'où je viens pour mieux avancer. Découvrir l'impact des premières empreintes de vie.
+
+Au programme : travail individuel et en groupe, enseignements, ateliers créatifs, mise en mouvement du corps, hypnose, méditation, mémoire cellulaire, breathwork.
+
+Points clés : trouver le sens des premières empreintes de vie, découvrir mes besoins, connaître mes fondations pour mieux atteindre mon potentiel.
+
+Animée par Perrine Gillet, thérapeute hypnose et EMDR, et Sophie Jacquet-Audebert, psychologue clinicienne et thérapeute en mémoire cellulaire.
+
+Lieu : 16 rue des Cognots, 89400 Ormoy. Accès : gare de Laroche-Migennes, A6 sortie 18 depuis Paris, A6 sortie 19 depuis Dijon ou Lyon.`,
+    tags: ['Hypnose', 'Méditation', 'Mémoire cellulaire', 'Breathwork', 'Ateliers créatifs'],
+    info: "Du mercredi 7 octobre 16h au dimanche 11 octobre 11h · Ormoy (89) · 500 € dont 50 € à l'inscription · 10 participants maximum",
+    status: 'Inscriptions ouvertes',
+    icon: '◇',
+    image_url: '/immersion-prendre-sa-place.jpg',
+  },
+  {
+    id: 2,
+    category: 'Rencontre',
+    title: 'Petits outils de base pour Êtres Humains',
+    subtitle: 'Un petit tour au pays de vous-même, pour cheminer plus léger dans la vie',
+    text: `Cette rencontre de 2h vous propose de faire un petit tour au pays de vous-même afin de cheminer plus léger dans la vie.
+
+Lors de cette entrevue, je partage quelques outils de vie, ces « facilitateurs de bien-être » que j'ai rencontrés, observés, compris, et qu'il me semble important de vous transmettre. J'essaie aussi de mettre en lumière les cachettes favorites des vieilleries encombrantes que nous traînons, nous autres les humains.
+
+Cette petite pause vous offre la possibilité de distinguer ce qui, du passé, peut être déposé, mais aussi ce dont vous pouvez vous saisir aujourd'hui.`,
+    tags: ['Connaissance', 'Discernement', 'Vivre conscient', 'Responsable', 'Centré'],
+    info: 'Ces ateliers et conférences peuvent avoir lieu chez vous, dans un cadre intime et bienveillant · Jusqu’à 15 personnes · Durée 2h',
+    status: 'Sur demande',
+    icon: '◇',
+    image_url: null,
+  },
+]
+
 export default function Actualites() {
-  const [workshops, setWorkshops] = useState<Workshop[]>([])
-  const [loading, setLoading] = useState(true)
+  const [workshops, setWorkshops] = useState<Workshop[]>(DEFAULT_WORKSHOPS)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     let isMounted = true
 
     async function fetchWorkshops() {
-      const { data, error } = await supabase
-        .from('articles')
-        .select('id, category, title, subtitle, text, tags, info, status, icon, image_url')
-        .eq('published', true)
-        .order('sort_order', { ascending: true })
+      try {
+        const { data, error } = await supabase
+          .from('articles')
+          .select('id, category, title, subtitle, text, tags, info, status, icon, image_url')
+          .eq('published', true)
+          .order('sort_order', { ascending: true })
 
-      if (!isMounted) return
+        if (!isMounted) return
 
-      if (error) {
-        console.error('Erreur lors du chargement des articles :', error)
-        setError('Impossible de charger les ateliers pour le moment.')
-      } else {
-        setWorkshops(data ?? [])
+        if (error) {
+          console.warn('Erreur de chargement articles Supabase, conservation des ateliers :', error.message)
+        } else if (data && data.length > 0) {
+          setWorkshops(data)
+        }
+      } catch (err) {
+        console.warn('Connexion Supabase non disponible, ateliers affichés par défaut.')
       }
-      setLoading(false)
     }
 
     fetchWorkshops()
@@ -132,8 +173,7 @@ export default function Actualites() {
             <span className="page-hero__label">Ateliers & conférences</span>
             <h1 className="page-hero__title">Actualités</h1>
             <p className="page-hero__text">
-             Des transmissions pour explorer, comprendre et grandir ensemble,
-            en groupe ou chez vous, sur demande.
+              Pour aller plus loin, des ressources annexes
             </p>
           </div>
         </div>
@@ -157,52 +197,76 @@ export default function Actualites() {
             <p className="actualites-status actualites-status--error">{error}</p>
           )}
 
-          {!loading && !error && workshops.length === 0 && (
+          {!loading && workshops.length === 0 && (
             <p className="actualites-status">Aucun atelier n'est publié pour le moment.</p>
           )}
 
-          {!loading && !error && workshops.length > 0 && (
+          {workshops.length > 0 && (
             <div className="workshops-list">
-              {workshops.map((w) => (
-                <div key={w.id} className={`workshop-card${w.image_url ? ' workshop-card--illustrated' : ''}`}>
-                  {w.image_url && (
-                    <a
-                      className="workshop-card__visual"
-                      href={w.image_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={w.image_url} alt={w.title} loading="lazy" />
-                    </a>
-                  )}
-                  <div className="workshop-card__body">
-                    <div className="workshop-card__header">
-                      <div className="workshop-card__icon">{w.icon}</div>
-                      <div className="workshop-card__meta">
-                        <span className="workshop-card__category">{w.category}</span>
-                        <span className="workshop-card__status">{w.status}</span>
+              {workshops.map((w) => {
+                const isImmersion = w.title.toLowerCase().includes('immersion')
+                return (
+                  <div key={w.id} className={`workshop-card${w.image_url ? ' workshop-card--illustrated' : ''}`}>
+                    {w.image_url && (
+                      <a
+                        className="workshop-card__visual"
+                        href={w.image_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src={w.image_url} alt={w.title} loading="lazy" />
+                      </a>
+                    )}
+                    <div className="workshop-card__body">
+                      <div className="workshop-card__header">
+                        <div className="workshop-card__icon">{w.icon}</div>
+                        <div className="workshop-card__meta">
+                          <span className="workshop-card__category">{w.category}</span>
+                          <span className="workshop-card__status">{w.status}</span>
+                        </div>
+                      </div>
+                      <h2 className="workshop-card__title">{w.title}</h2>
+                      {w.subtitle && (
+                        <p className="workshop-card__subtitle">{w.subtitle}</p>
+                      )}
+                      <div className="divider divider--left"></div>
+                      <p className="workshop-card__text">{w.text}</p>
+                      <div className="workshop-card__tags">
+                        {(w.tags ?? []).map(t => (
+                          <span key={t} className="workshop-card__tag">{t}</span>
+                        ))}
+                      </div>
+                      <div className="workshop-card__footer">
+                        <span className="workshop-card__info">{w.info}</span>
+                        <div className="workshop-card__actions">
+                          {isImmersion ? (
+                            <>
+                              <a
+                                href="https://buy.stripe.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn--primary btn--stripe"
+                              >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                  <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697.5 12.52.5 7.295.5 3.5 3.328 3.5 8.163c0 4.671 3.57 6.444 7.625 7.917 2.658.966 3.572 1.691 3.572 2.736 0 .979-.846 1.547-2.316 1.547-2.457 0-5.325-1.121-7.142-2.133l-.891 5.589C6.208 24.872 9.214 25.5 12.35 25.5c5.568 0 9.65-2.712 9.65-7.857 0-4.836-3.419-6.685-8.024-8.493z" />
+                                </svg>
+                                Réserver avec Stripe
+                              </a>
+                              <Link to="/contact" className="btn btn--outline">
+                                Me contacter
+                              </Link>
+                            </>
+                          ) : (
+                            <Link to="/contact" className="btn btn--outline">
+                              Me contacter
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
-                    <h2 className="workshop-card__title">{w.title}</h2>
-                    {w.subtitle && (
-                      <p className="workshop-card__subtitle">{w.subtitle}</p>
-                    )}
-                    <div className="divider divider--left"></div>
-                    <p className="workshop-card__text">{w.text}</p>
-                    <div className="workshop-card__tags">
-                      {(w.tags ?? []).map(t => (
-                        <span key={t} className="workshop-card__tag">{t}</span>
-                      ))}
-                    </div>
-                    <div className="workshop-card__footer">
-                      <span className="workshop-card__info">{w.info}</span>
-                      <Link to="/contact" className="btn btn--outline">
-                        Me contacter
-                      </Link>
-                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
         </div>
@@ -213,7 +277,7 @@ export default function Actualites() {
         <div className="container">
           <div className="section__header">
             <span className="section__label">Ressources</span>
-            <h2 className="section__title">Inspirations & recommandations</h2>
+            <h2 className="section__title">Inspirations</h2>
             <div className="divider"></div>
           </div>
           <div className="inspirations-grid">
