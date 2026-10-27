@@ -114,7 +114,7 @@ export default function Parcours() {
                 <p className="timeline-text">
                   C'est grâce à la maternité et à la quête du nouvel équilibre qui en découle
                   que j'initie mon travail personnel en psychothérapie. Il m'emmène sur les bancs
-                  de la faculté, où j'obtiens d'abord le DAEU qui me permettra d'intégrer ensuite le cursus
+                  de la faculté, où j'obtiens d'abord le DAEU pour ensuite intégrer le cursus
                   de Psychologie Clinique (Master Pro, option somatique) à l'Université Paris 7.
                 </p>
               </div>
@@ -124,10 +124,10 @@ export default function Parcours() {
                 <span className="timeline-year">Spécialisation</span>
                 <h3 className="timeline-title">Mère, enfant, parentalité</h3>
                 <p className="timeline-text">
-                  Mon intention première est de travailler avec la mère et l'enfant afin d'aider
-                  la jeune mère et le tout-petit à prendre le meilleur départ possible dans la relation.
-                  Le spectre de mon observation s'élargit naturellement, de la femme enceinte jusqu'à
-                  la parentalité, en passant par la problématique de l'infertilité.
+                  Mon intention première était de travailler auprès de la jeune mère et du tout-petit
+                  pour faciliter ce départ relationnel si important. Le spectre de mon observation s’est
+                  ensuite élargi à la femme enceinte, à la parentalité, en passant par la problématique
+                  de l’infertilité.
                 </p>
               </div>
 
@@ -136,10 +136,10 @@ export default function Parcours() {
                 <span className="timeline-year">Approfondissement</span>
                 <h3 className="timeline-title">Les liens familiaux invisibles</h3>
                 <p className="timeline-text">
-                  Les liens familiaux invisibles reliant les individus à travers les générations
-                  retiennent mon attention. Je comprends qu'une force silencieuse mais puissante
-                  circule au creux des systèmes familiaux : l'analyse transgénérationnelle devient
-                  un pilier de ma pratique.
+                  Depuis longtemps je présupposais qu’une force silencieuse mais puissante circulait
+                  au creux des familles car je l’éprouvais, mais sans réussir à l’expliquer. Le travailler
+                  et ainsi comprendre fut libérateur. Cette observation du transgénérationnel devint un
+                  des piliers de ma pratique.
                 </p>
               </div>
 
@@ -150,7 +150,8 @@ export default function Parcours() {
                 <p className="timeline-text">
                   Quand la Mémoire Cellulaire entre dans ma vie, la rencontre est aussi bouleversante
                   que naturelle. Je sais rapidement que cette discipline va devenir pour moi un outil
-                  incontournable, tellement il fait le lien avec les autres registres que je manie.
+                  incontournable, tellement il répond à ma recherche personnelle, et aussi, donc,
+                  tellement il fait le lien avec les autres registres que j’utilise.
                 </p>
               </div>
             </div>
@@ -229,8 +230,8 @@ export default function Parcours() {
 
               <p className="parcours-recit__closing">
                 Ma pratique est le résultat de ce parcours, universitaire, personnel, et passionné.
-                Ma démarche est d'accompagner chacun au plus proche de son besoin en mettant mes
-                compétences au service du patient.
+                Ma démarche est d'accompagner chacun au plus proche de son besoin en mettant toutes
+                mes compétences à son service.
               </p>
               <span className="parcours-recit__signature">Sophie J.-A.</span>
             </article>
@@ -240,13 +241,8 @@ export default function Parcours() {
                 <h4 className="parcours-formations__title">Formations & approches</h4>
                 <ul className="parcours-formations__list">
                   <li>Psychogénéalogie</li>
-                  <li>Hypnothérapie</li>
-                  <li>Thérapie de groupe</li>
                   <li>Constellations familiales</li>
-                  <li>PNL (Programmation Neuro-Linguistique)</li>
-                  <li>CPA (Communication Profonde Accompagnée)</li>
-                  <li>Art-thérapie</li>
-                  <li>Mémoire cellulaire</li>
+                  <li>Technique d’Abréaction Bilatérale et Circulaire</li>
                   <li>Bio-résonance cellulaire</li>
                 </ul>
               </div>

@@ -171,6 +171,33 @@
   color: var(--color-text-soft);
 }
 
+.workshop-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn--stripe {
+  background-color: #635bff;
+  color: #ffffff !important;
+  border: 1px solid #635bff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn--stripe:hover {
+  background-color: #4b45c6;
+  border-color: #4b45c6;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(99, 91, 255, 0.35);
+}
+
+
 /* Inspirations */
 .inspirations-grid {
   display: grid;

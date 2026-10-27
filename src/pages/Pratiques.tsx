@@ -200,7 +200,7 @@ export default function Pratiques() {
         </div>
       </div>
 
-      {/* ===== PAGE NAV (header non-hero) ===== */}
+      {/* ===== PAGE NAV (header non-hero / bulle grise) ===== */}
       <header className="page-nav">
         <div className="page-nav__inner">
           {/* Logo */}
@@ -241,24 +241,21 @@ export default function Pratiques() {
               Être psychologue demande de s'informer et de se former sans fin.
               La société bouge, les symptômes évoluent, le thérapeute se doit de suivre ce mouvement. Ma pratique s’appuie sur mes essentiels et s’enrichit sans cesse, respiration qui rend mon approche vivante.
             </p>
-            <p className="page-hero__subtitle">
-              Le spectre de mes formations additionnelles est vaste.
-              Ces approches me permettent de considérer autant la matière que l’invisible, de prendre en charge les symptômes post-traumatiques ainsi que les fantômes familiaux, de considérer le «&nbsp;système&nbsp;» ainsi que le vibratoire, …
-            </p>
           </div>
         </div>
       </header>
 
       <section className="section">
         <div className="container">
-          <div className="pratiques-quote">
-            <span className="pratiques-quote__icon" aria-hidden="true">“</span>
-            <blockquote className="pratiques-quote__text">
-              «&nbsp;La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information.&nbsp;»
-            </blockquote>
-            <cite className="pratiques-quote__author">— Albert Einstein</cite>
+          {/* 2ème paragraphe sorti de la bulle grise */}
+          <div className="pratiques-intro">
+            <p className="pratiques-intro__text">
+              Le spectre de mes formations additionnelles est vaste.
+              Ces approches me permettent de considérer autant la matière que l’invisible, de prendre en charge les symptômes post-traumatiques ainsi que les fantômes familiaux, de considérer le «&nbsp;système&nbsp;» ainsi que le vibratoire, …
+            </p>
           </div>
 
+          {/* Liste des pratiques */}
           <div className="pratiques-list">
             {practices.map((p, i) => (
               <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`}>
@@ -266,7 +263,6 @@ export default function Pratiques() {
                 <div className="pratique-item__visual">
                   {p.image ? (
                     <>
-                      {/* ↓ Remplacement : arrondi animé au scroll via Framer Motion */}
                       <RoundedImage
                         src={p.image}
                         alt={p.title}
@@ -302,6 +298,41 @@ export default function Pratiques() {
               </div>
             ))}
           </div>
+
+          {/* Formations supplémentaires & Citation Albert Einstein (en fin de rubrique Pratiques) */}
+          <div className="pratiques-formations-block">
+            <div className="pratiques-formations">
+              <span className="pratiques-formations__label">Approfondissement</span>
+              <h3 className="pratiques-formations__title">Formations et approches</h3>
+              <p className="pratiques-formations__subtitle">Formations supplémentaires</p>
+              <ul className="pratiques-formations__list">
+                <li>
+                  <span className="pratiques-formations__bullet" aria-hidden="true">°</span>
+                  Psychogénéalogie
+                </li>
+                <li>
+                  <span className="pratiques-formations__bullet" aria-hidden="true">°</span>
+                  Constellations familiales
+                </li>
+                <li>
+                  <span className="pratiques-formations__bullet" aria-hidden="true">°</span>
+                  Technique d’Abréaction Bilatérale et Circulaire
+                </li>
+                <li>
+                  <span className="pratiques-formations__bullet" aria-hidden="true">°</span>
+                  Bio-résonance cellulaire
+                </li>
+              </ul>
+            </div>
+
+            <div className="pratiques-quote">
+              <span className="pratiques-quote__icon" aria-hidden="true">“</span>
+              <blockquote className="pratiques-quote__text">
+                «&nbsp;La connaissance s'acquiert par l'expérience, tout le reste n'est que de l'information.&nbsp;»
+              </blockquote>
+              <cite className="pratiques-quote__author">— Albert Einstein</cite>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -312,7 +343,7 @@ export default function Pratiques() {
           <h2 className="section__title">Prendre rendez-vous</h2>
           <div className="divider"></div>
           <p className="section__subtitle" style={{ marginBottom: '2rem' }}>
-            En cabinet à Paris 10ème ou à distance, je vous accueille selon vos besoins et disponibilités.
+            En cabinet ou à distance, c’est avec plaisir que je vous accompagnerai.
           </p>
           <FadeUpBtn 
             href="https://www.doctolib.fr/psychologue/paris/sophie-jacquet-audebert"
