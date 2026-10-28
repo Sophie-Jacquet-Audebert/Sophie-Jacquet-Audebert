@@ -165,19 +165,34 @@ const practices = [
 
 const testimonials = [
   {
-    text: "Sophie m'a aidée à comprendre des schémas répétitifs dans ma vie que je ne voyais pas. Son approche holistique m'a permis de sortir d'une impasse que je vivais depuis des années.",
     author: "Marie-Claire D.",
+    initials: "M",
+    avatarBg: "#e8edf5",
+    avatarColor: "#2b4c7e",
+    rating: 5,
+    date: "Il y a 2 mois",
+    text: "Sophie m'a aidée à comprendre des schémas répétitifs dans ma vie que je ne voyais pas. Son approche holistique m'a permis de sortir d'une impasse que je vivais depuis des années.",
     detail: "Suivi en psychologie clinique"
   },
   {
-    text: "La douceur et la profondeur de l'approche de Sophie sont rares. Elle a su créer un espace de confiance où j'ai pu explorer ce que je n'osais pas regarder seul.",
     author: "Thomas B.",
+    initials: "T",
+    avatarBg: "#eef2ea",
+    avatarColor: "#3e6b48",
+    rating: 5,
+    date: "Il y a 4 mois",
+    text: "La douceur et la profondeur de l'approche de Sophie sont rares. Elle a su créer un espace de confiance où j'ai pu explorer ce que je n'osais pas regarder seul.",
     detail: "Art-thérapie & mémoire cellulaire"
   },
   {
-    text: "Je venais avec des questions sur ma parentalité. En quelques séances, des choses s'éclairaient, pas seulement pour moi mais pour toute ma famille. Un travail en profondeur.",
     author: "Aurélie M.",
-    detail: "Consultation à distance"
+    initials: "A",
+    avatarBg: "#faece8",
+    avatarColor: "#8e4438",
+    rating: 5,
+    date: "Il y a 5 mois",
+    text: "Je venais avec des questions sur ma parentalité. En quelques séances, des choses s'éclairaient, pas seulement pour moi mais pour toute ma famille. Un travail en profondeur.",
+    detail: "Consultation en cabinet"
   }
 ]
 
@@ -370,18 +385,102 @@ export default function Home() {
               Ce qu'ils en disent
             </FadeUp>
             <div className="divider"></div>
+
+            <div className="google-rating-summary">
+              <div className="google-rating-summary__brand">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+                <span className="google-rating-summary__title">Avis Google</span>
+              </div>
+              <div className="google-rating-summary__stars-group">
+                <span className="google-rating-summary__score">5,0</span>
+                <div className="google-stars" aria-label="5 étoiles sur 5">
+                  {[...Array(5)].map((_, idx) => (
+                    <svg key={idx} width="16" height="16" viewBox="0 0 24 24" fill="#fbbc04" aria-hidden="true">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <span className="google-rating-summary__caption">Recommandé par les patients</span>
+            </div>
           </div>
+
           <div className="testimonials-grid">
             {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card">
-                <div className="testimonial-card__quote">"</div>
+              <div key={i} className="testimonial-card testimonial-card--google">
+                <div className="testimonial-card__header">
+                  <div
+                    className="testimonial-card__avatar"
+                    style={{ backgroundColor: t.avatarBg, color: t.avatarColor }}
+                    aria-hidden="true"
+                  >
+                    {t.initials}
+                  </div>
+                  <div className="testimonial-card__user-info">
+                    <div className="testimonial-card__name-row">
+                      <span className="testimonial-card__author">{t.author}</span>
+                      <svg className="google-mini-badge" viewBox="0 0 24 24" width="16" height="16" aria-label="Google">
+                        <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                        <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                        <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                        <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                      </svg>
+                    </div>
+                    <span className="testimonial-card__date">{t.date}</span>
+                  </div>
+                </div>
+
+                <div className="testimonial-card__rating-row">
+                  <div className="google-stars" aria-label={`${t.rating} étoiles sur 5`}>
+                    {[...Array(t.rating)].map((_, s) => (
+                      <svg key={s} width="15" height="15" viewBox="0 0 24 24" fill="#fbbc04" aria-hidden="true">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="testimonial-card__verified">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    Avis vérifié
+                  </span>
+                </div>
+
                 <p className="testimonial-card__text">{t.text}</p>
+
                 <div className="testimonial-card__footer">
-                  <span className="testimonial-card__author">{t.author}</span>
                   <span className="testimonial-card__detail">{t.detail}</span>
+                  <span className="testimonial-card__source">Publié sur Google</span>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="testimonials-actions">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Sophie+Jacquet-Audebert+Psychologue+189+Rue+du+Faubourg+Saint-Denis+Paris"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--outline btn--google-reviews"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Consulter les avis sur Google
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
           </div>
         </div>
       </RoundedSection>

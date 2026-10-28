@@ -235,18 +235,6 @@ export default function Parcours() {
               </p>
               <span className="parcours-recit__signature">Sophie J.-A.</span>
             </article>
-
-            <div className="parcours-aside">
-              <div className="parcours-formations">
-                <h4 className="parcours-formations__title">Formations & approches</h4>
-                <ul className="parcours-formations__list">
-                  <li>Psychogénéalogie</li>
-                  <li>Constellations familiales</li>
-                  <li>Technique d’Abréaction Bilatérale et Circulaire</li>
-                  <li>Bio-résonance cellulaire</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </section>

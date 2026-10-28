@@ -28,11 +28,9 @@ Au programme : travail individuel et en groupe, enseignements, ateliers créatif
 
 Points clés : trouver le sens des premières empreintes de vie, découvrir mes besoins, connaître mes fondations pour mieux atteindre mon potentiel.
 
-Animée par Perrine Gillet, thérapeute hypnose et EMDR, et Sophie Jacquet-Audebert, psychologue clinicienne et thérapeute en mémoire cellulaire.
-
-Lieu : 16 rue des Cognots, 89400 Ormoy. Accès : gare de Laroche-Migennes, A6 sortie 18 depuis Paris, A6 sortie 19 depuis Dijon ou Lyon.`,
+Animée par Perrine Gillet, thérapeute hypnose et EMDR, et Sophie Jacquet-Audebert, psychologue clinicienne et thérapeute en mémoire cellulaire.`,
     tags: ['Hypnose', 'Méditation', 'Mémoire cellulaire', 'Breathwork', 'Ateliers créatifs'],
-    info: "Du mercredi 7 octobre 16h au dimanche 11 octobre 11h · Ormoy (89) · 500 € dont 50 € à l'inscription · 10 participants maximum",
+    info: "500 € dont 50 € à l'inscription · 10 participants maximum",
     status: 'Inscriptions ouvertes',
     icon: '◇',
     image_url: '/immersion-prendre-sa-place.jpg',
@@ -171,7 +169,7 @@ export default function Actualites() {
           {/* Page title block */}
           <div className="container">
             <span className="page-hero__label">Ateliers & conférences</span>
-            <h1 className="page-hero__title">Actualités</h1>
+            <h1 className="page-hero__title">Actualités et Inspirations</h1>
             <p className="page-hero__text">
               Pour aller plus loin, des ressources annexes
             </p>
@@ -181,14 +179,6 @@ export default function Actualites() {
 
       <section className="section">
         <div className="container">
-          <div className="actualites-intro">
-            <p>
-              Ces ateliers et conférences peuvent avoir lieu chez vous. 
-              Il vous suffit pour cela de me contacter : je me déplace pour animer
-              ces rencontres dans un cadre intime et bienveillant.
-            </p>
-          </div>
-
           {loading && (
             <p className="actualites-status">Chargement des ateliers...</p>
           )}
@@ -295,16 +285,16 @@ export default function Actualites() {
                   <span>Myriam Brousse · Marabout, 2007</span>
                 </li>
                 <li>
-                  <strong>Nouvelle Terre</strong>
-                  <span>Eckhart Tolle · Ariane Édition, 2005</span>
-                </li>
-                <li>
                   <strong>Aïe, mes aïeux !</strong>
                   <span>Anne Ancelin Schützenberger · Desclée de Brouwer, 2003</span>
                 </li>
                 <li>
                   <strong>Les fantômes familiaux</strong>
                   <span>Bruno Clavier · Petite Bibliothèque Payot, 2013</span>
+                </li>
+                <li>
+                  <strong>Nouvelle Terre</strong>
+                  <span>Eckhart Tolle · Ariane Édition, 2005</span>
                 </li>
               </ul>
             </div>
