@@ -1,7 +1,7 @@
 .pratiques-intro {
-  max-width: 780px;
-  margin: 1.5rem auto 4.5rem;
-  text-align: center;
+  max-width: 680px;
+  margin: 1.5rem 0 3.5rem auto;
+  text-align: right;
   color: var(--color-text-soft);
   font-size: 1.15rem;
   line-height: 1.9;
@@ -18,9 +18,10 @@
 /* ── item ── */
 .pratique-item {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 0;
-  align-items: stretch;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+  padding: 3.5rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -29,7 +30,7 @@
 }
 
 .pratique-item--reverse {
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 1.15fr 1fr;
 }
 
 .pratique-item--reverse .pratique-item__visual {
@@ -44,7 +45,11 @@
 .pratique-item__visual {
   position: relative;
   overflow: hidden;
-  min-height: 480px;
+  height: 310px;
+  min-height: 310px;
+  max-height: 310px;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(44, 39, 36, 0.08);
 }
 
 .pratique-item__photo {
@@ -58,7 +63,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   display: block;
 }
 
@@ -66,20 +71,24 @@
   content: '';
   position: absolute;
   inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 35%, transparent 65%);
   pointer-events: none;
+  z-index: 5;
 }
 
 .pratique-item__number {
   position: absolute;
-  bottom: 1.5rem;
-  left: 2rem;
+  bottom: 1.25rem;
+  left: 1.75rem;
   font-family: var(--font-heading);
-  font-size: 5rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.25);
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
   line-height: 1;
-  z-index: 1;
+  z-index: 10;
   letter-spacing: -0.02em;
+  pointer-events: none;
 }
 
 .pratique-item__icon {
@@ -102,7 +111,7 @@
 
 /* ── content side ── */
 .pratique-item__content {
-  padding: 4rem 3.5rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,9 +163,16 @@
 
 /* ── responsive ── */
 @media (max-width: 900px) {
+  .pratiques-intro {
+    text-align: left;
+    margin: 1.5rem auto 2.5rem;
+  }
+
   .pratique-item,
   .pratique-item--reverse {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
   }
 
   .pratique-item--reverse .pratique-item__visual,
@@ -165,25 +181,27 @@
   }
 
   .pratique-item__visual {
-    min-height: 340px;
+    height: 280px;
+    min-height: 280px;
+    max-height: 280px;
   }
 
   .pratique-item__content {
-    padding: 3rem 2rem;
+    padding: 0;
   }
 }
 
 @media (max-width: 600px) {
   .pratique-item__visual {
-    min-height: 260px;
-  }
-
-  .pratique-item__content {
-    padding: 2.5rem 1.5rem;
+    height: 240px;
+    min-height: 240px;
+    max-height: 240px;
   }
 
   .pratique-item__number {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    left: 1.25rem;
+    bottom: 1rem;
   }
 }
 

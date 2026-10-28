@@ -303,8 +303,7 @@ export default function Pratiques() {
           <div className="pratiques-formations-block">
             <div className="pratiques-formations">
               <span className="pratiques-formations__label">Approfondissement</span>
-              <h3 className="pratiques-formations__title">Formations et approches</h3>
-              <p className="pratiques-formations__subtitle">Formations supplémentaires</p>
+              <h3 className="pratiques-formations__title">Formation supplémentaire</h3>
               <ul className="pratiques-formations__list">
                 <li>
                   <span className="pratiques-formations__bullet" aria-hidden="true">°</span>
