@@ -79,12 +79,14 @@ function RoundedImage({
   className,
   delay = 0,
   finalRadius = '2.5rem',
+  imagePosition = 'center',
 }: {
   src: string
   alt: string
   className?: string
   delay?: number
   finalRadius?: string
+  imagePosition?: string
 }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
@@ -105,7 +107,13 @@ function RoundedImage({
       <img
         src={src}
         alt={alt}
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: imagePosition,
+          display: 'block'
+        }}
       />
     </motion.div>
   )
@@ -120,6 +128,7 @@ const practices = [
     short: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique.",
     tags: ['Individuel', 'Adulte', 'Profondeur'],
     image: '/psychologie-clinique.jpeg',
+    imagePosition: 'center',
     icon: null,
   },
   {
@@ -130,6 +139,7 @@ const practices = [
     short: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles.",
     tags: ['Généalogie', 'Lignée', 'Répétitions'],
     image: '/transgenerationnel.jpeg',
+    imagePosition: 'center',
     icon: null,
   },
   {
@@ -140,6 +150,7 @@ const practices = [
     short: "Les mémoires personnelle et familiale ont une place dans le corps : certains de nos symptômes les expriment.",
     tags: ['Transgénérationnel', 'Corps', 'Histoire'],
     image: '/corps-et-memoires.jpeg',
+    imagePosition: 'center',
     icon: null,
   },
   {
@@ -150,6 +161,7 @@ const practices = [
     short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création.",
     tags: ['Corps', 'Créativité', 'Symbolique'],
     image: '/art-therapie.jpeg',
+    imagePosition: 'center bottom',
     icon: null,
   }
 ]
@@ -258,7 +270,7 @@ export default function Pratiques() {
           {/* Liste des pratiques */}
           <div className="pratiques-list">
             {practices.map((p, i) => (
-              <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`}>
+              <div key={p.slug} className={`pratique-item ${i % 2 === 1 ? 'pratique-item--reverse' : ''}`} data-slug={p.slug}>
 
                 <div className="pratique-item__visual">
                   {p.image ? (
@@ -269,6 +281,7 @@ export default function Pratiques() {
                         className="pratique-item__photo"
                         delay={0}
                         finalRadius="2.5rem"
+                        imagePosition={p.imagePosition}
                       />
                       <span className="pratique-item__number">{p.number}</span>
                     </>
