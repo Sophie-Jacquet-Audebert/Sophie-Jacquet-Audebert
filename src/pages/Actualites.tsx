@@ -319,9 +319,9 @@ export default function Actualites() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://youtu.be/aQL91Tahebk" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.capuseen.com/films/449-les-chemins-de-la-guerison" target="_blank" rel="noopener noreferrer">
                     <strong>Les Chemins de la guérison</strong>
-                    <span>Jean-Yves Bilien, 2013</span>
+                    <span>Jean-Yves Bilien, 2013 · Documentaire en VOD</span>
                   </a>
                 </li>
               </ul>
