@@ -96,6 +96,17 @@ export default function Parcours() {
         <div className="container">
           <div className="parcours-grid">
             <div className="parcours-timeline">
+              <figure className="parcours-portrait">
+                <div className="parcours-portrait__frame">
+                  <img
+                    src="/sophie-parcours.png"
+                    alt="Sophie Jacquet-Audebert"
+                    className="parcours-portrait__image"
+                  />
+                </div>
+                <figcaption>Un chemin vers soi</figcaption>
+              </figure>
+
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <span className="timeline-year">Origines</span>

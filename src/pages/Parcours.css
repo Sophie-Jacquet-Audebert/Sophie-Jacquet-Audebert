@@ -12,6 +12,61 @@
   gap: 0;
 }
 
+/* Portrait placé en tête de la frise pour équilibrer visuellement les colonnes. */
+.parcours-portrait {
+  position: relative;
+  margin: 0 0 3.5rem;
+  padding: 0.75rem 0.75rem 0;
+  text-align: center;
+}
+
+.parcours-portrait::before,
+.parcours-portrait::after {
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-color: var(--color-rose-dark);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.parcours-portrait::before {
+  top: 0;
+  left: 0;
+  border-width: 1px 0 0 1px;
+}
+
+.parcours-portrait::after {
+  right: 0;
+  bottom: 1.65rem;
+  border-width: 0 1px 1px 0;
+}
+
+.parcours-portrait__frame {
+  position: relative;
+  padding: 0.45rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: 0.6rem 0.6rem 0 rgba(228, 120, 48, 0.12);
+}
+
+.parcours-portrait__image {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(228, 120, 48, 0.35);
+}
+
+.parcours-portrait figcaption {
+  margin-top: 0.8rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
 .timeline-item {
   position: relative;
   padding-left: 3rem;
@@ -176,6 +231,16 @@
   .parcours-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .parcours-portrait {
+    max-width: 28rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .parcours-portrait__image {
+    height: 28rem;
   }
 
   .parcours-aside {
