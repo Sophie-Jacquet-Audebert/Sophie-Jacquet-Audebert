@@ -123,10 +123,10 @@ const practices = [
   {
     slug: 'psychologie-clinique',
     number: '01',
-    label: 'Fondement théorique',
+    label: 'Parole',
     title: 'Psychologie clinique',
     short: "Une écoute profonde ancrée dans l'analytique : l'inconscient, le symptôme, l'individu unique.",
-    tags: ['Individuel', 'Adulte', 'Profondeur'],
+    tags: ['Individuel', 'Recherche', 'Profondeur'],
     image: '/psychologie-clinique.jpeg',
     imagePosition: 'center',
     icon: null,
@@ -134,10 +134,10 @@ const practices = [
   {
     slug: 'transgenerationnel',
     number: '02',
-    label: 'Racines familiales',
+    label: 'Transgénérationnel',
     title: 'Le transgénérationnel',
     short: "Les fils subtils qui relient les individus à travers les générations : une force silencieuse mais puissante, circulant au creux des familles.",
-    tags: ['Généalogie', 'Lignée', 'Répétitions'],
+    tags: ['Arbre', 'Héritage', 'Répétitions'],
     image: '/transgenerationnel.jpeg',
     imagePosition: 'center',
     icon: null,
@@ -145,10 +145,10 @@ const practices = [
   {
     slug: 'memoire-cellulaire',
     number: '03',
-    label: "Zone d'échange",
+    label: 'Corps',
     title: 'Le corps et ses mémoires',
     short: "Les mémoires personnelle et familiale ont une place dans le corps : certains de nos symptômes les expriment.",
-    tags: ['Transgénérationnel', 'Corps', 'Histoire'],
+    tags: ['Répétitions', 'Symptômes', 'Histoire'],
     image: '/corps-et-memoires.jpeg',
     imagePosition: 'center',
     icon: null,
@@ -156,10 +156,10 @@ const practices = [
   {
     slug: 'art-therapie',
     number: '04',
-    label: 'Expression',
+    label: 'Créativité',
     title: 'Art-thérapie',
     short: "Accéder à la personne en deçà de la parole, au-delà du contrôle conscient, par le geste et la création.",
-    tags: ['Corps', 'Créativité', 'Symbolique'],
+    tags: ['Transformation', 'Symboles', 'Expression'],
     image: '/art-therapie.jpeg',
     imagePosition: 'center bottom',
     icon: null,
@@ -316,7 +316,7 @@ export default function Pratiques() {
           <div className="pratiques-formations-block">
             <div className="pratiques-formations">
               <span className="pratiques-formations__label">Approfondissement</span>
-              <h3 className="pratiques-formations__title">Formation supplémentaire</h3>
+              <h3 className="pratiques-formations__title">Formations supplémentaires</h3>
               <ul className="pratiques-formations__list">
                 <li>
                   <span className="pratiques-formations__bullet" aria-hidden="true">°</span>

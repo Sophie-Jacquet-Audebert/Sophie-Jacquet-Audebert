@@ -76,7 +76,7 @@ export default function MemoireCellulaire() {
                   Film suisse : trauma sur 4 générations présent dans l'ADN
                 </figcaption>
               </figure>
-              <h3>Ce que la mémoire cellulaire peut traiter</h3>
+              <h3>Ce que la mémoire cellulaire peut permettre de traiter</h3>
               <ul className="practice-detail__list">
                 <li>Schémas répétitifs inexpliqués</li>
                 <li>Mémoires transgénérationnelles</li>

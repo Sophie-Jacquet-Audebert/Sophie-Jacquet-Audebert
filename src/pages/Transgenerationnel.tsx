@@ -62,6 +62,7 @@ export default function Transgenerationnel() {
                 <li>Schémas, évènements, répétitions… observables dans les différentes générations</li>
                 <li>Loyautés invisibles et places assignées dans le système familial</li>
                 <li>Non-dits, secrets et deuils non résolus dans la lignée</li>
+                <li>Découvrir des dates importantes</li>
                 <li>Liens entre l'histoire familiale et les symptômes actuels</li>
               </ul>
             </article>

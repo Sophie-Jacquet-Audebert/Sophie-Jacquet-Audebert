@@ -285,16 +285,16 @@ export default function Actualites() {
                   <span>Myriam Brousse · Marabout, 2007</span>
                 </li>
                 <li>
+                  <strong>Les mots pour le dire</strong>
+                  <span>Marie Cardinal · Éditions Gallimard, 1979</span>
+                </li>
+                <li>
                   <strong>Aïe, mes aïeux !</strong>
                   <span>Anne Ancelin Schützenberger · Desclée de Brouwer, 2003</span>
                 </li>
                 <li>
                   <strong>Les fantômes familiaux</strong>
                   <span>Bruno Clavier · Petite Bibliothèque Payot, 2013</span>
-                </li>
-                <li>
-                  <strong>Nouvelle Terre</strong>
-                  <span>Eckhart Tolle · Ariane Édition, 2005</span>
                 </li>
               </ul>
             </div>
@@ -303,9 +303,15 @@ export default function Actualites() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20">
                   <path d="M15 10l4.553-2.069A1 1 0 0121 8.845v6.31a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
                 </svg>
-                Documentaires
+                Vidéos
               </h3>
               <ul className="inspiration-list">
+                <li>
+                  <a href="https://www.netflix.com/search?q=le%20chemin%20de%20l%27olivier" target="_blank" rel="noopener noreferrer">
+                    <strong>Pour découvrir les constellations familiales</strong>
+                    <span>Série Netflix · Le chemin de l’Olivier</span>
+                  </a>
+                </li>
                 <li>
                   <a href="https://youtu.be/hG04LX4zrlA?si=ShT64G277eYfGFuo" target="_blank" rel="noopener noreferrer">
                     <strong>La Révolution de l'esprit</strong>
@@ -316,12 +322,6 @@ export default function Actualites() {
                   <a href="https://youtu.be/70Xg0cclf5Q?si=p04_Nz1Y-cib3bGO" target="_blank" rel="noopener noreferrer">
                     <strong>La Puissance de l'intention</strong>
                     <span>Anthony Chêne</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.capuseen.com/films/449-les-chemins-de-la-guerison" target="_blank" rel="noopener noreferrer">
-                    <strong>Les Chemins de la guérison</strong>
-                    <span>Jean-Yves Bilien, 2013 · Documentaire en VOD</span>
                   </a>
                 </li>
               </ul>

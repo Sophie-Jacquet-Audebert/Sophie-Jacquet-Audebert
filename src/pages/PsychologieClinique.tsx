@@ -47,14 +47,6 @@ export default function PsychologieClinique() {
                 la réalité historique de ses origines, autant personnelles que générationnelles,
                 les événements cycliques familiaux et individuels et bien sûr, les maux de son corps.
               </blockquote>
-              <ul className="practice-detail__list">
-                <li>Psychogénéalogie</li>
-                <li>Hypnothérapie</li>
-                <li>Thérapie de groupe</li>
-                <li>Constellations familiales</li>
-                <li>Programmation Neuro-Linguistique (PNL)</li>
-                <li>Communication Profonde Accompagnée (CPA)</li>
-              </ul>
             </article>
             <PracticeSidebar current="psychologie-clinique" />
           </div>
