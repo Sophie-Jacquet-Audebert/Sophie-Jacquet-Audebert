@@ -62,6 +62,7 @@ export default function Actualites() {
     let isMounted = true
 
     async function fetchWorkshops() {
+      setLoading(true)
       try {
         const { data, error } = await supabase
           .from('articles')
@@ -72,12 +73,16 @@ export default function Actualites() {
         if (!isMounted) return
 
         if (error) {
+          setError(error.message)
           console.warn('Erreur de chargement articles Supabase, conservation des ateliers :', error.message)
         } else if (data && data.length > 0) {
           setWorkshops(data)
         }
       } catch (err) {
+        if (isMounted) setError('Connexion Supabase non disponible, ateliers affichés par défaut.')
         console.warn('Connexion Supabase non disponible, ateliers affichés par défaut.')
+      } finally {
+        if (isMounted) setLoading(false)
       }
     }
 
