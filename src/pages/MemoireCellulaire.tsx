@@ -38,11 +38,8 @@ export default function MemoireCellulaire() {
               <p>
                 Nous sommes nombreux à comprendre notre problème, et malheureusement,
                 tout aussi nombreux à continuer à exprimer le symptôme issu du problème,
-                malgré notre compréhension donc, et de plus (le pire ?), souvent après
-                des années de travail intense auprès d'un psychologue ou d'un thérapeute
-                tout à fait investi. Et oui, l'esprit a compris (ce qui est déjà fort
-                utile), mais la matière est lourde et continue de renfermer en son sein
-                une mémoire enkystée, et bien souvent ignorée.
+                malgré notre compréhension, souvent après des années de travail thérapeutique.
+                 L’esprit a compris mais la matière est lourde et continue d’enfermer en son sein la mémoire enkystée. 
               </p>
               <p>
                 Travailler en mémoire cellulaire, c'est considérer cet aspect de la
@@ -56,11 +53,9 @@ export default function MemoireCellulaire() {
                 dans le corps fut ma chance, mon issue."
               </blockquote>
               <p>
-                Je ne renie pas la psychanalyse, bien au contraire, car je ne pense pas
-                que le travail en mémoire cellulaire aurait à lui seul suffi à mon
-                soulagement (comme toutes les thérapies non ?), en revanche, l'axe de
-                travail mémoire cellulaire permet un nettoyage dans la matière que peu
-                de thérapies proposent. C'est, jusqu'à présent, mon observation.
+                Au fil de mon expérience, personnelle et professionnelle, apparait avec évidence l’impossible suprématie 
+                d’un mode thérapeutique sur les autres. Rien ne permet de tout régler.
+                 L’axe de travail en mémoire cellulaire a cela de particulier qu’il donne une place au corps et à sa matière dans la thérapie. Apport aussi riche que rare. 
               </p>
               <figure className="practice-detail__video">
                 <div className="practice-detail__video-frame">

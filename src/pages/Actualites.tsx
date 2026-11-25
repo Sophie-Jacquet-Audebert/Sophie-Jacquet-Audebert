@@ -267,7 +267,7 @@ export default function Actualites() {
         <div className="container">
           <div className="section__header">
             <span className="section__label">Ressources</span>
-            <h2 className="section__title">Inspirations</h2>
+            <h2 className="section__title">Pour aller plus loin</h2>
             <div className="divider"></div>
           </div>
           <div className="inspirations-grid">
@@ -296,6 +296,10 @@ export default function Actualites() {
                   <strong>Les fantômes familiaux</strong>
                   <span>Bruno Clavier · Petite Bibliothèque Payot, 2013</span>
                 </li>
+                <li>
+                  <strong>Nouvelle Terre</strong>
+                  <span>Eckhart Tolle · Ariane Edition, 2005</span>
+                </li>
               </ul>
             </div>
             <div className="inspiration-col">
@@ -308,7 +312,7 @@ export default function Actualites() {
               <ul className="inspiration-list">
                 <li>
                   <a href="https://www.netflix.com/search?q=le%20chemin%20de%20l%27olivier" target="_blank" rel="noopener noreferrer">
-                    <strong>Pour découvrir les constellations familiales</strong>
+                    <strong>Les chemins de l’olivier</strong>
                     <span>Série Netflix · Le chemin de l’Olivier</span>
                   </a>
                 </li>
@@ -320,8 +324,14 @@ export default function Actualites() {
                 </li>
                 <li>
                   <a href="https://youtu.be/70Xg0cclf5Q?si=p04_Nz1Y-cib3bGO" target="_blank" rel="noopener noreferrer">
-                    <strong>La Puissance de l'intention</strong>
+                    <strong>Le pouvoir de l’intention</strong>
                     <span>Anthony Chêne</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.capuseen.com/films/449-les-chemins-de-la-guerison" target="_blank" rel="noopener noreferrer">
+                    <strong>Les chemins de la guérison</strong>
+                    <span>Documentaire · Jean-Yves Bilien</span>
                   </a>
                 </li>
               </ul>
