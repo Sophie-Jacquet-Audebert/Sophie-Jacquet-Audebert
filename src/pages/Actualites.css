@@ -237,6 +237,9 @@
   font-family: var(--font-heading);
   font-size: 1.45rem;
   font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-align: left;
   color: var(--color-text);
   transition: color 0.2s ease;
 }

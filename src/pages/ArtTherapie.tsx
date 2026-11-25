@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PracticeSidebar } from './PsychologieClinique'
 import './PracticeDetail.css'
+import './ArtTherapie.css'
 
 export default function ArtTherapie() {
   return (
@@ -14,7 +15,7 @@ export default function ArtTherapie() {
           <h1 className="page-hero__title">Art-thérapie</h1>
           <p className="page-hero__text">
             Un outil précieux permettant d'accéder à la personne et à ses fonctionnements 
-            en dépassant la barrière du contrôle, en deçà de la parole.
+            en dépassant la barrière du contrôle.
           </p>
         </div>
       </div>
@@ -23,33 +24,42 @@ export default function ArtTherapie() {
         <div className="container">
           <div className="practice-detail-grid">
             <article className="practice-detail__content">
+              <h1>L’art-thérapie, mes racines.</h1>
               <p className="practice-detail__lead">
-                L'art-thérapie est une forme de thérapie qui utilise le processus créatif 
-                comme médiateur entre le patient et le thérapeute.
+                Je suis avant tout une enlumineuse, emportée par la couleur, la beauté, la quête d’équilibre, partout
               </p>
               <p>
-                Elle permet d'accéder à des parties de soi qui ne peuvent pas toujours 
-                s'exprimer par les mots. Le geste, la couleur, la forme : tout cela parle
-                à la place du contrôle conscient et permet une exploration plus profonde
-                de l'expérience intérieure.
+                Si l’art thérapie peut être une thérapie à part entière, elle est, dans ma pratique, un outil comme un autre, utilisé quand le besoin s’en fait ressentir.
+
+                Cet outil fantastique mêle puissance et douceur.
+
               </p>
               <p>
-                Nourrie par sa formation d'enlumineuse et de calligraphe, Sophie Jacquet-Audebert 
-                intègre l'art-thérapie dans sa pratique avec une sensibilité particulière pour 
-                la dimension créatrice et symbolique de l'être humain.
+                La créativité, s’éloignant du contrôle et de la pensée, offre un accès dérivé à l’expression de nos émotions, biais léger vers nos profondeurs, nos ombres.
+                Ce faisant, avec peu de mots, elle permet d’approcher nos monstres, parfois de les dissiper
+
+                L’art-thérapie est un voyage à travers soi-même, pertinent à tous les âges de la vie.
+
               </p>
               <blockquote className="practice-detail__quote">
                 "Un outil précieux permettant d'accéder à la personne et ses fonctionnements 
                 en dépassant la barrière du contrôle, en deçà de la parole."
               </blockquote>
-              <h3>Ce que l'art-thérapie peut traiter</h3>
+              <h1>La créativité sauve.</h1>
+              <section className="art-therapy-testimonial" aria-labelledby="loulou-testimonial-title">
+                <h2 id="loulou-testimonial-title">LOULOU</h2>
+                <p className="art-therapy-testimonial__age"><em>(14 ans. 9 ans lors du suivi)</em></p>
+                <blockquote>
+                  <em>
+                    L’art-thérapie m'a aidé à redonner des couleurs à ma vie. Après la mort de mon père je vivais dans un monde sans couleurs, sans joie, un monde vide... Grâce à cette année de thérapie avec Sophie, j'ai appris à exprimer ce que je ressentais, j'ai recommencé à sourire et à voir la vie d'un autre côté. À chaque séance je rajoutais littéralement de la couleur, que ce soit sur la feuille ou dans ma vie.
+                  </em>
+                </blockquote>
+              </section>
+              <h3>Ce que l’art thérapie permet</h3>
               <ul className="practice-detail__list">
-                <li>Difficultés à mettre des mots sur ses émotions</li>
-                <li>Traumas anciens ou récents</li>
-                <li>Anxiété et stress chronique</li>
-                <li>Travail sur l'identité et la confiance en soi</li>
-                <li>Accompagnement du deuil</li>
-                <li>Exploration créatrice de soi</li>
+                <li>Se découvrir en douceur </li>
+                <li>Laisser émerger des parts enfouies</li>
+                <li>Reprendre confiance </li>
               </ul>
             </article>
             <PracticeSidebar current="art-therapie" />
