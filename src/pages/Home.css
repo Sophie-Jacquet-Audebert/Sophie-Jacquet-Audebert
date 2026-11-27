@@ -595,6 +595,10 @@
 }
 
 /* ===== TESTIMONIALS (GOOGLE REVIEWS FORM) ===== */
+.wewidget-container {
+  width: 100%;
+}
+
 .google-rating-summary {
   display: inline-flex;
   align-items: center;
